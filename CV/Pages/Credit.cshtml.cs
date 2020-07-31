@@ -11,20 +11,15 @@ using System.Text.Json;
 
 namespace CV.Pages
 {
-    public class WorkModel : PageModel
+    public class CreditModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
 
         public IList<WorkItem> WorkItems { get; }
 
-        public WorkModel(ILogger<IndexModel> logger)
+        public CreditModel(ILogger<IndexModel> logger)
         {
             _logger = logger;
-            var options = new JsonSerializerOptions
-            {
-                ReadCommentHandling = JsonCommentHandling.Skip
-            };
-            this.WorkItems = JsonSerializer.Deserialize<List<WorkItem>>(System.IO.File.ReadAllText("data/work.json"), options);
         }
 
         public void OnGet()

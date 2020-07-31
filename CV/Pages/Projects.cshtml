@@ -1,41 +1,42 @@
 ﻿@page
-@model CV.Pages.WorkModel
+@model CV.Pages.ProjectModel
 @{
-    ViewData["Title"] = "work";
+    ViewData["Title"] = "Projects";
 }
 
-
-@foreach (var workItem in Model.WorkItems)
+@foreach (var projectItem in Model.ProjectItems)
 {
     <div class="d-flex flex-row justify-content-between align-items-center item-title">
         <div class="col-8">
             <div class="companyName">
-                <img class="workImage" src="~/img/@workItem.Image" />
-                @workItem.CompanyName
+                <img class="workImage" src="~/img/@projectItem.Image"/>
+                @projectItem.SiteName
             </div>
             <div class="workTitle">
                 <i class="far fa-address-card"></i>
-                @workItem.Position
+                @projectItem.Description
             </div>
         </div>
         <div class="col-4">
             <div>
-                <i class="far fa-calendar-alt"></i> @workItem.Dates
+                Last Updated:
+                @projectItem.Date
             </div>
             <div>
                 <i class="fas fa-map-marked-alt"></i>
-                @workItem.Location
+                <a src="@projectItem.Url">@projectItem.Url</a>
             </div>
         </div>
     </div>
     <div>
         <ul class="fa-ul listItem">
-            @foreach (var item in workItem.BulletPoints)
-            {
-                <li>
-                    @item
-                </li>
-            }
+            @foreach (var item in projectItem.TechnologyUsed)
+        {
+            <li>
+                @item
+            </li>
+        }
+            
         </ul>
     </div>
     <div class="border-container">
@@ -43,5 +44,4 @@
     </div>
 
 }
-
 

@@ -1,0 +1,106 @@
+﻿// All data contained in this file is copywrited by Michael Silver and cannot be used without permission
+[
+  {
+    "Category": "Programming Languages",
+    "Items": [
+      {
+        "Name": "C#",
+        "Years": 1,
+        "ExperienceLevel": 10,
+        "Image": "C_Sharp_wordmark.svg",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ]
+      },
+      {
+        "Name": "Delphi",
+        "Years": 1,
+        "ExperienceLevel": 10,
+        "Image": "Delphi.png",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ]
+      },
+      {
+        "Name": "Python",
+        "Years": 1,
+        "ExperienceLevel": 10,
+        "Image": "Python-logo-notext.svg",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ]
+      },
+      {
+        "Name": "C++",
+        "Years": 1,
+        "ExperienceLevel": 10,
+        "Image": "cpp_logo.png",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ]
+      },
+      {
+        "Name": "SQL",
+        "Years": 1,
+        "ExperienceLevel": 10,
+        "Image": "",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ]
+      }
+    ]
+  },
+  {
+    "Category": "Databases",
+    "Items": [
+      {
+        "Name": "SqlServer",
+        "Years": 1,
+        "ExperienceLevel": 10,
+        "Image": "microsoft-sql-server-logo-96AF49E2B3-seeklogo.com.png",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ]
+      },
+      {
+        "Name": "Oracle",
+        "Years": 1,
+        "ExperienceLevel": 10,
+        "Image": "640px-Oracle_Logo.svg.png",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ]
+      },
+      {
+        "Name": "MongoDB",
+        "Years": 1,
+        "ExperienceLevel": 1,
+        "Image": "",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ]
+      },
+      {
+        "Name": "Informix",
+        "Years": 1,
+        "ExperienceLevel": 10,
+        "Image": "",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ]
+      }
+
+    ]
+  }
+
+]
+

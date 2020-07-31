@@ -3,41 +3,52 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Michael Silver - Curriculum Vitae</title>
+    <title>Michael Silver - Software Engineer and Architect - Curriculum Vitae</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css"/>
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <a class="navbar-brand" href="#">Michael Silver - Curriculum Vitae</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="work">Work</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="web">Web Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="open">Open Source</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="ed">Education</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="ref">References</a>
-                    </li>
-                </ul>
-            </div>
+        <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+                <a class="navbar-brand" href="/">Michael Silver - Software Architect & Engineer</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+        <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">Summary</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/work">Work History</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/tech">Technology</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/projects">Projects</a>
+                        </li>
+                        @*
+        <li class="nav-item">
+            <a class="nav-link" href="open">Open Source</a>
+        </li>
+                        *@
+                        <li class="nav-item">
+                            <a class="nav-link" href="/ed">Education</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/ref">References</a>
+                        </li>
+                    </ul>
+                </div>
         </nav>
     </header>
 
-    <div class="container">
+    <div class="container primary-ctn">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
@@ -46,7 +57,14 @@
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/font-awesome/js/all.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        // remove any current navbar active classes
+        $(".navbar .nav-item.active").removeClass('active');
+        // add active class to proper navbar item that matches window.location
+        $('.navbar .nav-item a[href="' + location.pathname + '"]').closest('li').addClass('active');
+    </script>
 
     @RenderSection("Scripts", required: false)
 </body>

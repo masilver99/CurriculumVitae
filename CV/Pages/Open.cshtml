@@ -1,36 +1,35 @@
 ﻿@page
-@model CV.Pages.WorkModel
+@model CV.Pages.OpenModel
 @{
-    ViewData["Title"] = "work";
+    ViewData["Title"] = "Open Source Projects";
 }
 
-
-@foreach (var workItem in Model.WorkItems)
+@foreach (var openItem in Model.OpenItems)
 {
     <div class="d-flex flex-row justify-content-between align-items-center item-title">
         <div class="col-8">
             <div class="companyName">
-                <img class="workImage" src="~/img/@workItem.Image" />
-                @workItem.CompanyName
+                <img class="workImage" src="~/img/@openItem.Image"/>
+                @openItem.ProjectName
             </div>
             <div class="workTitle">
                 <i class="far fa-address-card"></i>
-                @workItem.Position
+                @openItem.Position
             </div>
         </div>
         <div class="col-4">
             <div>
-                <i class="far fa-calendar-alt"></i> @workItem.Dates
+                <i class="far fa-calendar-alt"></i> @openItem.Dates
             </div>
             <div>
                 <i class="fas fa-map-marked-alt"></i>
-                @workItem.Location
+                @openItem.Location
             </div>
         </div>
     </div>
     <div>
         <ul class="fa-ul listItem">
-            @foreach (var item in workItem.BulletPoints)
+            @foreach (var item in openItem.BulletPoints)
             {
                 <li>
                     @item
@@ -43,5 +42,4 @@
     </div>
 
 }
-
 

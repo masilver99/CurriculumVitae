@@ -1,4 +1,5 @@
-﻿[
+﻿// All data contained in this file is copywrited by Michael Silver and cannot be used without permission
+[
   {
     "CompanyName": "Wolters Kluwer",
     "Division": "Tax and Accounting",
@@ -6,6 +7,7 @@
     "Dates": "May 2018 - Current",
     "Position": "Senior Product Software Engineer",
     "Location": "Kennesaw, GA",
+    "Image": "wk.png",
     "BulletPoints": [
       "Manage different teams of programmers on a per project basis.",
       "Primarily work on the Electronic Filing Center (EFC) team. Responsible for a large queue based backend, distributed system, processing millions of tax returns every year.",
@@ -20,6 +22,7 @@
     "Dates": "May 2010 to May 2018",
     "Position": "Professional Services Manager",
     "Location": "Rome, GA",
+    "Image": "ncr.png",
     "BulletPoints": [
       "Supervised remote programmers, including mentoring, code reviews and assignments of tasks.",
       "Designed, developed and maintained software to manage over 56,000 retail self checkout machines and 700,000 additional devices at the largest retailer in the world.",
@@ -36,6 +39,7 @@
     "Dates": "June 2002 to May 2010",
     "Position": "Senior Level Developer",
     "Location": "Rome, GA",
+    "Image": "wk.png",
     "BulletPoints": [
       "Worked on commercial tax preparation software product for professionals. Began conversion from Delphi to C#.",
       "Converted back end processing code from Delphi to C# and legacy communications protocols to web services using WCF as well as NHibernate and Oracle queues.",
@@ -49,6 +53,7 @@
     "Dates": "May 1994 to current",
     "Position": "Consultant",
     "Location": "Rome, GA",
+    "Image": "business.png",
     "BulletPoints": [
       "Wrote agent and web service to inventory and download concert tickets from the largest online ticket provider using Node.js, Python, MongoDB and PostgreSQL on Linux virtual machines created with Vagrant, running in VirtualBox.",
       "Wrote SSL encrypted website to track community tennis matches using ASP.NET MVC, Amazon S3, and PostgreSQL. Allowed for end user score entry and automated rankings.",
@@ -62,6 +67,7 @@
     "Dates": "June 2001 to March 2002",
     "Position": "Windows and Web Developer",
     "Location": "Columbia, SC",
+    "Image": "business.png",
     "BulletPoints": [
       "Developed object-oriented client/server commercial software for use by tax professionals using Delphi and Interbase.",
       "Developed web site based on the same set of business classes, greatly reducing time-to-market.",
@@ -75,6 +81,7 @@
     "Dates": "March 1999 to June 2001",
     "Position": "Contract Programmer",
     "Location": "Gastonia, NC & Columbia, SC",
+    "Image": "psnc.png",
     "BulletPoints": [
       "Design and developed software to determine the feasibility of potential gas projects.",
       "Wrote various software utilities in Delphi, using NT services, and a simplified XML server for processing XML documents."
@@ -87,6 +94,7 @@
     "Dates": "November 1998 to January 1999",
     "Position": "Contract Programmer",
     "Location": "Charleston, SC",
+    "Image": "carepoint.png",
     "BulletPoints": [
       "Wrote multithreaded communications server with Delphi 3 to allow multiple clients to transact with server over TCP/IP.",
       "Wrote custom socket components to handle multiple threads and sockets.",
@@ -100,6 +108,7 @@
     "Dates": "February 1998 to November 1998",
     "Position": "Systems Engineer",
     "Location": "Columbia, SC",
+    "Image": "ibss.png",
     "BulletPoints": [
       "Designed and wrote, in Delphi 3, timesheet tracking software.",
       "Wrote installation software for distribution of software updates over a network.",
@@ -114,6 +123,7 @@
     "Dates": "February 1995 to February 1998",
     "Position": "Senior Developer",
     "Location": "Columbia, SC",
+    "Image": "business.png",
     "BulletPoints": [
       "Was part of a two man team to head up creation of IT department. Duties included gathering of specifications to design and eventually develop corporate information system in Delphi 1.0, used company wide. This included choosing development tools, hardware, and workstations.",
       "Duties also included, design, creation and tuning of the Informix database and design and programming of the front end in Delphi.",
@@ -127,6 +137,7 @@
     "Dates": "November 1992 to November 1994",
     "Position": "Systems Administrator",
     "Location": "Columbia, SC",
+    "Image": "business.png",
     "BulletPoints": [
       "Automated credit card validation testing in Pascal, saving hundreds of man hours.",
       "Maintained Novell Network (v3.12), including the physical LAN.",

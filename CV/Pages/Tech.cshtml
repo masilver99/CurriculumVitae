@@ -1,0 +1,68 @@
+﻿@page
+@model CV.Pages.TechModel
+@{
+    ViewData["Title"] = "Technological Experience";
+}
+
+@foreach (var techCategory in Model.TechCategories)
+{
+    <div class="container item-title">
+        <div class="row">
+            <div class="col-12">
+                <div class="companyName">
+                    @*<img class="workImage" src="~/img/@techItem.Image" />*@
+                    @techCategory.Category
+                </div>
+            </div>
+        </div>
+        <div class="card-deck">
+            @foreach (var techItem in techCategory.Items)
+            {
+                    <div class="card border-primary mb-3">
+                        <div class="card-header"><img class="workImage" src="~/img/@techItem.Image" />@techItem.Name</div>
+                        <div class="card-body test-primary">
+                            <h5 class="card-title">@techItem.Name</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+            }
+        </div>
+    </div>
+        
+        @*<div class="d-flex flex-row justify-content-between align-items-center item-title">
+            <div class="col-8">
+                <div class="companyName">
+                    <img class="workImage" src="~/img/@techItem.Image"/>
+                    @techItem.Name
+                </div>
+                <div class="workTitle">
+                    <i class="far fa-address-card"></i>
+                    @techItem.Years
+                </div>
+            </div>
+            <div class="col-4">
+                <div>
+                    <i class="far fa-calendar-alt"></i> @techItem.ExperienceLevel
+                </div>
+                <div>
+                    <i class="fas fa-map-marked-alt"></i>
+                    @techItem.Years
+                </div>
+            </div>
+        </div>
+        <div>
+            <ul class="fa-ul listItem">
+                @foreach (var item in techItem.BulletPoints)
+                {
+                    <li>
+                        @item
+                    </li>
+                }
+            </ul>
+        </div>
+        <div class="border-container">
+            <img src="~/img/border.png" />
+        </div>
+        *@
+        }
+

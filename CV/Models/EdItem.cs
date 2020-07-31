@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace CV.Models
 {
-    public class WorkItem
+    public class EdItem
     {
         public string CompanyName { get; set; }
         public string Division { get; set; }

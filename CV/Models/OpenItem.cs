@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace CV.Models
 {
-    public class WorkItem
+    public class OpenItem
     {
-        public string CompanyName { get; set; }
+        public string ProjectName { get; set; }
         public string Division { get; set; }
         public string Dates { get; set; }
         public string Position { get; set; }

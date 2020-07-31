@@ -12,16 +12,46 @@ a {
   color: #0366d6;
 }
 
+.item-title {
+    padding-top: 1rem;
+    padding-bottom: .6rem;
+}
+
+ul.listItem li:before {
+    font-family: 'FontAwesome';
+    //font-size: .6rem;
+    content: '\f1b2';
+    margin: 0 5px 0 -25px;
+}
+
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.border-container {
+    display: flex;
+    justify-content: center;
+    opacity: 0.5;
+}
+
+.workImage {
+    width: 2rem;
+    align-content: center;
+    margin-bottom: .5rem;
+}
+
+.navbar {
+    background-color: rgb(36, 37, 55);
+    padding-top: .1rem;
+    padding-bottom: .1rem;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
 /* Sticky footer styles
@@ -29,10 +59,26 @@ a {
 html {
   font-size: 14px;
 }
+
 @media (min-width: 768px) {
   html {
     font-size: 16px;
   }
+}
+
+.primary-ctn {
+}
+
+.companyName {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+
+.workTitle {
+    font-weight: 600;
+    font-style: italic;
+    color: darkblue;
 }
 
 .border-top {
