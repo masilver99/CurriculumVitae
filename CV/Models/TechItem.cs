@@ -25,5 +25,20 @@ namespace CV.Models
         public int ExperienceLevel { get; set; }
 
         public List<string> BulletPoints { get; set; }
+
+        public int GetFullStars()
+        {
+            return (ExperienceLevel - GetHalfStars()) / 2;
+        }
+
+        public int GetHalfStars()
+        {
+            return (ExperienceLevel % 2);
+        }
+
+        public int GetEmptyStars()
+        {
+            return (10 - ExperienceLevel - GetHalfStars()) / 2;
+        }
     }
 }

@@ -4,7 +4,7 @@ for details on configuring this project to bundle and minify static web assets. 
 a.navbar-brand {
   white-space: normal;
   text-align: center;
-  word-break: break-all;
+  word-break: keep-all;
 }
 
 /* Provide sufficient contrast against white background */
@@ -12,16 +12,15 @@ a {
   color: #0366d6;
 }
 
-.item-title {
-    padding-top: 1rem;
-    padding-bottom: .6rem;
-}
-
 ul.listItem li:before {
     font-family: 'FontAwesome';
     //font-size: .6rem;
     content: '\f1b2';
     margin: 0 5px 0 -25px;
+}
+
+ul.listItem {
+    margin-bottom: 0;
 }
 
 .btn-primary {
@@ -40,6 +39,12 @@ ul.listItem li:before {
     width: 2rem;
     align-content: center;
     margin-bottom: .5rem;
+}
+
+.techImage {
+    width: 2rem;
+    margin-bottom: .1rem;
+    margin-right: .5rem;
 }
 
 .navbar {
@@ -71,7 +76,7 @@ html {
 
 .companyName {
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 

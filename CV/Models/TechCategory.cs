@@ -8,6 +8,7 @@ namespace CV.Models
     public class TechCategory
     {
         public string Category { get; set; }
+        public string Title { get; set; }
         public List<TechItem> Items { get; set; }
     }
 }

@@ -2,6 +2,7 @@
 [
   {
     "Category": "Programming Languages",
+    "Title": "Language",
     "Items": [
       {
         "Name": "C#",
@@ -16,7 +17,7 @@
       {
         "Name": "Delphi",
         "Years": 1,
-        "ExperienceLevel": 10,
+        "ExperienceLevel": 9,
         "Image": "Delphi.png",
         "BulletPoints": [
           "sadcsadc",
@@ -26,7 +27,7 @@
       {
         "Name": "Python",
         "Years": 1,
-        "ExperienceLevel": 10,
+        "ExperienceLevel": 4,
         "Image": "Python-logo-notext.svg",
         "BulletPoints": [
           "sadcsadc",
@@ -36,7 +37,7 @@
       {
         "Name": "C++",
         "Years": 1,
-        "ExperienceLevel": 10,
+        "ExperienceLevel": 3,
         "Image": "cpp_logo.png",
         "BulletPoints": [
           "sadcsadc",
@@ -46,7 +47,7 @@
       {
         "Name": "SQL",
         "Years": 1,
-        "ExperienceLevel": 10,
+        "ExperienceLevel": 8,
         "Image": "",
         "BulletPoints": [
           "sadcsadc",
@@ -57,11 +58,12 @@
   },
   {
     "Category": "Databases",
+    "Title": "Database",
     "Items": [
       {
         "Name": "SqlServer",
         "Years": 1,
-        "ExperienceLevel": 10,
+        "ExperienceLevel": 5,
         "Image": "microsoft-sql-server-logo-96AF49E2B3-seeklogo.com.png",
         "BulletPoints": [
           "sadcsadc",
@@ -71,7 +73,7 @@
       {
         "Name": "Oracle",
         "Years": 1,
-        "ExperienceLevel": 10,
+        "ExperienceLevel": 6,
         "Image": "640px-Oracle_Logo.svg.png",
         "BulletPoints": [
           "sadcsadc",
