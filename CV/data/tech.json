@@ -48,7 +48,7 @@
         "Name": "SQL",
         "Years": 1,
         "ExperienceLevel": 8,
-        "Image": "",
+        "Image": "mono-state-sql.svg",
         "BulletPoints": [
           "sadcsadc",
           "sadcasdcsadc"
@@ -65,7 +65,7 @@
         "Years": 1,
         "ExperienceLevel": 5,
         "Image": "microsoft-sql-server-logo-96AF49E2B3-seeklogo.com.png",
-        "BulletPoints": [
+        "BulletPoints": [ 
           "sadcsadc",
           "sadcasdcsadc"
         ]
@@ -84,7 +84,7 @@
         "Name": "MongoDB",
         "Years": 1,
         "ExperienceLevel": 1,
-        "Image": "",
+        "Image": "MongoDB_Leaf_FullColor_RGB.png",
         "BulletPoints": [
           "sadcsadc",
           "sadcasdcsadc"
@@ -94,7 +94,7 @@
         "Name": "Informix",
         "Years": 1,
         "ExperienceLevel": 10,
-        "Image": "",
+        "Image": "informix.gif",
         "BulletPoints": [
           "sadcsadc",
           "sadcasdcsadc"

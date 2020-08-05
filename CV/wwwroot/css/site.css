@@ -2,14 +2,46 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: keep-all;
+    white-space: normal;
+    text-align: center;
+    word-break: keep-all;
 }
+
+.navbar-left {
+    float: left;
+    position: relative;
+    display: inline-block;
+}
+
+.navbar-parent {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.navbar-right {
+    float: right;
+    display: inline-block;
+}
+
+
 
 /* Provide sufficient contrast against white background */
 a {
   color: #0366d6;
+}
+
+[aria-expanded="true"] div.expand:before {
+    font-family: "FontAwesome";
+    //font-weight: 400;
+    content: '\f139';
+}
+
+[aria-expanded="false"] div.expand:before {
+    font-family: "FontAwesome";
+    //font-weight: 400;
+    content: '\f13a';
 }
 
 ul.listItem li:before {
@@ -69,6 +101,15 @@ html {
   html {
     font-size: 16px;
   }
+}
+
+@media (max-width: 400px) {
+    .techImage {
+        width: 1rem;
+    }
+    .rating {
+        font-size: .75rem;
+    }
 }
 
 .primary-ctn {
