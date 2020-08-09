@@ -15,7 +15,7 @@ namespace CV.Pages
     {
         private readonly ILogger<EdModel> _logger;
 
-        public IList<WorkItem> WorkItems { get; }
+        public IList<EdItem> EdItems { get; }
 
         public EdModel(ILogger<EdModel> logger)
         {
@@ -25,7 +25,7 @@ namespace CV.Pages
                 ReadCommentHandling = JsonCommentHandling.Skip
             };
 
-            this.WorkItems = JsonSerializer.Deserialize<List<WorkItem>>(System.IO.File.ReadAllText("data/work.json"), options);
+            this.EdItems = JsonSerializer.Deserialize<List<EdItem>>(System.IO.File.ReadAllText("data/ed.json"), options);
         }
 
         public void OnGet()

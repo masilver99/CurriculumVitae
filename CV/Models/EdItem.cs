@@ -7,11 +7,9 @@ namespace CV.Models
 {
     public class EdItem
     {
-        public string CompanyName { get; set; }
-        public string Division { get; set; }
-        public string Dates { get; set; }
-        public string Position { get; set; }
-        public string Location { get; set; }
+        public string SchoolName { get; set; }
+        public string Degree { get; set; }
+        public string GraduationDate { get; set; }
         public string Image { get; set; }
         public List<string> BulletPoints { get; set; }
     }

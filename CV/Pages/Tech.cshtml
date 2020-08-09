@@ -1,10 +1,10 @@
 ﻿@page
 @model CV.Pages.TechModel
 @{
+    int count = 0;
     ViewData["Title"] = "Technological Experience";
 }           @foreach (var techCategory in Model.TechCategories)
 {
-    int count = 0;
     <table class="table">
         <thead>
             <tr>
@@ -57,47 +57,18 @@
             </tr>
                 <tr class="collapse out" id='@("collapseme"+count++)'>
                     <td colspan="4">
-                        Hello World
+                        <ul>
+                            @foreach (var bullet in techItem.BulletPoints)
+                            {
+                            <li>
+                                @bullet
+                            </li>
+                            }
+                        </ul>
                     </td>
                 </tr>
             }
         </tbody>
     </table>
-
-    @*<div class="d-flex flex-row justify-content-between align-items-center item-title">
-            <div class="col-8">
-                <div class="companyName">
-                    <img class="workImage" src="~/img/@techItem.Image"/>
-                    @techItem.Name
-                </div>
-                <div class="workTitle">
-                    <i class="far fa-address-card"></i>
-                    @techItem.Years
-                </div>
-            </div>
-            <div class="col-4">
-                <div>
-                    <i class="far fa-calendar-alt"></i> @techItem.ExperienceLevel
-                </div>
-                <div>
-                    <i class="fas fa-map-marked-alt"></i>
-                    @techItem.Years
-                </div>
-            </div>
-        </div>
-        <div>
-            <ul class="fa-ul listItem">
-                @foreach (var item in techItem.BulletPoints)
-                {
-                    <li>
-                        @item
-                    </li>
-                }
-            </ul>
-        </div>
-        <div class="border-container">
-            <img src="~/img/border.png" />
-        </div>
-    *@
 }
 

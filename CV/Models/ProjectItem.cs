@@ -11,6 +11,8 @@ namespace CV.Models
         public string Url { get; set; }
         public string Date { get; set; }
         public string Description { get; set; }
+        public string Purpose { get; set; }
+        public bool OpenSource { get; set; }
         public string Image { get; set; }
         public List<string> TechnologyUsed { get; set; }
     }

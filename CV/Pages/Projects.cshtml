@@ -4,44 +4,44 @@
     ViewData["Title"] = "Projects";
 }
 
+
 @foreach (var projectItem in Model.ProjectItems)
 {
-    <div class="d-flex flex-row justify-content-between align-items-center item-title">
-        <div class="col-8">
-            <div class="companyName">
-                <img class="workImage" src="~/img/@projectItem.Image"/>
-                @projectItem.SiteName
-            </div>
-            <div class="workTitle">
-                <i class="far fa-address-card"></i>
-                @projectItem.Description
+    <div class="card my-2">
+        <div class="card-header">
+            <div class="d-flex flex-wrap justify-content-between align-items-center item-title">
+                <div class="p-2 flex-grow-1">
+                    <div class="companyName">
+                        <img class="workImage" src="~/img/@projectItem.Image" />
+                        @projectItem.SiteName
+                    </div>
+                    @if (!string.IsNullOrWhiteSpace(projectItem.Url))
+                    {
+                        <div class="workTitle">
+                            <a href="@projectItem.Url"><i class="fas fa-globe"></i>@projectItem.Url</a>
+                        </div>
+                    }
+                </div>
+                <div class="p-1">
+                    <div>
+                        Began Work:
+                     </div>
+                     <div>
+                        <i class="far fa-calendar-alt"></i> @projectItem.Date
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-4">
-            <div>
-                Last Updated:
-                @projectItem.Date
-            </div>
-            <div>
-                <i class="fas fa-map-marked-alt"></i>
-                <a src="@projectItem.Url">@projectItem.Url</a>
-            </div>
+        <div class="card-body">
+            <div>projectItem.Description</div>
+            <ul class="fa-ul listItem">
+                @foreach (var item in projectItem.TechnologyUsed)
+                {
+                    <li>
+                        @item
+                    </li>
+                }
+            </ul>
         </div>
     </div>
-    <div>
-        <ul class="fa-ul listItem">
-            @foreach (var item in projectItem.TechnologyUsed)
-        {
-            <li>
-                @item
-            </li>
-        }
-            
-        </ul>
-    </div>
-    <div class="border-container">
-        <img src="~/img/border.png" />
-    </div>
-
 }
-

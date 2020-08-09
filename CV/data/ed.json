@@ -1,1 +1,14 @@
-﻿#
+﻿[
+  {
+    "SchoolName": "University of Georgia",
+    "Degree": "Bachlor of Science in Psychology",
+    "GraduationDate": "1992",
+    "Image": "uga.png",
+    "BulletPoints": [
+      "Numerous Computer Science classes",
+      "President and Secretary of Tau Epsilon Phi fraternity",
+      "Introduced computer record keeping to fraternity",
+      "Dean's list"
+    ]
+  }
+]
