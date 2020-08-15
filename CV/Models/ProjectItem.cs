@@ -14,6 +14,7 @@ namespace CV.Models
         public string Purpose { get; set; }
         public bool OpenSource { get; set; }
         public string Image { get; set; }
-        public List<string> TechnologyUsed { get; set; }
+        public List<string> Xref { get; set; } = new List<string>();
+        public List<string> TechnologyUsed { get; set; } = new List<string>();
     }
 }

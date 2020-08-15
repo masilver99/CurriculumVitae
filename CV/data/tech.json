@@ -1,37 +1,119 @@
-﻿// All data contained in this file is copywrited by Michael Silver and cannot be used without permission
+﻿/* All data contained in this file is copywrited by Michael Silver and cannot be used without permission */
 [
   {
     "Category": "Programming Languages",
     "Title": "Language",
+    "Xref": [
+      "LANGUAGES",
+      "LANGUAGE",
+      "PROGRAMMINGLANGUAGES"
+    ],
     "Items": [
       {
         "Name": "C#",
-        "Years": 1,
+        "Years": 16,
         "ExperienceLevel": 10,
         "Image": "C_Sharp_wordmark.svg",
+        "Versions": "2.0+",
         "BulletPoints": [
           "sadcsadc",
           "sadcasdcsadc"
+        ],
+        "Xref": [
+          "C#",
+          "CSHARP",
+          "NET",
+          "NETFRAMEWORK",
+          "NETCORE",
+          "CORE"
         ]
       },
       {
-        "Name": "Delphi",
-        "Years": 1,
+        "Name": "Delphi/Pascal",
+        "Years": 9,
         "ExperienceLevel": 9,
         "Image": "Delphi.png",
+        "Versions": "1.0-2006",
         "BulletPoints": [
           "sadcsadc",
           "sadcasdcsadc"
+        ],
+        "Xref": [
+          "DELPHI",
+          "PASCAL",
+          "OBJECTPASCAL",
+          "MODULA",
+          "OXYGEN"
         ]
       },
       {
         "Name": "Python",
-        "Years": 1,
+        "Years": 2,
         "ExperienceLevel": 4,
         "Image": "Python-logo-notext.svg",
+        "Versions": "2 & 3",
         "BulletPoints": [
           "sadcsadc",
           "sadcasdcsadc"
+        ],
+        "Xref": [
+          "PYTHON"
+        ]
+      },
+      {
+        "Name": "SQL",
+        "Years": 25,
+        "ExperienceLevel": 9,
+        "Image": "mono-state-sql.svg",
+        "Versions": "multiple",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "SQL",
+          "STRUCTURED QUERY LANGUAGE"
+        ]
+      },
+      {
+        "Name": "HTML",
+        "Years": 25,
+        "ExperienceLevel": 8,
+        "Image": "HTML5_logo_and_wordmark.svg",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "HTML",
+          "HYPERTEXTMARKUPLANGUAGE"
+        ]
+      },
+      {
+        "Name": "CSS",
+        "Years": 10,
+        "ExperienceLevel": 7,
+        "Image": "CSS3_logo_and_wordmark.svg",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "CSS"
+        ]
+      },
+      {
+        "Name": "Javascript",
+        "Years": 10,
+        "ExperienceLevel": 7,
+        "Image": "File_Unofficial_JavaScript_logo_2.svg",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "JS",
+          "JAVASCRIPT"
         ]
       },
       {
@@ -42,42 +124,277 @@
         "BulletPoints": [
           "sadcsadc",
           "sadcasdcsadc"
+        ],
+        "Xref": [
+          "C",
+          "C++"
+        ]
+      },
+      {
+        "Name": "C",
+        "Years": 1,
+        "ExperienceLevel": 3,
+        "Image": "1920px-The_C_Programming_Language_logo.svg.png",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "C",
+          "C++"
         ]
       },
       {
         "Name": "SQL",
-        "Years": 1,
-        "ExperienceLevel": 8,
+        "Years": 25,
+        "ExperienceLevel": 9,
         "Image": "mono-state-sql.svg",
         "BulletPoints": [
           "sadcsadc",
           "sadcasdcsadc"
+        ],
+        "Xref": [
+          "SQL",
+          "STRUCTURED QUERY LANGUAGE"
+        ]
+      },
+      {
+        "Name": "Ruby",
+        "Years": 2,
+        "ExperienceLevel": 3,
+        "Image": "",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "RUBY"
+        ]
+      },
+      {
+        "Name": "VBScript",
+        "Years": 2,
+        "ExperienceLevel": 3,
+        "Image": "VBScript.jpg",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "VBSCRIPT"
+        ]
+      },
+      {
+        "Name": "Typescript",
+        "Years": 1,
+        "ExperienceLevel": 3,
+        "Image": "Typescript_logo_2020.svg",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "TYPESCRIPT"
+        ]
+      },
+      {
+        "Name": "SCSS",
+        "Years": 1,
+        "ExperienceLevel": 2,
+        "Image": "sass-color-1c4aab2b.png",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "SCSS",
+          "SASS",
+          "SASSSCRIPT"
+
+        ]
+      },
+      {
+        "Name": "Perl",
+        "Years": 1,
+        "ExperienceLevel": 2,
+        "Image": "perl-onion.png",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "PERL"
+        ]
+      },
+      {
+        "Name": "PHP",
+        "Years": 1,
+        "ExperienceLevel": 2,
+        "Image": "new-php-logo.svg",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "PHP"
+        ]
+      },
+      {
+        "Name": "Ruby",
+        "Years": 1,
+        "ExperienceLevel": 2,
+        "Image": "ruby.png",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "RUBY"
         ]
       }
     ]
   },
   {
+    "Category": "Process/Design",
+    "Title": "Process",
+    "Xref": [
+      "LIBS",
+      "LIB",
+      "LIBRARY",
+      "LIBRARIES"
+    ],
+    "Items": [
+      {
+        "Name": "Agile",
+        "Years": 18,
+        "ExperienceLevel": 9,
+        "Image": "Microsoft_.NET_Framework_v4.5_logo.png",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "NET",
+          "NETFRAMEWORK"
+        ]
+      },
+      {
+        "Name": "Design Patterns",
+        "Years": 18,
+        "ExperienceLevel": 9,
+        "Image": "Microsoft_.NET_Framework_v4.5_logo.png",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "NET",
+          "NETFRAMEWORK"
+        ]
+      },
+      {
+        "Name": "Scrum",
+        "Years": 18,
+        "ExperienceLevel": 9,
+        "Image": "Microsoft_.NET_Framework_v4.5_logo.png",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "NET",
+          "NETFRAMEWORK"
+        ]
+      },
+      {
+        "Name": "Unit/Integration Testing",
+        "Years": 18,
+        "ExperienceLevel": 9,
+        "Image": "Microsoft_.NET_Framework_v4.5_logo.png",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "NET",
+          "NETFRAMEWORK"
+        ]
+      },
+      {
+        "Name": "SDLC",
+        "Years": 18,
+        "ExperienceLevel": 9,
+        "Image": "Microsoft_.NET_Framework_v4.5_logo.png",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "NET",
+          "NETFRAMEWORK"
+        ]
+      }
+
+
+    ]
+  },
+  {
     "Category": "Databases",
     "Title": "Database",
+    "Xref": [
+      "DATABASE",
+      "DATABASES",
+      "DB",
+      "DBS"
+    ],
     "Items": [
       {
         "Name": "SqlServer",
-        "Years": 1,
-        "ExperienceLevel": 5,
+        "Years": 10,
+        "ExperienceLevel": 8,
         "Image": "microsoft-sql-server-logo-96AF49E2B3-seeklogo.com.png",
-        "BulletPoints": [ 
+        "BulletPoints": [
           "sadcsadc",
           "sadcasdcsadc"
+        ],
+        "Xref": [
+          "SQL",
+          "TSQL",
+          "TRANSACT-SQL",
+          "SQLSERVER",
+          "MSSQLSERVER",
+          "MICROSOFTSQLSERVER"
         ]
       },
       {
         "Name": "Oracle",
-        "Years": 1,
-        "ExperienceLevel": 6,
+        "Years": 13,
+        "ExperienceLevel": 7,
         "Image": "640px-Oracle_Logo.svg.png",
         "BulletPoints": [
           "sadcsadc",
           "sadcasdcsadc"
+        ],
+        "Xref": [
+          "SQL",
+          "PLSQL",
+          "ORACLE",
+          "ORACLESQL"
+        ]
+      },
+      {
+        "Name": "PostgreSQL",
+        "Years": 10,
+        "ExperienceLevel": 6,
+        "Image": "PostgreSQL_logo.3colors.svg",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "POSTGRESSQL",
+          "POSTGRESQL",
+          "POSTGRES"
         ]
       },
       {
@@ -88,21 +405,312 @@
         "BulletPoints": [
           "sadcsadc",
           "sadcasdcsadc"
+        ],
+        "Xref": [
+          "NOSQL",
+          "MONGO",
+          "MONGODB"
+        ]
+      },
+      {
+        "Name": "SQLite",
+        "Years": 5,
+        "ExperienceLevel": 6,
+        "Image": "sqlite370_banner.gif",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "SQL",
+          "SQLITE",
+          "SQLLITE"
         ]
       },
       {
         "Name": "Informix",
-        "Years": 1,
-        "ExperienceLevel": 10,
+        "Years": 3,
+        "ExperienceLevel": 4,
         "Image": "informix.gif",
         "BulletPoints": [
           "sadcsadc",
           "sadcasdcsadc"
+        ],
+        "Xref": [
+          "SQL",
+          "INFORMIXSQL",
+          "INFORMIX",
+          "IBMINFORMIX"
+        ]
+      }
+    ]
+  },
+  {
+    "Category": "Frameworks",
+    "Title": "Framework",
+    "Xref": [
+      "FRAMEWORKS",
+      "FRAMEWORK"
+    ],
+    "Items": [
+      {
+        "Name": ".NET Framework (2.0-4.8)",
+        "Years": 18,
+        "ExperienceLevel": 9,
+        "Image": "Microsoft_.NET_Framework_v4.5_logo.png",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "NET",
+          "NETFRAMEWORK"
+        ]
+      },
+      {
+        "Name": ".NET Core (1.0-3.1)",
+        "Years": 4,
+        "ExperienceLevel": 9,
+        "Image": "NET_Core_Logo.svg",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "NET",
+          "NETCORE"
+        ]
+      },
+
+      {
+        "Name": "ASP.NET MVC",
+        "Years": 10,
+        "ExperienceLevel": 6,
+        "Image": "",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "POSTGRESSQL",
+          "POSTGRESQL",
+          "POSTGRES"
+        ]
+      },
+      {
+        "Name": "ASP.NET Razor Pages",
+        "Years": 10,
+        "ExperienceLevel": 6,
+        "Image": "",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "POSTGRESSQL",
+          "POSTGRESQL",
+          "POSTGRES"
+        ]
+      },
+      {
+        "Name": "ASP.NET WebForms",
+        "Years": 10,
+        "ExperienceLevel": 6,
+        "Image": "",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "POSTGRESSQL",
+          "POSTGRESQL",
+          "POSTGRES"
+        ]
+      },
+      {
+        "Name": "Bootstrap",
+        "Years": 10,
+        "ExperienceLevel": 6,
+        "Image": "",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "POSTGRESSQL",
+          "POSTGRESQL",
+          "POSTGRES"
+        ]
+      },
+      {
+        "Name": "jQuery",
+        "Years": 10,
+        "ExperienceLevel": 6,
+        "Image": "",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "POSTGRESSQL",
+          "POSTGRESQL",
+          "POSTGRES"
+        ]
+      },
+      {
+        "Name": "Ruby On Rails",
+        "Years": 10,
+        "ExperienceLevel": 6,
+        "Image": "",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "POSTGRESSQL",
+          "POSTGRESQL",
+          "POSTGRES"
+        ]
+      }
+    ]
+  },
+  {
+    "Category": "Notable Libraries",
+    "Title": "Library",
+    "Xref": [
+      "LIBS",
+      "LIB",
+      "LIBRARY",
+      "LIBRARIES"
+    ],
+    "Items": [
+      {
+        "Name": "Dapper",
+        "Years": 18,
+        "ExperienceLevel": 9,
+        "Image": "Microsoft_.NET_Framework_v4.5_logo.png",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "NET",
+          "NETFRAMEWORK"
+        ]
+      },
+      {
+        "Name": "Subversion",
+        "Years": 18,
+        "ExperienceLevel": 9,
+        "Image": "Microsoft_.NET_Framework_v4.5_logo.png",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "NET",
+          "NETFRAMEWORK"
+        ]
+      },
+      {
+        "Name": "Azure DevOps",
+        "Years": 18,
+        "ExperienceLevel": 9,
+        "Image": "Microsoft_.NET_Framework_v4.5_logo.png",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "NET",
+          "NETFRAMEWORK"
+        ]
+      },
+      {
+        "Name": "Git",
+        "Years": 18,
+        "ExperienceLevel": 9,
+        "Image": "Microsoft_.NET_Framework_v4.5_logo.png",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "NET",
+          "NETFRAMEWORK"
         ]
       }
 
+
+    ]
+  },
+  {
+    "Category": "Tools",
+    "Title": "Tool",
+    "Xref": [
+      "TOOLS",
+      "TOOL"
+    ],
+    "Items": [
+      {
+        "Name": "Git",
+        "Years": 18,
+        "ExperienceLevel": 9,
+        "Image": "Microsoft_.NET_Framework_v4.5_logo.png",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "NET",
+          "NETFRAMEWORK"
+        ]
+      },
+      {
+        "Name": "Subversion",
+        "Years": 18,
+        "ExperienceLevel": 9,
+        "Image": "Microsoft_.NET_Framework_v4.5_logo.png",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "NET",
+          "NETFRAMEWORK"
+        ]
+      },
+      {
+        "Name": "Azure DevOps",
+        "Years": 18,
+        "ExperienceLevel": 9,
+        "Image": "Microsoft_.NET_Framework_v4.5_logo.png",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "NET",
+          "NETFRAMEWORK"
+        ]
+      },
+      {
+        "Name": "Git",
+        "Years": 18,
+        "ExperienceLevel": 9,
+        "Image": "Microsoft_.NET_Framework_v4.5_logo.png",
+        "BulletPoints": [
+          "sadcsadc",
+          "sadcasdcsadc"
+        ],
+        "Xref": [
+          "NET",
+          "NETFRAMEWORK"
+        ]
+      }
+
+
     ]
   }
-
 ]
 

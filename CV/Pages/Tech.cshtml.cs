@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using System.IO;
-using System.Text.Json;
+using Utf8Json;
 
 namespace CV.Pages
 {
@@ -17,14 +17,10 @@ namespace CV.Pages
 
         public IList<TechCategory> TechCategories { get; }
 
-        public TechModel(ILogger<TechModel> logger)
+        public TechModel(ILogger<TechModel> logger, List<TechCategory> techCategories)
         {
             _logger = logger;
-            var options = new JsonSerializerOptions
-            {
-                ReadCommentHandling = JsonCommentHandling.Skip
-            };
-            this.TechCategories = JsonSerializer.Deserialize<List<TechCategory>>(System.IO.File.ReadAllText("data/tech.json"), options);
+            TechCategories = techCategories;
         }
 
         public void OnGet()

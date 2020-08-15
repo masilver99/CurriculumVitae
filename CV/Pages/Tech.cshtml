@@ -1,74 +1,7 @@
 ﻿@page
 @model CV.Pages.TechModel
 @{
-    int count = 0;
     ViewData["Title"] = "Technological Experience";
-}           @foreach (var techCategory in Model.TechCategories)
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">@techCategory.Title</th>
-                <th scope="col">Years</th>
-                <th scope="col">Expierence</th>
-                <th scope="col">Details</th>
-            </tr>
-        </thead>
-        <tbody>
-
-            @foreach (var techItem in techCategory.Items)
-            {
-
-            <tr>
-                <td>
-                    <img class="techImage" src="~/img/@techItem.Image" />@techItem.Name
-                </td>
-                <td>
-                    @techItem.Years
-                </td>
-                <td>
-                    <div class="rating">
-                        @for (int i = @techItem.GetFullStars() - 1; i >= 0; i--)
-                        {
-                            <i class="fas fa-star rating"></i>
-                        }
-                        @if (techItem.GetHalfStars() > 0)
-                        {
-                            <i class="fas rating fa-star-half-alt"></i>
-                        }
-                        @for (int i = @techItem.GetEmptyStars() - 1; i >= 0; i--)
-                        {
-                            <i class="far rating fa-star"></i>
-                        }
-                    </div>
-
-                </td>
-
-                <td>
-                    <button class="btn btn-outline-dark"
-                       aria-expanded="false"
-                       data-toggle="collapse"
-                       href='@("#collapseme"+count)'
-                       role="button">
-                       <div aria-hidden="true" class="expand"></div>
-                    </button>
-                </td>
-
-            </tr>
-                <tr class="collapse out" id='@("collapseme"+count++)'>
-                    <td colspan="4">
-                        <ul>
-                            @foreach (var bullet in techItem.BulletPoints)
-                            {
-                            <li>
-                                @bullet
-                            </li>
-                            }
-                        </ul>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
 }
 
+<partial name="_TechList" data="Model.TechCategories" />

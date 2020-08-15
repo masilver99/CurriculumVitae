@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using System.IO;
-using System.Text.Json;
+using Utf8Json;
 
 namespace CV.Pages
 {
@@ -15,12 +15,12 @@ namespace CV.Pages
     {
         private readonly ILogger<ProjectModel> _logger;
 
-        public IList<ProjectItem> ProjectItems { get; }
+        public List<ProjectItem> ProjectItems { get; }
 
-        public ProjectModel(ILogger<ProjectModel> logger)
+        public ProjectModel(ILogger<ProjectModel> logger, List<ProjectItem> projectItems)
         {
             _logger = logger;
-            this.ProjectItems = JsonSerializer.Deserialize<List<ProjectItem>>(System.IO.File.ReadAllText("data/projects.json"));
+            this.ProjectItems = projectItems;
         }
 
         public void OnGet()

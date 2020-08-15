@@ -24,7 +24,11 @@ namespace CV.Models
         /// </summary>
         public int ExperienceLevel { get; set; }
 
-        public List<string> BulletPoints { get; set; }
+        public string Versions { get; set; }
+
+        public List<string> BulletPoints { get; set; } = new List<string>();
+
+        public List<string> Xref { get; set; } = new List<string>();
 
         public int GetFullStars()
         {

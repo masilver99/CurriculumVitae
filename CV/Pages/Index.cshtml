@@ -5,6 +5,43 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Hello</h1>
+    <p>Welcome to my online curriculum vitae.</p>
+    <p><strong>I'm a passionate, professional software architect and programmer with extensive career experience solving
+complex problems with targeted, polished solutions. I'm enamored with researching new technology and programming
+advances and how they can reduce costs and increase revenue.</strong></p>
+    <p>If you need a short form resume, please request it here. This helps to limit the amount of spam I receive on my cell phone.</p>
 </div>
+
+<div class="text-center">
+<p>Do you need help?  Am I qualified for a position? Don't poke around my CV, just search for the relevant experience here. Seperate search terms with a comma.</p>
+<form method="get">
+    <input type="text" name="searchTerms" id="searchTerms" value="@Model.searchTerms"> 
+    <input type="submit" value="Search">
+</form>
+</div>
+
+<div>
+    <partial name="_TechList" model="Model.SearchedTechCategories" />
+</div>
+
+<div>
+    <partial name="_WorkList" model="Model.SearchedWorkItems" />
+</div>
+
+<div>
+    <partial name="_ProjectList" model="Model.SearchedProjectItems" />
+</div>
+
+<div>
+    <partial name="_EdList" model="Model.SearchedEdItems" />
+</div>
+
+@section Scripts
+{
+  <script type="text/javascript">
+    window.addEventListener('load',function(){
+        document.getElementById("searchTerms").select();
+    })
+  </script>
+}

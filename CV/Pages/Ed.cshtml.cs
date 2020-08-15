@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using System.IO;
-using System.Text.Json;
+using Utf8Json;
 
 namespace CV.Pages
 {
@@ -15,17 +15,12 @@ namespace CV.Pages
     {
         private readonly ILogger<EdModel> _logger;
 
-        public IList<EdItem> EdItems { get; }
+        public List<EdItem> EdItems { get; }
 
-        public EdModel(ILogger<EdModel> logger)
+        public EdModel(ILogger<EdModel> logger, List<EdItem> edItems)
         {
             _logger = logger;
-            var options = new JsonSerializerOptions
-            {
-                ReadCommentHandling = JsonCommentHandling.Skip
-            };
-
-            this.EdItems = JsonSerializer.Deserialize<List<EdItem>>(System.IO.File.ReadAllText("data/ed.json"), options);
+            EdItems = edItems;
         }
 
         public void OnGet()

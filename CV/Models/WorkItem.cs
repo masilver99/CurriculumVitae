@@ -13,6 +13,7 @@ namespace CV.Models
         public string Position { get; set; }
         public string Location { get; set; }
         public string Image { get; set; }
-        public List<string> BulletPoints { get; set; }
+        public List<string> Xref { get; set; } = new List<string>();
+        public List<string> BulletPoints { get; set; } = new List<string>();
     }
 }

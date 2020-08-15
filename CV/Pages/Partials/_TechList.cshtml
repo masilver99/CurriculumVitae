@@ -1,0 +1,88 @@
+﻿@using CV.Models
+@model List<TechCategory>
+
+@{
+    int count = 0;
+}
+<div class="container">
+@foreach (var techCategory in Model)
+{
+    <div class="cards">
+    <a href="#@techCategory.Title">@techCategory.Category</a> 
+    </div>
+}
+</div>
+
+
+@foreach (var techCategory in Model)
+{
+    <table class="table table-stripedX table-hover table-sm" id="@techCategory.Title">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col"><a href="#">@techCategory.Title</a></th>
+                <th scope="col">Years</th>
+                <th scope="col">Expierence</th>
+                <th scope="col">Details</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var techItem in techCategory.Items)
+            {
+
+            <tr>
+                <td scope="row">
+                    @if(!string.IsNullOrWhiteSpace(techItem.Image))
+                    {
+                        <img class="techImage" src="~/img/@techItem.Image" />
+                    }
+                    @techItem.Name
+                </td>
+                <td>
+                    @techItem.Years
+                </td>
+                <td>
+                    <div class="rating">
+                        @for (int i = @techItem.GetFullStars() - 1; i >= 0; i--)
+                        {
+                            <i class="fas fa-star rating"></i>
+                        }
+                        @if (techItem.GetHalfStars() > 0)
+                        {
+                            <i class="fas rating fa-star-half-alt"></i>
+                        }
+                        @for (int i = @techItem.GetEmptyStars() - 1; i >= 0; i--)
+                        {
+                            <i class="far rating fa-star"></i>
+                        }
+                    </div>
+
+                </td>
+
+                <td>
+                    <button class="btn btn-outline-dark"
+                       aria-expanded="false"
+                       data-toggle="collapse"
+                       href='@("#collapseme"+count)'
+                       role="button">
+                       <div aria-hidden="true" class="expand"></div>
+                    </button>
+                </td>
+
+            </tr>
+                <tr class="collapse out" id='@("collapseme"+count++)'>
+                    <td colspan="4">
+                        <ul>
+                            @foreach (var bullet in techItem.BulletPoints)
+                            {
+                            <li>
+                                @bullet
+                            </li>
+                            }
+                        </ul>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
