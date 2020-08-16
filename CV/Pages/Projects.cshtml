@@ -4,7 +4,9 @@
     ViewData["Title"] = "Projects";
 }
 
-
+@*   
+    <partial name="_ProjectList" model="new PartialViewModel<ProjectItem> { ItemList = Model.SearchedProjectItems, IsForSearch = true }" />
+ *@
 @foreach (var projectItem in Model.ProjectItems)
 {
     <div class="card my-2">

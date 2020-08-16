@@ -1,4 +1,5 @@
 ﻿@page
+@using CV.Models
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
@@ -20,23 +21,23 @@ advances and how they can reduce costs and increase revenue.</strong></p>
     <input type="submit" value="Search">
 </form>
 </div>
-
+<div class="searchResults">
 <div>
-    <partial name="_TechList" model="Model.SearchedTechCategories" />
+    <partial name="_TechList" model='new PartialViewModel<TechCategory> { ItemList = Model.SearchedTechCategories, IsForSearch = true }' />
 </div>
 
 <div>
-    <partial name="_WorkList" model="Model.SearchedWorkItems" />
+    <partial name="_WorkList" model="new PartialViewModel<WorkItem> { ItemList = Model.SearchedWorkItems, IsForSearch = true }" />
 </div>
 
 <div>
-    <partial name="_ProjectList" model="Model.SearchedProjectItems" />
+    <partial name="_ProjectList" model="new PartialViewModel<ProjectItem> { ItemList = Model.SearchedProjectItems, IsForSearch = true }" />
 </div>
 
 <div>
-    <partial name="_EdList" model="Model.SearchedEdItems" />
+    <partial name="_EdList" model="new PartialViewModel<EdItem> { ItemList = Model.SearchedEdItems, IsForSearch = true }" />
 </div>
-
+</div>
 @section Scripts
 {
   <script type="text/javascript">

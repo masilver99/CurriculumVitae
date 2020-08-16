@@ -68,6 +68,14 @@ ul.listItem {
     opacity: 0.5;
 }
 
+.fa-caret-square-up {
+    color: white;
+}
+
+.searchResults {
+    padding-top: .6rem
+}
+
 .workImage {
     width: 2rem;
     align-content: center;

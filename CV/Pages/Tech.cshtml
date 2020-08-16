@@ -1,7 +1,8 @@
 ﻿@page
+@using CV.Models
 @model CV.Pages.TechModel
 @{
     ViewData["Title"] = "Technological Experience";
 }
 
-<partial name="_TechList" data="Model.TechCategories" />
+<partial name="_TechList" model='new PartialViewModel<TechCategory> { ItemList = Model.TechCategories, IsForSearch = false }' />

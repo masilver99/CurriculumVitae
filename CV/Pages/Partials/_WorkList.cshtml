@@ -1,7 +1,7 @@
 ﻿@using CV.Models
-@model List<WorkItem>
+@model PartialViewModel<WorkItem>
 
-@foreach (var workItem in Model)
+@foreach (var workItem in Model.ItemList)
 {
     <div class="card my-2">
         <div class="card-header">

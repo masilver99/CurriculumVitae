@@ -1,8 +1,8 @@
 ﻿@page
+@using CV.Models
 @model CV.Pages.WorkModel
 @{
     ViewData["Title"] = "work";
 }
 
-<partial name="_WorkList" model="Model.WorkItems" />
-
+   <partial name="_WorkList" model="new PartialViewModel<WorkItem> { ItemList = Model.WorkItems, IsForSearch = false }" />
