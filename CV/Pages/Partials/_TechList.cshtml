@@ -34,7 +34,7 @@
         </thead>
         <tbody>
 
-            @foreach (var techItem in techCategory.Items)
+            @foreach (var techItem in techCategory.Items.OrderByDescending(i => i.ExperienceLevel))
             {
 
             <tr>
@@ -42,6 +42,10 @@
                     @if(!string.IsNullOrWhiteSpace(techItem.Image))
                     {
                         <img class="techImage" src="~/img/@techItem.Image" />
+                    }
+                    else
+                    {
+                        <img class="techImage" src="~/img/blank.png" />
                     }
                     @techItem.Name
                 </td>

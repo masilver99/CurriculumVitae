@@ -1,4 +1,4 @@
-﻿// All data contained in this file is copywrited by Michael Silver and cannot be used without permission
+﻿// All data contained in this file is copyrighted by Michael Silver and cannot be used without permission
 [
   {
     "CompanyName": "Wolters Kluwer",
@@ -8,28 +8,52 @@
     "Position": "Senior Product Software Engineer",
     "Location": "Kennesaw, GA",
     "Image": "wk.png",
+    "Xref": [
+      "WK",
+      "WOLTERSKLUWER",
+      "UTS",
+      "TAXWISE",
+      "UNIVERSALTAXSYSTEMS",
+      "TAXES",
+      "TAXPREP",
+      "TAXPREPARATION",
+      "FINANCE",
+      "REMOTE",
+      "KENNESAW",
+      "KENNESAWGA",
+      "GA",
+      "GEORGIA"
+
+    ],
     "BulletPoints": [
       "Manage different teams of programmers on a per project basis.",
-      "Primarily work on the Electronic Filing Center (EFC) team. Responsible for a large queue based backend, distributed system, processing millions of tax returns every year.",
+      "Primarily work on the Electronic Filing Center (EFC) team. Responsible for a large queue based back end, distributed system, processing millions of tax returns every year.",
       "\"Security Champion\", responsible for scanning and remediation planning for dozens of products for security, license and operational risks and reporting our security exposure and progress to our Vice President.",
       "Team is responsible for numerous products, from customer facing web applications, to console apps, to libraries and web apis."
     ]
   },
   {
     "CompanyName": "NCR Corporation",
-    "Division": "Professinoal Services",
+    "Division": "Professional Services",
     "CompanyNote": "100% Remote",
     "Dates": "May 2010 to May 2018",
     "Position": "Professional Services Manager",
     "Location": "Rome, GA",
     "Image": "ncr.png",
+    "Xref": [
+      "NCR",
+      "NCRINC",
+      "WALMART",
+      "RETAIL",
+      "REMOTE"
+    ],
     "BulletPoints": [
       "Supervised remote programmers, including mentoring, code reviews and assignments of tasks.",
       "Designed, developed and maintained software to manage over 56,000 retail self checkout machines and 700,000 additional devices at the largest retailer in the world.",
       "Designed and implemented complex communication and queuing software.",
       "Converted highly complex back end from Delphi to C#, including threaded code, raw socket communication, encryption and compression. Made extensive use of unit testing.",
-      "Maintained seven different web sites and a windows application used by numerous internal teams including support staff and over 2000 onsite Customer Engineers.",
-      "Introduced a standardized workflow, including Git, code reviews, task management, etc."
+      "Maintained seven different web sites and a windows application used by numerous internal teams including support staff and over 2000 on-site Customer Engineers.",
+      "Introduced a standardized work flow, including Git, code reviews, task management, etc."
     ]
   },
   {
@@ -40,6 +64,21 @@
     "Position": "Senior Level Developer",
     "Location": "Rome, GA",
     "Image": "wk.png",
+    "Xref": [
+      "WK",
+      "WOLTERSKLUWER",
+      "UTS",
+      "TAXWISE",
+      "UNIVERSALTAXSYSTEMS",
+      "TAXES",
+      "TAXPREP",
+      "TAXPREPARATION",
+      "FINANCE",
+      "ROME",
+      "ROMEGA",
+      "GA",
+      "GEORGIA"
+    ],
     "BulletPoints": [
       "Worked on commercial tax preparation software product for professionals. Began conversion from Delphi to C#.",
       "Converted back end processing code from Delphi to C# and legacy communications protocols to web services using WCF as well as NHibernate and Oracle queues.",
@@ -54,6 +93,21 @@
     "Position": "Consultant",
     "Location": "Rome, GA",
     "Image": "business.png",
+    "Xref": [
+      "SELFEMPLOYED",
+      "CONSULTANT",
+      "CONSULTING",
+      "ROME",
+      "ROMEGA",
+      "COLUMBIA",
+      "GA",
+      "GEORGIA",
+      "SC",
+      "SOUTHCAROLINA",
+      "COLUMBIASC",
+      "COLASC",
+      "COLA"
+    ],
     "BulletPoints": [
       "Wrote agent and web service to inventory and download concert tickets from the largest online ticket provider using Node.js, Python, MongoDB and PostgreSQL on Linux virtual machines created with Vagrant, running in VirtualBox.",
       "Wrote SSL encrypted website to track community tennis matches using ASP.NET MVC, Amazon S3, and PostgreSQL. Allowed for end user score entry and automated rankings.",
@@ -68,14 +122,27 @@
     "Position": "Windows and Web Developer",
     "Location": "Columbia, SC",
     "Image": "business.png",
+    "Xref": [
+      "XPRESS",
+      "EXPRESS",
+      "XPRESSGROUP",
+      "TAXES",
+      "FINANCE",
+      "TAXPREP",
+      "TAXPREPARATION",
+      "COLUMBIA",
+      "SC",
+      "COLUMBIASC",
+      "SOUTHCAROLINA"
+    ],
     "BulletPoints": [
       "Developed object-oriented client/server commercial software for use by tax professionals using Delphi and Interbase.",
       "Developed web site based on the same set of business classes, greatly reducing time-to-market.",
-      "While designing Xpress's first Windows based tax preparation software for the year 2002, Xpress was purchased by a competitor and the company ceased all tax software development."
+      "While designing Xpress' first Windows based tax preparation software for the year 2002, Xpress was purchased by a competitor and the company ceased all tax software development."
     ]
   },
   {
-    "CompanyName": "PSNC Energery",
+    "CompanyName": "PSNC Energy",
     "Division": "",
     "CompanyNote": "",
     "Dates": "March 1999 to June 2001",
@@ -96,7 +163,7 @@
     "Location": "Charleston, SC",
     "Image": "carepoint.png",
     "BulletPoints": [
-      "Wrote multithreaded communications server with Delphi 3 to allow multiple clients to transact with server over TCP/IP.",
+      "Wrote multi-threaded communications server with Delphi 3 to allow multiple clients to transact with server over TCP/IP.",
       "Wrote custom socket components to handle multiple threads and sockets.",
       "Worked on additional projects and bug fixes."
     ]
@@ -110,7 +177,7 @@
     "Location": "Columbia, SC",
     "Image": "ibss.png",
     "BulletPoints": [
-      "Designed and wrote, in Delphi 3, timesheet tracking software.",
+      "Designed and wrote, in Delphi 3, time sheet tracking software.",
       "Wrote installation software for distribution of software updates over a network.",
       "Began design work, including prototyping on a customer information and task management system.",
       "Designed and wrote, with C++ Builder, custom database client. Used as a front end to a proprietary database/transaction server on which IBSS's manufacturing software is built. Wrote low level socket routines to communicate with database."

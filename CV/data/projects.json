@@ -1,87 +1,287 @@
 ﻿[
   {
     "SiteName": "Nutrition Facts",
-    "Url": "",
+    "Url": "food.michaelsilver.us",
     "Date": "",
-    "Description": "",
-    "Purpose": "",
-    "OpenSoure": "true",
-    "Image": "wk.png",
+    "Description": "Began work on first application in the 1990's and over time have converted it from a Delphi Windows app, to a C# Web Forms app, to a .NET Core MVC app running in Docker. Source code is available upon request.",
+    "Purpose": "To testing new languages, frameworks and features.",
+    "OpenSoure": "false",
+    "Image": "",
+    "Screenshot": "",
+    "Status": "Active",
+    "CodeAvailable": "true",
+    "Types": [ "Website" ],
     "TechnologyUsed": [
-      "ASP.NET Core",
+      "ASP.NET Core MVC",
       "Postgres",
       "Dapper",
-      "Linux"
+      "Linux",
+      "Docker",
+      "Nginx reverse proxy",
+      "Unbuntu",
+      "Let's Encrypt"
+    ],
+    "TechXref": [
+      "C#",
+      "ASP.NET MVC",
+      ".NET Core (1.0-3.1)",
+      "PostgreSQL",
+      "Docker",
+      "Dapper",
+      "Ubuntu",
+      "Nginx"
+    ]
+  },
+  {
+    "SiteName": "Curriculum Vitae site",
+    "Url": "cv.michaelsilver.us",
+    "Date": "",
+    "Description": "This web site. All data is stored in json files and can be updated without a code change. Developed on Windows and deployed to a Unbuntu machine via a docker container. ",
+    "Purpose": "Provides searchable curriculum vitae for Michael Silver. ",
+    "OpenSoure": "true",
+    "Image": "wk.png",
+    "Screenshot": "Provides searchable curriculum vitae for Michael Silver. ",
+    "Status": "Active",
+    "CodeAvailable": "true",
+    "Types": [ "Website" ],
+    "TechnologyUsed": [
+      "ASP.NET Core Razor Pages",
+      "JSON",
+      "Nginx reverse proxy",
+      "Unbuntu",
+      "Let's Encrypt"
+    ],
+    "TechXref": [
+
     ]
   },
   {
     "SiteName": "WhoIsOpen.Today",
-    "Url": "",
+    "Url": "whosopen.today",
     "Date": "",
     "Description": "",
     "Purpose": "",
+    "OpenSoure": "false",
+    "Image": "wk.png",
+    "Screenshot": "",
+    "Status": "Active, no longer updated",
+    "CodeAvailable": "true",
+    "Types": [ "Website" ],
+    "TechnologyUsed": [
+      "ASP.NET Core MVC",
+      "Postgres",
+      "CSV",
+      "Docker",
+      "Nginx reverse proxy",
+      "Unbuntu",
+      "Let's Encrypt"
+    ],
+    "TechXref": [
+
+    ]
+  },
+  {
+    "SiteName": "NWorkQueue",
+    "Url": "https://github.com/masilver99/NWorkQueue",
+    "Date": "",
+    "Description": "Provides a thin wrapper around a database, Postgres, by default, allowing for safe queuing of messages, avoiding typical pitfalls, such as poison messages, or locks. Storage is abstracted out and a storage layer can be written for any storage medium, currently Postgres and SQLite are in development. Goal is to have two docker versions, one with the postgres db, the other without.",
+    "Purpose": "A simple, opinionated message queue, using Postgres for storage.",
     "OpenSoure": "true",
     "Image": "wk.png",
+    "Screenshot": "",
+    "Status": "Active, still in development",
+    "CodeAvailable": "true",
+    "Types": [ "Software" ],
     "TechnologyUsed": [
       "ASP.NET Core",
       "Postgres",
-      "CSV"
+      "gRPC",
+      "Message Queue",
+      "Docker",
+      "SQLite"
+    ],
+    "TechXref": [
+
     ]
   },
+
   {
     "SiteName": "RobbieSilver.com",
-    "Url": "",
+    "Url": "https://web.archive.org/web/20190109102302/https://robbiesilver.com/",
     "Date": "",
-    "Description": "",
+    "Description": "Designed a WordPress site for a family member.",
     "Purpose": "",
-    "OpenSoure": "true",
+    "OpenSoure": "false",
     "Image": "wk.png",
+    "Screenshot": "",
+    "Status": "Retired",
+    "CodeAvailable": "false",
+    "Types": [ "Website" ],
     "TechnologyUsed": [
-      "WordPress"
+      "WordPress",
+      "CSS"
+    ],
+    "TechXref": [
+
     ]
   },
   {
-    "SiteName": "Tennis Scoring",
+    "SiteName": "Live Tennis Scoring",
     "Url": "",
     "Date": "",
-    "Description": "",
+    "Description": "Created as a proof of concept to test live tennis scoring using C#, Vue.js, Bootstrap and SignalR.",
     "Purpose": "Proof of Concept",
-    "OpenSoure": "true",
+    "OpenSoure": "false",
     "Image": "wk.png",
+    "Screenshot": "",
+    "Status": "Retired/Demo",
+    "CodeAvailable": "true",
+    "Types": [ "Website" ],
     "TechnologyUsed": [
       "ASP.NET Core",
       "Heavy Javascript",
-      "SignalR"
+      "SignalR",
+      "Vue.js"
+    ],
+    "TechXref": [
+
     ]
   },
   {
     "SiteName": "RomeLadder.com",
     "Url": "",
     "Date": "",
-    "Description": "",
+    "Description": "Created to track local tennis league.",
     "Purpose": "",
     "OpenSoure": "true",
     "Image": "wk.png",
+    "Screenshot": "",
+    "Status": "Retired",
+    "CodeAvailable": "true",
+    "Types": [ "Website" ],
     "TechnologyUsed": [
-      "ASP.NET Core",
+      "ASP.NET 5",
       "Heavy Javascript",
       "SignalR"
+    ],
+    "TechXref": [
+
     ]
   },
   {
     "SiteName": "cvta.us",
-    "Url": "",
+    "Url": "https://web.archive.org/web/20160306224456/http://cvta.us/",
     "Date": "",
-    "Description": "",
-    "Purpose": "Proof of Concept",
+    "Description": "While secretary of the Coosa Valley Tennis Association, I redesigned their website using Joomla and a fair amount of custom css. Also setup and displayed live webcam feed. Site was mostly data driven, using custom built utilities to import tennis league schedules.",
+    "Purpose": "",
+    "OpenSoure": "false",
+    "Image": "wk.png",
+    "Screenshot": "",
+    "Status": "Retired",
+    "CodeAvailable": "true",
+    "Types": [ "Website" ],
+    "TechnologyUsed": [
+      "Joomla",
+      "CSS",
+      "SignalR"
+    ],
+    "TechXref": [
+
+    ]
+  },
+  {
+    "SiteName": "Keyboard Firmware Mods",
+    "Url": "https://web.archive.org/web/20160306224456/http://cvta.us/",
+    "Date": "",
+    "Description": "QMK firmware allows for the conversion of older keyboards to work on a USB port (along with many other features). Made changes to firmware to allow for the addition of an LCD panel and counting of keystrokes.",
+    "Purpose": "",
     "OpenSoure": "true",
     "Image": "wk.png",
+    "Screenshot": "",
+    "Status": "Active",
+    "CodeAvailable": "true",
+    "Types": [ "Firmware" ],
     "TechnologyUsed": [
-      "ASP.NET Core",
-      "Heavy Javascript",
-      "SignalR"
+      "C",
+      "Teensy IC",
+      "LCD Display"
+    ],
+    "TechXref": [
+
+    ]
+  },
+  {
+    "SiteName": "Internet Enabled TV Slideshow",
+    "Url": "",
+    "Date": "",
+    "Description": "Loads a web page automatically from a Raspberry Pi that displays a slide show of items from a specific directory on the webserver. Includes items like live weather radar, etc.",
+    "Purpose": "",
+    "OpenSoure": "false",
+    "Image": "wk.png",
+    "Screenshot": "",
+    "Status": "Retired",
+    "CodeAvailable": "true",
+    "Types": [ "Website/Hardware" ],
+    "TechnologyUsed": [
+      "Python",
+      "Raspberry Pi",
+      "HTML"
+    ],
+    "TechXref": [
+
+    ]
+  },
+  {
+    "SiteName": "Internet Enabled TV Slideshow",
+    "Url": "",
+    "Date": "",
+    "Description": "Loads a web page automatically from a Raspberry Pi that displays a slide show of items from a specific directory on the webserver. Includes items like live weather radar, etc.",
+    "Purpose": "",
+    "OpenSoure": "false",
+    "Image": "wk.png",
+    "Screenshot": "",
+    "Status": "Retired",
+    "CodeAvailable": "true",
+    "Types": [
+      "Firmware"
+    ],
+    "TechnologyUsed": [
+      "Python",
+      "Raspberry Pi",
+      "HTML"
+    ],
+    "TechXref": [
+
+    ]
+  },
+  // Managed team working on File download queue
+  // Managed team working on enrollment software
+  // Billing, critical part of infrastructin
+  // ERP software from scratch
+  // Model M keyboard mods
+  // Arduino lighting
+  {
+    "SiteName": "Internet Enabled TV Slideshow",
+    "Url": "",
+    "Date": "",
+    "Description": "Loads a web page automatically from a Raspberry Pi that displays a slide show of items from a specific directory on the webserver. Includes items like live weather radar, etc.",
+    "Purpose": "",
+    "OpenSoure": "false",
+    "Image": "wk.png",
+    "Screenshot": "",
+    "Status": "Retired",
+    "CodeAvailable": "true",
+    "Types": [
+      "Firmware"
+    ],
+    "TechnologyUsed": [
+        "Python",
+        "Raspberry Pi",
+        "HTML"
+    ],
+    "TechXref":
+    [
+
     ]
   }
-
-
 ]

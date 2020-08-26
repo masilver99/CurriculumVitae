@@ -1,0 +1,190 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: keep-all;
+}
+
+.navbar-left {
+    float: left;
+    position: relative;
+    display: inline-block;
+}
+
+.navbar-parent {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.navbar-right {
+    float: right;
+    display: inline-block;
+}
+
+.references {
+    margin-top: 3rem;
+}
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
+}
+
+[aria-expanded="true"] div.expand:before {
+    font-family: "FontAwesome";
+    //font-weight: 400;
+    content: '\f139';
+}
+
+[aria-expanded="false"] div.expand:before {
+    font-family: "FontAwesome";
+    //font-weight: 400;
+    content: '\f13a';
+}
+
+ul.listItem li:before {
+    font-family: 'FontAwesome';
+    //font-size: .6rem;
+    content: '\f1b2';
+    margin: 0 5px 0 -25px;
+}
+
+ul.listItem {
+    margin-bottom: 0;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.border-container {
+    display: flex;
+    justify-content: center;
+    opacity: 0.5;
+}
+
+.rrlinkCard {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+}
+
+.linkIcon {
+    width: 3rem;
+    padding-top: 2rem;
+}
+
+.fa-caret-square-up {
+    color: white;
+}
+
+.searchResults {
+    padding-top: .6rem
+}
+
+.workImage {
+    width: 2rem;
+    align-content: center;
+    margin-bottom: .5rem;
+}
+
+.techImage {
+    max-width: 2rem;
+    max-height: 2rem;
+    margin-bottom: .1rem;
+    margin-right: .5rem;
+}
+
+
+
+.table-stripedX tbody tr:nth-of-type(4n+1) {
+    background-color: rgba(0,0,0,.05);
+}
+
+.navbar {
+    background-color: rgb(36, 37, 55);
+    padding-top: .1rem;
+    padding-bottom: .1rem;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+    .techImage {
+        width: 1rem;
+    }
+    .rating {
+        font-size: .75rem;
+    }
+}
+
+.primary-ctn {
+}
+
+.companyName {
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+
+.workTitle {
+    font-weight: 600;
+    font-style: italic;
+    color: darkblue;
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}

@@ -1,0 +1,99 @@
+﻿[
+  {
+    "SiteName": "Nutrition Facts",
+    "Url": "",
+    "Date": "",
+    "Description": "",
+    "Purpose": "",
+    "OpenSoure": "true",
+    "Image": "wk.png",
+    "Screenshot": "",
+    "Status": "Active",
+    "TechnologyUsed": [
+      "ASP.NET Core",
+      "Postgres",
+      "Dapper",
+      "Linux"
+    ]
+  },
+  {
+    "SiteName": "WhoIsOpen.Today",
+    "Url": "",
+    "Date": "",
+    "Description": "",
+    "Purpose": "",
+    "OpenSoure": "true",
+    "Image": "wk.png",
+    "Screenshot": "",
+    "Status": "Retired/Demo",
+    "TechnologyUsed": [
+      "ASP.NET Core",
+      "Postgres",
+      "CSV"
+    ]
+  },
+  {
+    "SiteName": "RobbieSilver.com",
+    "Url": "",
+    "Date": "",
+    "Description": "",
+    "Purpose": "",
+    "OpenSoure": "true",
+    "Image": "wk.png",
+    "Screenshot": "",
+    "Status": "Retired/Demo",
+    "TechnologyUsed": [
+      "WordPress"
+    ]
+  },
+  {
+    "SiteName": "Tennis Scoring",
+    "Url": "",
+    "Date": "",
+    "Description": "",
+    "Purpose": "Proof of Concept",
+    "OpenSoure": "true",
+    "Image": "wk.png",
+    "Screenshot": "",
+    "Status": "Retired/Demo",
+    "TechnologyUsed": [
+      "ASP.NET Core",
+      "Heavy Javascript",
+      "SignalR"
+    ]
+  },
+  {
+    "SiteName": "RomeLadder.com",
+    "Url": "",
+    "Date": "",
+    "Description": "",
+    "Purpose": "",
+    "OpenSoure": "true",
+    "Image": "wk.png",
+    "Screenshot": "",
+    "Status": "Retired/Demo",
+    "TechnologyUsed": [
+      "ASP.NET Core",
+      "Heavy Javascript",
+      "SignalR"
+    ]
+  },
+  {
+    "SiteName": "cvta.us",
+    "Url": "",
+    "Date": "",
+    "Description": "",
+    "Purpose": "Proof of Concept",
+    "OpenSoure": "true",
+    "Image": "wk.png",
+    "Screenshot": "",
+    "Status": "Retired/Demo",
+    "TechnologyUsed": [
+      "ASP.NET Core",
+      "Heavy Javascript",
+      "SignalR"
+    ]
+  }
+
+
+]

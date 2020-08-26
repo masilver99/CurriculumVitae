@@ -14,7 +14,21 @@ namespace CV.Models
         public string Purpose { get; set; }
         public bool OpenSource { get; set; }
         public string Image { get; set; }
+        public string Screenshot { get; set; }
+        public string Status { get; set; }
+        public bool CodeAvailable { get; set; }
+
+        public List<string> Types { get; set; }
         public List<string> Xref { get; set; } = new List<string>();
         public List<string> TechnologyUsed { get; set; } = new List<string>();
+        //Lookup Tech XRef for tech used
+    }
+
+    public enum ProjectType
+    {
+        Hardware,   //<i class="fas fa-server"></i>
+        Application,  //<i class="far fa-window-restore"></i>
+        Website,  //<i class="fas fa-globe-americas"></i>
+        Firmware  //<i class="fas fa-microchip"></i>
     }
 }

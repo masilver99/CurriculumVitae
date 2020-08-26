@@ -30,7 +30,8 @@ a.navbar-brand {
 }
 /* Provide sufficient contrast against white background */
 a {
-    color: #0366d6;
+       color: #0366d6;
+
 }
 
 [aria-expanded="true"] div.expand:before {
@@ -68,6 +69,20 @@ ul.listItem {
     opacity: 0.5;
 }
 
+.rrlinkCard {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+}
+
+.linkIcon {
+    width: 3rem;
+    padding-top: 2rem;
+}
+
+.menunavbar {
+    background-color: darkolivegreen;
+}
 .fa-caret-square-up {
     color: white;
 }
@@ -107,6 +122,9 @@ ul.listItem {
     border-color: #1861ac;
 }
 
+.nav-link {
+    color: bisque;
+}
 /* Sticky footer styles
 -------------------------------------------------- */
 html {

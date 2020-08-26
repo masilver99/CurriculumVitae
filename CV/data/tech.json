@@ -1,4 +1,4 @@
-﻿/* All data contained in this file is copywrited by Michael Silver and cannot be used without permission */
+﻿/* All data contained in this file is copyrighted by Michael Silver and cannot be used without permission */
 [
   {
     "Category": "Programming Languages",
@@ -16,10 +16,13 @@
         "Image": "C_Sharp_wordmark.svg",
         "Versions": "2.0+",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Currently, my most used language.",
+          "Use in too many projects to count, ranging from web applications, web apis, libraries, console apps, etc.",
+          "Stay up-to-date on the latest versions."
         ],
         "Xref": [
+          "MS",
+          "MICROSOFT",
           "C#",
           "CSHARP",
           "NET",
@@ -35,8 +38,9 @@
         "Image": "Delphi.png",
         "Versions": "1.0-2006",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Used mostly for Windows UI applications.",
+          "Used with numerous projects and companies.",
+          "Have used pascal since the mid 1990's."
         ],
         "Xref": [
           "DELPHI",
@@ -53,11 +57,11 @@
         "Image": "Python-logo-notext.svg",
         "Versions": "2 & 3",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Used for a Linux based web screen scraper."
         ],
         "Xref": [
-          "PYTHON"
+          "PYTHON",
+          "PY"
         ]
       },
       {
@@ -67,8 +71,8 @@
         "Image": "mono-state-sql.svg",
         "Versions": "multiple",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Used in almost every database application I've been involved in.",
+          "Too many applications to count."
         ],
         "Xref": [
           "SQL",
@@ -81,12 +85,12 @@
         "ExperienceLevel": 8,
         "Image": "HTML5_logo_and_wordmark.svg",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Used in every web project I've been involved in."
         ],
         "Xref": [
           "HTML",
-          "HYPERTEXTMARKUPLANGUAGE"
+          "HYPERTEXTMARKUPLANGUAGE",
+          "HYPERTEXT"
         ]
       },
       {
@@ -95,11 +99,12 @@
         "ExperienceLevel": 7,
         "Image": "CSS3_logo_and_wordmark.svg",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Used in all web projects."
         ],
         "Xref": [
-          "CSS"
+          "CSS",
+          "STYLESHEETS",
+          "CASCADINGSTYLESHEETS"
         ]
       },
       {
@@ -108,8 +113,8 @@
         "ExperienceLevel": 7,
         "Image": "File_Unofficial_JavaScript_logo_2.svg",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Used in almost all web projects I've been involved in.",
+          "Also used for Node.js projects."
         ],
         "Xref": [
           "JS",
@@ -122,8 +127,7 @@
         "ExperienceLevel": 3,
         "Image": "cpp_logo.png",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Used exclusively in one job to create a UI to a custom written database."
         ],
         "Xref": [
           "C",
@@ -136,8 +140,8 @@
         "ExperienceLevel": 3,
         "Image": "1920px-The_C_Programming_Language_logo.svg.png",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Used in several jobs.",
+          "Used for embedded programming."
         ],
         "Xref": [
           "C",
@@ -145,27 +149,12 @@
         ]
       },
       {
-        "Name": "SQL",
-        "Years": 25,
-        "ExperienceLevel": 9,
-        "Image": "mono-state-sql.svg",
-        "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
-        ],
-        "Xref": [
-          "SQL",
-          "STRUCTURED QUERY LANGUAGE"
-        ]
-      },
-      {
         "Name": "Ruby",
-        "Years": 2,
+        "Years": 1,
         "ExperienceLevel": 3,
-        "Image": "",
+        "Image": "ruby.png",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Used for a few Rails projects."
         ],
         "Xref": [
           "RUBY"
@@ -177,10 +166,11 @@
         "ExperienceLevel": 3,
         "Image": "VBScript.jpg",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Used for scripting on Windows."
         ],
         "Xref": [
+          "MS",
+          "MICROSOFT",
           "VBSCRIPT"
         ]
       },
@@ -190,11 +180,11 @@
         "ExperienceLevel": 3,
         "Image": "Typescript_logo_2020.svg",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Used for proof of concept project."
         ],
         "Xref": [
-          "TYPESCRIPT"
+          "TYPESCRIPT",
+          "TS"
         ]
       },
       {
@@ -203,14 +193,12 @@
         "ExperienceLevel": 2,
         "Image": "sass-color-1c4aab2b.png",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Used to simplify CSS code with variables, etc."
         ],
         "Xref": [
           "SCSS",
           "SASS",
           "SASSSCRIPT"
-
         ]
       },
       {
@@ -219,8 +207,8 @@
         "ExperienceLevel": 2,
         "Image": "perl-onion.png",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Used for heaving text processing projects.",
+          "Not a preferred language due to it cryptic syntax."
         ],
         "Xref": [
           "PERL"
@@ -232,24 +220,10 @@
         "ExperienceLevel": 2,
         "Image": "new-php-logo.svg",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Used mostly for fixing bugs in existing code."
         ],
         "Xref": [
           "PHP"
-        ]
-      },
-      {
-        "Name": "Ruby",
-        "Years": 1,
-        "ExperienceLevel": 2,
-        "Image": "ruby.png",
-        "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
-        ],
-        "Xref": [
-          "RUBY"
         ]
       }
     ]
@@ -258,84 +232,116 @@
     "Category": "Process/Design",
     "Title": "Process",
     "Xref": [
-      "LIBS",
-      "LIB",
-      "LIBRARY",
-      "LIBRARIES"
+      "PROCESS",
+      "SOFTWAREDESIGN"
     ],
     "Items": [
       {
-        "Name": "Agile",
+        "Name": "Code Reviews",
         "Years": 18,
-        "ExperienceLevel": 9,
-        "Image": "Microsoft_.NET_Framework_v4.5_logo.png",
+        "ExperienceLevel": 8,
+        "Image": "code-review.png",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "I don't look for perfect code, just mistakes that will make maintenance more difficult.",
+          "All corporate code must be code reviewed by peers."
         ],
         "Xref": [
-          "NET",
-          "NETFRAMEWORK"
+          "CODEREVIEW",
+          "CODEREVIEWS"
+        ]
+      },
+      {
+        "Name": "Agile",
+        "Years": 10,
+        "ExperienceLevel": 8,
+        "Image": "agile.png",
+        "BulletPoints": [
+          "Firm believer in the Agile Manifesto.",
+          "Also believe it's essence has been lost by some practitioners."
+        ],
+        "Xref": [
+          "AGILE"
         ]
       },
       {
         "Name": "Design Patterns",
-        "Years": 18,
-        "ExperienceLevel": 9,
-        "Image": "Microsoft_.NET_Framework_v4.5_logo.png",
+        "Years": 15,
+        "ExperienceLevel": 6,
+        "Image": "",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Use numerous patterns, very often, such as Singleton, Repository, Dependency Injection, etc.",
+          "Not an expert in all the pattern names."
         ],
         "Xref": [
-          "NET",
-          "NETFRAMEWORK"
+          "DESIGNPATTERNS",
+          "GANGOFFOUR",
+          "PATTERNS",
+          "PATTERN",
+          "SINGLETON",
+          "DI",
+          "IOC",
+          "REPOSITORY"
         ]
       },
       {
         "Name": "Scrum",
-        "Years": 18,
+        "Years": 10,
         "ExperienceLevel": 9,
-        "Image": "Microsoft_.NET_Framework_v4.5_logo.png",
+        "Image": "scrum.png",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Currently use to manage projects."
         ],
         "Xref": [
-          "NET",
-          "NETFRAMEWORK"
+          "SCRUM"
         ]
       },
       {
         "Name": "Unit/Integration Testing",
         "Years": 18,
         "ExperienceLevel": 9,
-        "Image": "Microsoft_.NET_Framework_v4.5_logo.png",
+        "Image": "mstest.png",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Firm believer in thorough unit testing."
         ],
         "Xref": [
-          "NET",
-          "NETFRAMEWORK"
+          "TESTS",
+          "UNITTESTS",
+          "UNITTEST",
+          "UNITTESTING",
+          "INTEGRATIONTESTS",
+          "INTEGRATIONTESTING",
+          "INTTESTS"
         ]
       },
       {
         "Name": "SDLC",
         "Years": 18,
         "ExperienceLevel": 9,
-        "Image": "Microsoft_.NET_Framework_v4.5_logo.png",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Sometimes I take a software project through the entire process, other times, I only receive predetermined requirements.",
+          "Excellent at asking questions of the stakeholders to fully understand the scope of the project.",
+          "Often merge the SDLC with an Agile style of development."
         ],
         "Xref": [
-          "NET",
-          "NETFRAMEWORK"
+          "SDLC",
+          "SOFTWAREDESIGN",
+          "SOFTWAREDEVELOPMENT",
+          "SOFTWAREDEVELOPMENTLIFECYCLE"
+        ]
+      },
+      {
+        "Name": "SOLID Principles",
+        "Years": 15,
+        "ExperienceLevel": 7,
+        "Image": "",
+        "BulletPoints": [
+          "Use principals on all new projects and refactoring."
+        ],
+        "Xref": [
+          "SOLID",
+          "SOLIDPRINCIPLES"
         ]
       }
-
-
     ]
   },
   {
@@ -354,10 +360,11 @@
         "ExperienceLevel": 8,
         "Image": "microsoft-sql-server-logo-96AF49E2B3-seeklogo.com.png",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Used for numerous projects across numerous companies."
         ],
         "Xref": [
+          "MS",
+          "MICROSOFT",
           "SQL",
           "TSQL",
           "TRANSACT-SQL",
@@ -372,8 +379,7 @@
         "ExperienceLevel": 7,
         "Image": "640px-Oracle_Logo.svg.png",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Used extensively by current company."
         ],
         "Xref": [
           "SQL",
@@ -385,16 +391,18 @@
       {
         "Name": "PostgreSQL",
         "Years": 10,
-        "ExperienceLevel": 6,
+        "ExperienceLevel": 7,
         "Image": "PostgreSQL_logo.3colors.svg",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Preferred database.",
+          "Use on most open source or side projects.",
+          "Use as a document store using the JSON type."
         ],
         "Xref": [
           "POSTGRESSQL",
           "POSTGRESQL",
-          "POSTGRES"
+          "POSTGRES",
+          "DOCUMENTDB"
         ]
       },
       {
@@ -403,13 +411,13 @@
         "ExperienceLevel": 1,
         "Image": "MongoDB_Leaf_FullColor_RGB.png",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Used to store data from automated screen scrapping application on Linux."
         ],
         "Xref": [
           "NOSQL",
           "MONGO",
-          "MONGODB"
+          "MONGODB",
+          "DOCUMENTDB"
         ]
       },
       {
@@ -418,8 +426,8 @@
         "ExperienceLevel": 6,
         "Image": "sqlite370_banner.gif",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Used whenever a multiuser database isn't required.",
+          "Used in numerous applications."
         ],
         "Xref": [
           "SQL",
@@ -433,14 +441,40 @@
         "ExperienceLevel": 4,
         "Image": "informix.gif",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Used for large internal client/server Windows application.",
+          "Last used about 20 years ago."
         ],
         "Xref": [
           "SQL",
           "INFORMIXSQL",
           "INFORMIX",
           "IBMINFORMIX"
+        ]
+      },
+      {
+        "Name": "Interbase",
+        "Years": 2,
+        "ExperienceLevel": 4,
+        "Image": "Interbase_FINAL_ICONS_1024.png",
+        "BulletPoints": [
+          "Used as the primary database for a large internal distributed project."
+        ],
+        "Xref": [
+          "SQL",
+          "INTERBASE"
+        ]
+      },
+      {
+        "Name": "Sybase",
+        "Years": 1,
+        "ExperienceLevel": 3,
+        "Image": "Sybase.png",
+        "BulletPoints": [
+          "Used as the primary storage for a commercial pharmacy application."
+        ],
+        "Xref": [
+          "SQL",
+          "SYBASE"
         ]
       }
     ]
@@ -459,10 +493,11 @@
         "ExperienceLevel": 9,
         "Image": "Microsoft_.NET_Framework_v4.5_logo.png",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Used ever since 2.0 was released."
         ],
         "Xref": [
+          "MS",
+          "MICROSOFT",
           "NET",
           "NETFRAMEWORK"
         ]
@@ -473,103 +508,293 @@
         "ExperienceLevel": 9,
         "Image": "NET_Core_Logo.svg",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Almost all new development has been in .NET Core.",
+          "Written numerous apps, although all have been web apps or console apps."
         ],
         "Xref": [
+          "MS",
+          "MICROSOFT",
           "NET",
           "NETCORE"
         ]
       },
-
       {
         "Name": "ASP.NET MVC",
-        "Years": 10,
-        "ExperienceLevel": 6,
-        "Image": "",
+        "Years": 8,
+        "ExperienceLevel": 7,
+        "Image": "mvc.png",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Written both public facing and internal web apps."
         ],
         "Xref": [
-          "POSTGRESSQL",
-          "POSTGRESQL",
-          "POSTGRES"
+          "MS",
+          "MICROSOFT",
+          "MVC",
+          "ASPNETMVC",
+          "MODELVIEWCONTROLLER",
+          "MSMVC",
+          "NETMVC",
+          "RAZOR",
+          "ASPNET"
         ]
       },
       {
         "Name": "ASP.NET Razor Pages",
-        "Years": 10,
-        "ExperienceLevel": 6,
-        "Image": "",
+        "Years": 2,
+        "ExperienceLevel": 8,
+        "Image": "mvc.png",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Use on most newer projects.",
+          "Fixes many of the pain points found in MVC."
         ],
         "Xref": [
-          "POSTGRESSQL",
-          "POSTGRESQL",
-          "POSTGRES"
+          "MS",
+          "MICROSOFT",
+          "RAZORPAGES",
+          "ASPNETRAZORPAGES",
+          "RAZOR",
+          "ASPNET"
         ]
       },
       {
         "Name": "ASP.NET WebForms",
-        "Years": 10,
-        "ExperienceLevel": 6,
-        "Image": "",
+        "Years": 4,
+        "ExperienceLevel": 5,
+        "Image": "mvc.png",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Used on a large public facing application."
         ],
         "Xref": [
-          "POSTGRESSQL",
-          "POSTGRESQL",
-          "POSTGRES"
+          "MS",
+          "MICROSOFT",
+          "WEBFORMS",
+          "ASPNETWEBFORMS",
+          "MSWBEFORMS",
+          "ASPNET"
         ]
       },
       {
         "Name": "Bootstrap",
         "Years": 10,
-        "ExperienceLevel": 6,
-        "Image": "",
+        "ExperienceLevel": 7,
+        "Image": "Bootstrap.svg",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Used in most web applications.",
+          "Greatly speeds up development time."
         ],
         "Xref": [
-          "POSTGRESSQL",
-          "POSTGRESQL",
-          "POSTGRES"
+          "BOOTSTRAP"
         ]
       },
       {
         "Name": "jQuery",
         "Years": 10,
         "ExperienceLevel": 6,
-        "Image": "",
+        "Image": "jQuery.jpg",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Used in most web applications."
         ],
         "Xref": [
-          "POSTGRESSQL",
-          "POSTGRESQL",
-          "POSTGRES"
+          "JQUERY"
         ]
       },
       {
         "Name": "Ruby On Rails",
-        "Years": 10,
-        "ExperienceLevel": 6,
-        "Image": "",
+        "Years": 1,
+        "ExperienceLevel": 4,
+        "Image": "Ruby_on_Rails-logo.png",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Used in a single application."
         ],
         "Xref": [
-          "POSTGRESSQL",
-          "POSTGRESQL",
-          "POSTGRES"
+          "RAILS",
+          "RUBYONRAILS"
+        ]
+      },
+      {
+        "Name": "Node.js",
+        "Years": 1,
+        "ExperienceLevel": 5,
+        "Image": "Node.js_logo.svg",
+        "BulletPoints": [
+          "Used in several projects that ran on Linux machines."
+        ],
+        "Xref": [
+          "NODE",
+          "NODEJS"
+        ]
+      },
+      {
+        "Name": "Vue.js",
+        "Years": 1,
+        "ExperienceLevel": 4,
+        "Image": "vue.png",
+        "BulletPoints": [
+          "Used in several proof of concepts.",
+          "Used in ASP.NET apps."
+        ],
+        "Xref": [
+          "VUE",
+          "VUEJS"
+        ]
+      }
+    ]
+  },
+  {
+    "Category": "Message Queues",
+    "Title": "Message Queue",
+    "Xref": [
+      "QUEUE",
+      "QUEUES",
+      "MESSAGE",
+      "MESSAGES",
+      "MESSAGEQUEUES",
+      "MESSAGEQUEUE",
+      "MESSAGEBUS"
+    ],
+    "Items": [
+      {
+        "Name": "Oracle Advanced Queuing",
+        "Years": 11,
+        "ExperienceLevel": 5,
+        "Image": "640px-Oracle_Logo.svg.png",
+        "BulletPoints": [
+          "Used in very large, commercial back end."
+        ],
+        "Xref": [
+          "ORACLE",
+          "ORACLEAQ",
+          "ORACLEADVANCEDQUEUING"
+        ]
+      },
+      {
+        "Name": "MS Message Queues",
+        "Years": 2,
+        "ExperienceLevel": 7,
+        "Image": "Microsoft.png",
+        "BulletPoints": [
+          "Used with smaller apps when a simple messaging solution is needed."
+        ],
+        "Xref": [
+          "MS",
+          "MICROSOFT",
+          "MSMQ",
+          "MSMESSAGEQUEUES",
+          "MSMESSAGEQUEUE",
+          "MICROSOFTMESSAGEQUEUES",
+          "MICROSOFTMESSAGEQUEUE",
+          "MESSAGEQUEUES",
+          "MESSAGEQUEUE"
+        ]
+      },
+      {
+        "Name": "Azure Service Bus",
+        "Years": 1,
+        "ExperienceLevel": 4,
+        "Image": "Azure-Service-Bus.png",
+        "BulletPoints": [
+          "Used in a relatively large, message based set of applications."
+        ],
+        "Xref": [
+          "MS",
+          "MICROSOFT",
+          "SERVICEBUS",
+          "AZURE",
+          "AZURESERVICEBUS",
+          "CLOUD"
+        ]
+      }
+    ]
+  },
+  {
+    "Category": "File Formats",
+    "Title": "File Format",
+    "Xref": [
+      "FILEFORMATS",
+      "FILEFORMAT"
+    ],
+    "Items": [
+      {
+        "Name": "JSON",
+        "Years": 12,
+        "ExperienceLevel": 8,
+        "Image": "json-logo-svg-vector.svg",
+        "BulletPoints": [
+          "Use extensively for object serialization.",
+          "Used in too many projects to mention.",
+          "Most config files are now JSON."
+        ],
+        "Xref": [
+          "JSON",
+          "JSONNET"
+        ]
+      },
+      {
+        "Name": "Protocol Buffers",
+        "Years": 5,
+        "ExperienceLevel": 6,
+        "Image": "protobuf_nano.png",
+        "BulletPoints": [
+          "Used in numerous projects where fast serialization and compact size was required."
+        ],
+        "Xref": [
+          "PB",
+          "PROTOCOLBUFFERS"
+        ]
+      },
+      {
+        "Name": "XML",
+        "Years": 6,
+        "ExperienceLevel": 7,
+        "Image": "xml.png",
+        "BulletPoints": [
+          "Used in numerous projects due to it's ubiquity.",
+          "Very common as a format used between companies. "
+        ],
+        "Xref": [
+          "XML",
+          "EXTENSIBLEMARKUPLANGUAGE"
+        ]
+      },
+      {
+        "Name": "Fixed Length",
+        "Years": 6,
+        "ExperienceLevel": 9,
+        "Image": "",
+        "BulletPoints": [
+          "Often used when exchanging data with banks."
+        ],
+        "Xref": [
+          "FIXEDLENGTH",
+          "FIXED"
+        ]
+      },
+      {
+        "Name": "CSV",
+        "Years": 6,
+        "ExperienceLevel": 9,
+        "Image": "csv.svg",
+        "BulletPoints": [
+          "Used in numerous projects."
+        ],
+        "Xref": [
+          "CSV",
+          "COMMADELIMITED",
+          "COMMASEPARATEDVALUES",
+          "COMMASEPARATEDVALUE"
+        ]
+      },
+      {
+        "Name": "MessagePack",
+        "Years": 1,
+        "ExperienceLevel": 4,
+        "Image": "messagepack.png",
+        "BulletPoints": [
+          "Used in a single project.",
+          "Impressed with it's speed and resulting size."
+        ],
+        "Xref": [
+          "MESSAGEPACK"
         ]
       }
     ]
@@ -586,62 +811,145 @@
     "Items": [
       {
         "Name": "Dapper",
-        "Years": 18,
+        "Years": 6,
         "ExperienceLevel": 9,
-        "Image": "Microsoft_.NET_Framework_v4.5_logo.png",
+        "Image": "",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Preferred library for accessing databases.",
+          "Use in almost all new projects."
         ],
         "Xref": [
-          "NET",
-          "NETFRAMEWORK"
+          "DAPPER",
+          "ORM",
+          "STACKEXCHANGE"
         ]
       },
       {
-        "Name": "Subversion",
-        "Years": 18,
-        "ExperienceLevel": 9,
-        "Image": "Microsoft_.NET_Framework_v4.5_logo.png",
+        "Name": "NHibernate",
+        "Years": 5,
+        "ExperienceLevel": 3,
+        "Image": "NhLogo.png",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Only used in one large project.",
+          "Prefer not to use an ORM."
         ],
         "Xref": [
-          "NET",
-          "NETFRAMEWORK"
+          "ORM",
+          "NHIBERNATE"
         ]
       },
       {
-        "Name": "Azure DevOps",
-        "Years": 18,
-        "ExperienceLevel": 9,
-        "Image": "Microsoft_.NET_Framework_v4.5_logo.png",
-        "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
-        ],
+        "Name": "nUnit",
+        "Years": 5,
+        "ExperienceLevel": 6,
+        "Image": "nunit.png",
         "Xref": [
-          "NET",
-          "NETFRAMEWORK"
+          "NUNIT",
+          "UNITTEST",
+          "UNITTESTS",
+          "UNITTESTING",
+          "TESTING",
+          "TESTS",
+          "TEST"
         ]
       },
       {
-        "Name": "Git",
-        "Years": 18,
+        "Name": "MS Test",
+        "Years": 2,
+        "ExperienceLevel": 8,
+        "Image": "MSTest.png",
+        "BulletPoints": [
+          "Goto framework for writing unit tests.",
+          "Didn't use previous version as they were lacking important features."
+        ],
+        "Xref": [
+          "MSTEST",
+          "UNITTEST",
+          "UNITTESTS",
+          "UNITTESTING",
+          "TESTING",
+          "TESTS",
+          "TEST",
+          "TESTFRAMEWORK"
+        ]
+      },
+      {
+        "Name": "xUnit",
+        "Years": 6,
+        "ExperienceLevel": 8,
+        "Image": "xunit.png",
+        "BulletPoints": [
+          "Typically write most unit tests in xUnit or MSTest"
+        ],
+        "Xref": [
+          "XUNIT",
+          "UNITTEST",
+          "UNITTESTS",
+          "UNITTESTING",
+          "TESTING",
+          "TESTS",
+          "TEST",
+          "TESTFRAMEWORK"
+        ]
+      },
+      {
+        "Name": "Moq",
+        "Years": 10,
+        "ExperienceLevel": 8,
+        "Image": "moq.png",
+        "BulletPoints": [
+          "Use extensively.",
+          "Use in most unit tests where mocking is required."
+        ],
+        "Xref": [
+          "UNITTEST",
+          "UNITTESTS",
+          "UNITTESTING",
+          "TESTING",
+          "TESTS",
+          "TEST",
+          "TESTFRAMEWORK"
+        ]
+      },
+      {
+        "Name": "Entity Framework",
+        "Years": 1,
+        "ExperienceLevel": 2,
+        "Image": "ef.png",
+        "BulletPoints": [
+          "Prefer using Dapper and/or the repository pattern, instead of EF"
+        ],
+        "Xref": [
+          "EF",
+          "ENTITYFRAMEWORK",
+          "ORM"
+        ]
+      },
+      {
+        "Name": "LINQ",
+        "Years": 12,
         "ExperienceLevel": 9,
         "Image": "Microsoft_.NET_Framework_v4.5_logo.png",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Used a great deal for non-performant code."
         ],
         "Xref": [
-          "NET",
-          "NETFRAMEWORK"
+          "LINQ"
+        ]
+      },
+      {
+        "Name": "SignalR",
+        "Years": 1,
+        "ExperienceLevel": 6,
+        "Image": "signalr.png",
+        "BulletPoints": [
+          "Used in production and for proof of concept applications."
+        ],
+        "Xref": [
+          "SIGNALR",
+          "AJAX"
         ]
       }
-
-
     ]
   },
   {
@@ -653,64 +961,236 @@
     ],
     "Items": [
       {
-        "Name": "Git",
-        "Years": 18,
-        "ExperienceLevel": 9,
-        "Image": "Microsoft_.NET_Framework_v4.5_logo.png",
-        "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
-        ],
-        "Xref": [
-          "NET",
-          "NETFRAMEWORK"
-        ]
-      },
-      {
         "Name": "Subversion",
-        "Years": 18,
-        "ExperienceLevel": 9,
-        "Image": "Microsoft_.NET_Framework_v4.5_logo.png",
-        "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
-        ],
+        "Years": 6,
+        "ExperienceLevel": 7,
+        "Image": "Subversion_Logo.svg",
         "Xref": [
-          "NET",
-          "NETFRAMEWORK"
+          "SUBVERSION",
+          "SOURCECONTROL",
+          "SVN"
         ]
       },
       {
         "Name": "Azure DevOps",
-        "Years": 18,
-        "ExperienceLevel": 9,
-        "Image": "Microsoft_.NET_Framework_v4.5_logo.png",
+        "Years": 2,
+        "ExperienceLevel": 7,
+        "Image": "AzureDevOps.jpg",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Use for code reviews, continuous integration, automated tests, etc."
         ],
         "Xref": [
-          "NET",
-          "NETFRAMEWORK"
+          "AZURE",
+          "AZUREDEVOPS",
+          "DEVOPS"
         ]
       },
       {
         "Name": "Git",
-        "Years": 18,
-        "ExperienceLevel": 9,
-        "Image": "Microsoft_.NET_Framework_v4.5_logo.png",
+        "Years": 5,
+        "ExperienceLevel": 8,
+        "Image": "Git-Icon-1788C.png",
         "BulletPoints": [
-          "sadcsadc",
-          "sadcasdcsadc"
+          "Used for source control at last two jobs.",
+          "Used in all my closed and open source projects.",
+          "Make extensive use of branching"
         ],
         "Xref": [
-          "NET",
-          "NETFRAMEWORK"
+          "GIT",
+          "SOURCECONTROL"
+        ]
+      },
+      {
+        "Name": "Docker",
+        "Years": 2,
+        "ExperienceLevel": 7,
+        "Image": "Moby-logo.png",
+        "BulletPoints": [
+          "Use mostly in side work, but will soon use at current job.",
+          "This web page is running in a Docker container on Linux.",
+          "Future of software deployment."
+        ],
+        "Xref": [
+          "DOCKER",
+          "DOCKERDESKTOP",
+          "CONTAINER",
+          "CONTAINERS",
+          "VM",
+          "VMS"
+        ]
+      },
+      {
+        "Name": "Vagrant",
+        "Years": 6,
+        "ExperienceLevel": 8,
+        "Image": "vagrant-color.svg",
+        "BulletPoints": [
+          "Used for testing especially with databases or complex messaging architectures.",
+          "For scripting VituralBox or other VMs."
+        ],
+        "Xref": [
+          "VAGRANT",
+          "VM",
+          "VMS",
+          "VIRTUALBOX"
+        ]
+      },
+      {
+        "Name": "Amazon S3",
+        "Years": 4,
+        "ExperienceLevel": 5,
+        "Image": "s3.png",
+        "BulletPoints": [
+          "Used mostly for backups of production data and as a backup download location"
+        ],
+        "Xref": [
+          "S3",
+          "AMAZONS3",
+          "CLOUD",
+          "STORAGE",
+          "CLOUDSTORAGE",
+          "ONLINESTORAGE"
+        ]
+      },
+      {
+        "Name": "Virtual Box",
+        "Years": 6,
+        "ExperienceLevel": 7,
+        "Image": "vbox_logo2_gradient.png",
+        "BulletPoints": [
+          "Mostly used for testing purposes.",
+          "Allows easy setup of databases and other servers that code depends on.",
+          "Usually use Vagrant to script creation and setup of VMs."
+        ],
+        "Xref": [
+          "ORACLEVIRTUALBOX",
+          "VIRTUALBOX",
+          "VIRTUALIZATION",
+          "VM",
+          "VMS"
+        ]
+      },
+      {
+        "Name": "Amazon SES",
+        "Years": 1,
+        "ExperienceLevel": 2,
+        "Image": "SES_logo_transparent.png",
+        "BulletPoints": [
+          "Integrated into websites for sending high volume email."
+        ],
+        "Xref": [
+          "AMAZONSES",
+          "SES",
+          "EMAIL",
+          "EMAILING",
+          "CLOUD",
+          "MAIL",
+          "SIMPLEEMAILSERVICE"
         ]
       }
-
-
+    ]
+  },
+  {
+    //OS
+    //FreeBSD
+    //Windows
+    //Ubuntu
+    "Category": "Operating Systems",
+    "Title": "Operating System",
+    "Xref": [
+      "OS",
+      "OPERATINGSYSTEM",
+      "OPERATINGSYSTEMS"
+    ],
+    "Items": [
+      {
+        "Name": "Windows",
+        "Years": 30,
+        "ExperienceLevel": 10,
+        "Image": "Windows.svg",
+        "BulletPoints": [
+          "Use extensively in development as a client and as a server."
+        ],
+        "Xref": [
+          "MSWINDOWS",
+          "WINDOWS"
+        ]
+      },
+      {
+        "Name": "FreeBSD",
+        "Years": 2,
+        "ExperienceLevel": 6,
+        "Image": "Freebsd.jpg",
+        "BulletPoints": [
+          "Used as a server for hosting databases and websites."
+        ],
+        "Xref": [
+          "FREEBSD",
+          "BSD",
+          "LINUX",
+          "UNIX"
+        ]
+      },
+      {
+        "Name": "Ubuntu",
+        "Years": 10,
+        "ExperienceLevel": 8,
+        "Image": "ubuntu-logo.png",
+        "BulletPoints": [
+          "Used extensively as a server for hosting databases, websites, and other software."
+        ],
+        "Xref": [
+          "UBUNTU",
+          "LINUX",
+          "UNIX"
+        ]
+      },
+      {
+        "Name": "pfSense",
+        "Years": 1,
+        "ExperienceLevel": 5,
+        "Image": "PfSense_logo.png",
+        "BulletPoints": [
+          "Used to convert PCs into fully functioning network routers."
+        ],
+        "Xref": [
+          "ROUTER",
+          "PFSENSE",
+          "FREEBSD",
+          "UNIX"
+        ]
+      },
+      {
+        "Name": "OpenWRT",
+        "Years": 1,
+        "ExperienceLevel": 5,
+        "Image": "Openwrt.png",
+        "BulletPoints": [
+          "Router software mostly used in embedded systems."
+        ],
+        "Xref": [
+          "ROUTER",
+          "LINUX",
+          "OPENWRT"
+        ]
+      }
     ]
   }
 ]
+
+
+
+//Software
+//IIS
+//Nginx
+//Apache
+//Wordpress
+//Joomla
+
+//Hardware
+//Teensy Microcontroller
+//Raspberry Pi
+//Raspberry Pi Zero
+//Arduino Uno
+
 

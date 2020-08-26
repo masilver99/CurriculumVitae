@@ -1,4 +1,5 @@
 ﻿@page
+@using CV.Pages
 @using CV.Models
 @model IndexModel
 @{
@@ -6,16 +7,50 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Hello</h1>
-    <p>Welcome to my online curriculum vitae.</p>
-    <p><strong>I'm a passionate, professional software architect and programmer with extensive career experience solving
+    <h1 class="display-4">Welcome</h1>
+    <p><strong>I'm a professional software architect, lead and programmer with extensive career experience solving
 complex problems with targeted, polished solutions. I'm enamored with researching new technology and programming
 advances and how they can reduce costs and increase revenue.</strong></p>
-    <p>If you need a short form resume, please request it here. This helps to limit the amount of spam I receive on my cell phone.</p>
+    <div class="card-group align-item-center justify-content-center">
+
+        <a href="https://www.linkedin.com/in/michaelsilver/">
+        <div class="card linkCard mx-auto">
+            <div class="card-title">
+                <img class="linkIcon" src="~/img/linkedin.svg" />
+            </div>
+            <div class="card-body">
+                LinkedIn Profile
+            </div>
+        </div>
+        </a>
+
+        <a href="https://stackoverflow.com/users/125406/michael-silver">
+        <div class="card linkCard mx-auto">
+            <div class="card-title">
+                <img class="linkIcon" src="~/img/so-icon.svg" />
+            </div>
+            <div class="card-body">
+                Stack Overflow profile
+            </div>
+        </div>
+        </a>
+
+        <a href="files/MichaelSilverResume.pdf">
+        <div class="card linkCard mx-auto">
+            <div class="card-title">
+                <img class="linkIcon" src="~/img/resume.svg" />
+            </div>
+            <div class="card-body">
+                PDF Resume
+            </div>
+        </div>    
+        </a>
+
+    </div>
 </div>
 
 <div class="text-center">
-<p>Do you need help?  Am I qualified for a position? Don't poke around my CV, just search for the relevant experience here. Seperate search terms with a comma.</p>
+<p>Am I qualified for a position? Don't poke around my CV, just search for the relevant experience here. Separate search terms with a comma.</p>
 <form method="get">
     <input type="text" name="searchTerms" id="searchTerms" value="@Model.searchTerms"> 
     <input type="submit" value="Search">
