@@ -35,10 +35,45 @@ namespace CV
                 });
 
             // Cache file.  They aren't that large, so it shouldn't affect memory.
-            services.AddSingleton(JsonSerializer.Deserialize<List<TechCategory>>(System.IO.File.ReadAllText(@"data/tech.json")));
+            TechCategories techCats = new TechCategories(JsonSerializer.Deserialize<List<TechCategory>>(System.IO.File.ReadAllText(@"data/tech.json")));
+            var workItems = JsonSerializer.Deserialize<List<WorkItem>>(System.IO.File.ReadAllText(@"data/work.json"));
+            var projectItems = JsonSerializer.Deserialize<List<ProjectItem>>(System.IO.File.ReadAllText(@"data/projects.json"));
+            BuildWorkXRefs(workItems, techCats);
+            BuildProjectXRefs(projectItems, techCats);
+            services.AddSingleton(techCats);
             services.AddSingleton(JsonSerializer.Deserialize<List<EdItem>>(System.IO.File.ReadAllText(@"data/ed.json")));
-            services.AddSingleton(JsonSerializer.Deserialize<List<WorkItem>>(System.IO.File.ReadAllText(@"data/work.json")));
-            services.AddSingleton(JsonSerializer.Deserialize<List<ProjectItem>>(System.IO.File.ReadAllText(@"data/projects.json")));
+            services.AddSingleton(workItems);
+            services.AddSingleton(projectItems);
+        }
+
+        private void BuildProjectXRefs(List<ProjectItem> projectItems, TechCategories techCats)
+        {
+            foreach (var projectItem in projectItems)
+            {
+                foreach (var techXref in projectItem.TechXref)
+                {
+                    var techItem = techCats.GetTechItemByName(techXref);
+                    if (techItem != null)
+                    {
+                        projectItem.TechItems.Add(techItem);
+                    }
+                }
+            }
+        }
+
+        private void BuildWorkXRefs(List<WorkItem> workItems, TechCategories techCats)
+        {
+            foreach (var workItem in workItems)
+            {
+                foreach (var techXref in workItem.TechXref)
+                {
+                    var techItem = techCats.GetTechItemByName(techXref);
+                    if (techItem != null)
+                    {
+                        workItem.TechItems.Add(techItem);
+                    }
+                }
+            }
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -97,14 +97,34 @@ ul.listItem {
     margin-bottom: .5rem;
 }
 
-.techImage {
-    max-width: 2rem;
-    max-height: 2rem;
-    margin-bottom: .1rem;
-    margin-right: .5rem;
+.techImageDiv {
+    width: 32px;
+    vertical-align: middle;
+    text-align: center;
 }
 
+.techImageTd {
+    display: flex;
+}
 
+.techImage {
+    max-width: 32px;
+    max-Height: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2px;
+    vertical-align: middle;
+    align-content: center;
+}
+
+.techName {
+    margin-left: .4rem;
+    margin-top: .25rem;
+}
+
+.techList {
+    font-size: xx-small;
+}
 
 .table-stripedX tbody tr:nth-of-type(4n+1) {
     background-color: rgba(0,0,0,.05);

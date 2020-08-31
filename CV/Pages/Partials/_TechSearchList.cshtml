@@ -4,37 +4,25 @@
     int count = 0;
 }
 
-    <div class="d-flex justify-content-center">
-     <div>   |
-    @foreach (var techCategory in Model.ItemList)
-    {
-        @:&nbsp;<a href="#@techCategory.Title">@techCategory.Category</a>&nbsp;|
-    }
-    </div>
-    </div>
-
-@foreach (var techCategory in Model.ItemList)
-{
-    <table class="table table-stripedX table-hover table-sm" id="@techCategory.Title">
+    <table class="table table-stripedX table-hover table-sm">
         <thead class="thead-dark">
             <tr>
-                <th scope="col">@techCategory.Title
-                @if (!Model.IsForSearch)
-                {
+                <th scope="col">Technology
                     <a href="#"><i class="far fa-caret-square-up"></i></a>
-                }
                 </th>
                 <th scope="col">Years</th>
                 <th scope="col">Expierence</th>
                 <th scope="col">Details</th>
             </tr>
         </thead>
-        <tbody>
+ 
+@foreach (var techCategory in Model.ItemList)
+{       <tbody>
 
             @foreach (var techItem in techCategory.Items.OrderByDescending(i => i.ExperienceLevel))
             {
 
-            <tr id="@techItem.Name">
+            <tr>
                 <td scope="row" class="techImageTd">
                     <div class="techImageDiv">
                     @if(!string.IsNullOrWhiteSpace(techItem.Image))
@@ -47,7 +35,9 @@
                     }
                     </div>
                     <div class="techName">
+                        <a href="/Tech/#@techItem.Name">
                         @techItem.Name
+                    </a>
                     </div>
                 </td>
                 <td>
@@ -75,14 +65,14 @@
                     <button class="btn btn-outline-dark"
                        aria-expanded="false"
                        data-toggle="collapse"
-                       href='@("#collapseme"+count)'
+                       href='@("#collapsetech"+count)'
                        role="button">
                        <div aria-hidden="true" class="expand"></div>
                     </button>
                 </td>
 
             </tr>
-                <tr class="collapse out" id='@("collapseme"+count++)'>
+                <tr class="collapse out" id='@("collapsetech"+count++)'>
                     <td colspan="4">
                         <ul>
                             @foreach (var bullet in techItem.BulletPoints)
@@ -96,5 +86,6 @@
                 </tr>
             }
         </tbody>
-    </table>
+ 
 }
+</table>

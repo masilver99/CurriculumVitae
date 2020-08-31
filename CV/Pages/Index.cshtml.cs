@@ -16,7 +16,7 @@ namespace CV.Pages
         [BindProperty(SupportsGet = true)]
         public string searchTerms { get; set; }
 
-        public List<TechCategory> SearchedTechCategories { get; set; } = new List<TechCategory>();
+        public TechCategories SearchedTechCategories { get; set; } = new TechCategories();
         public List<EdItem> SearchedEdItems { get; set; } = new List<EdItem>();
         public List<WorkItem> SearchedWorkItems { get; set; } = new List<WorkItem>();
         public List<ProjectItem> SearchedProjectItems { get; set; } = new List<ProjectItem>();
@@ -27,8 +27,8 @@ namespace CV.Pages
         private List<ProjectItem> _projectItems { get; }
 
         public IndexModel(
-            ILogger<IndexModel> logger, 
-            List<TechCategory> techCategories,
+            ILogger<IndexModel> logger,
+            TechCategories techCategories,
             List<EdItem> edItems,
             List<WorkItem> workItems,
             List<ProjectItem> projectItems)
@@ -105,10 +105,8 @@ namespace CV.Pages
             { 
                 "ED", 
                 "EDUCATION",
-                "SCHOOLS",
                 "SCHOOL",
                 "DEGREE",
-                "DEGREES",
                 "SCHOOLING",
                 "COLLEGE"
             };
@@ -135,7 +133,7 @@ namespace CV.Pages
         {
             var globalSearchTerms = new string[]
             {
-                "PROJECTS"
+                "PROJECT"
             };
 
             // Check if looking for all items, if not add only ones matching
@@ -148,20 +146,39 @@ namespace CV.Pages
                 // linq is avoided here to increase speed
                 foreach (var projectItem in projectItems)
                 {
-                    if (projectItem.Xref.Contains(term))
+                    foreach (var xref in projectItem.TechXref)
                     {
-                        SafeAddItem(SearchedProjectItems, projectItem);
+                        // Linq would be easier...but slower
+                        if (GetTechItemByName(xref, term, this._techCategories) != "")
+                        {
+                            SafeAddItem(SearchedProjectItems, projectItem);
+                        }
                     }
                 }
             }
         }
+
+        private string GetTechItemByName(string name, string searchTerm, List<TechCategory> techCats)
+        {
+            foreach (var techCat in techCats)
+            {
+                foreach (var techitem in techCat.Items)
+                {
+                    if (techitem.Name == name && techitem.Xref.Contains(searchTerm))
+                    {
+                        return techitem.Name;
+                    }
+                }
+            }
+            return "";
+        }
+
 
         private void SearchWorkItems(List<WorkItem> workItems, string term)
         {
             var globalSearchTerms = new string[]
             {
                 "WORK",
-                "JOBS",
                 "JOB"
             };
 
@@ -172,24 +189,17 @@ namespace CV.Pages
             }
             else
             {
-                // linq is avoided here to increase speed
                 foreach (var workItem in workItems)
                 {
-                    if (workItem.Xref.Contains(term))
+                    foreach (var xref in workItem.TechXref)
                     {
-                        SafeAddItem(SearchedWorkItems, workItem);
+                        // Linq would be easier...but slower
+                        if (GetTechItemByName(xref, term, this._techCategories) != "")
+                        {
+                            SafeAddItem(SearchedWorkItems, workItem);
+                        }
                     }
                 }
-            }
-
-        }
-
-
-        public void SafeAddTechCat(TechCategory techCategory)
-        {
-            if (SearchedTechCategories.Where(t => t.Category == techCategory.Category).Count() == 0)
-            {
-                SearchedTechCategories.Add(techCategory);
             }
         }
 
@@ -222,7 +232,11 @@ namespace CV.Pages
 
         private List<string> ScrubUserInput(string searchTerms)
         {
-            Regex regex = new Regex(@"[^A-Z0-9#+]");
+            // Removed numbers and most chars from search term
+            // Also remove all trailing 'S'es
+            // And capitalize
+            // This will speed up searches.
+            Regex regex = new Regex(@"[^A-Z#+]|[S]*$");
             List<string> scrubedTerms = new List<string>();
             foreach (var term in searchTerms.Split(',', ';', StringSplitOptions.RemoveEmptyEntries))
             {

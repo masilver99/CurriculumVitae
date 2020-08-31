@@ -17,7 +17,7 @@ namespace CV.Pages
 
         public IList<TechCategory> TechCategories { get; }
 
-        public TechModel(ILogger<TechModel> logger, List<TechCategory> techCategories)
+        public TechModel(ILogger<TechModel> logger, TechCategories techCategories)
         {
             _logger = logger;
             TechCategories = techCategories;

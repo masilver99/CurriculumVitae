@@ -17,10 +17,21 @@ namespace CV.Pages
 
         public List<ProjectItem> ProjectItems { get; }
 
-        public ProjectModel(ILogger<ProjectModel> logger, List<ProjectItem> projectItems)
+        public ProjectModel(ILogger<ProjectModel> logger, List<ProjectItem> projectItems, TechCategories techCats)
         {
             _logger = logger;
             this.ProjectItems = projectItems;
+            foreach (var item in projectItems)
+            {
+                foreach (var xref in item.TechXref)
+                {
+                    // Linq would be easier...but slower
+                    if (techCats.GetTechItemByName(xref) == null)
+                    {
+                        _logger.LogWarning($"Cross-Ref not found: {xref}");
+                    }
+                }
+            }
         }
 
         public void OnGet()

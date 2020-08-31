@@ -1,2 +1,43 @@
 ﻿@using CV.Models
 @model PartialViewModel<ProjectItem>
+
+@foreach(var projectItem in Model.ItemList)
+{
+        <div class="card my-2" id="@projectItem.SiteName">
+        <div class="card-header">
+            <div class="d-flex flex-wrap justify-content-between align-items-center item-title">
+                <div class="p-2 flex-grow-1">
+                    <div class="companyName">
+                        <img class="workImage" src="~/img/@projectItem.Image" />
+                        @projectItem.SiteName
+                    </div>
+                    <div class="workTitle">
+                        <i class="far fa-address-card"></i>
+                        @projectItem.Purpose
+                    </div>
+                </div>
+                <div class="p-1">
+                    <div>
+                        <i class="far fa-calendar-alt"></i> @projectItem.Date
+                    </div>
+                    <div>
+                        <i class="fas fa-map-marked-alt"></i>
+                        @projectItem.Status
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+@projectItem.Description
+            <ul class="fa-ul listItem">
+                @* 
+                @foreach (var item in projectItem.BulletPoints)
+                {
+                    <li>
+                        @item
+                    </li>
+                } *@
+            </ul>
+        </div>
+    </div>
+}

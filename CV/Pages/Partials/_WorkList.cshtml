@@ -3,7 +3,7 @@
 
 @foreach (var workItem in Model.ItemList)
 {
-    <div class="card my-2">
+    <div class="card my-2" id="@workItem.CompanyName">
         <div class="card-header">
             <div class="d-flex flex-wrap justify-content-between align-items-center item-title">
                 <div class="p-2 flex-grow-1">
@@ -28,6 +28,13 @@
             </div>
         </div>
         <div class="card-body">
+                @foreach (var techCat in workItem.TechCats)
+                {
+                    foreach (var techItem in techCat.Items)
+                    {
+                        <div class="techList">@techItem.Name</div>
+                    }
+                }
             <ul class="fa-ul listItem">
                 @foreach (var item in workItem.BulletPoints)
                 {

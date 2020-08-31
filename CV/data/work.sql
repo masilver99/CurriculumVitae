@@ -1,28 +1,29 @@
-﻿// All data contained in this file is copyrighted by Michael Silver and cannot be used without permission
-[
-  {
-    "CompanyName": "Wolters Kluwer",
-    "Division": "Tax and Accounting",
-    "CompanyNote": "Mostly Remote",
-    "Dates": "May 2018 - Current",
-    "Position": "Senior Product Software Engineer",
-    "Location": "Kennesaw, GA",
-    "Image": "wk.png",
-    "Xref": [
-      "WK",
-      "WOLTERSKLUWER",
-      "UT", //UTS
-      "TAXWISE",
-      "UNIVERSALTAXSYSTEM", //UNIVERSALTAXSYSTEMS
-      "TAXE", //TAXES
-      "TAXPREP",
-      "TAXPREPARATION",
-      "FINANCE",
-      "REMOTE",
-      "KENNESAW",
-      "KENNESAWGA",
-      "GA",
-      "GEORGIA"
+﻿INSERT INTO work (id, company_name, division, company_note, start_date, end_date, position, location, image) VALUES
+(1,
+ "Wolters Kluwer",
+ "Tax and Accounting",
+ "Mostly Remote",
+ "2018-05-01",
+ NULL, 
+ "Senior Product Software Engineer",
+ "Kennesaw, GA",
+ "wk.png");
+
+INSERT INTO work_search_terms (work_id, search_ter) VALUES
+  (1, "WK"),
+  (1, "WOLTERSKLUWER"),
+  (1, "UT"), -- UTS
+  (1, "TAXWISE"),
+  (1, "UNIVERSALTAXSYSTEM"), --UNIVERSALTAXSYSTEMS
+  (1, "TAXE"), --TAXES
+  (1, "TAXPREP"),
+  (1, "TAXPREPARATION"),
+  (1, "FINANCE"),
+  (1, "REMOTE"),
+  (1, "KENNESAW"),
+  (1, "KENNESAWGA"),
+  (1, "GA"),
+  (1, "GEORGIA")
     ],
     "TechXref": [
       "C#",
@@ -303,7 +304,7 @@
       "SOUTHCAROLINA"
     ],
     "TechXref": [
-      "Delphi/Pascal",
+      "Delphi",
       "Windows",
       "CSV"
     ],
@@ -337,7 +338,7 @@
       "SOUTHCAROLINA"
     ],
     "TechXref": [
-      "Delphi/Pascal",
+      "Delphi",
       "Windows",
       "CSV"
     ],
@@ -364,7 +365,7 @@
       "SOUTHCAROLINA"
     ],
     "TechXref": [
-      "Delphi/Pascal",
+      "Delphi",
       "Windows",
       "CSV",
       "Sybase"

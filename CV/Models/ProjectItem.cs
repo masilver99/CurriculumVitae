@@ -19,7 +19,8 @@ namespace CV.Models
         public bool CodeAvailable { get; set; }
 
         public List<string> Types { get; set; }
-        public List<string> Xref { get; set; } = new List<string>();
+        public List<string> TechXref { get; set; } = new List<string>();
+        public List<TechItem> TechItems { get; set; } = new List<TechItem>();
         public List<string> TechnologyUsed { get; set; } = new List<string>();
         //Lookup Tech XRef for tech used
     }

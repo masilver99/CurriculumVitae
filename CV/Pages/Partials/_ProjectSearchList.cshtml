@@ -1,0 +1,76 @@
+﻿@using CV.Models
+@model PartialViewModel<ProjectItem>
+@{
+    int count = 0;
+}
+    <table class="table table-stripedX table-hover table-sm">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Projects
+                    <a href="#"><i class="far fa-caret-square-up"></i></a>
+                </th>
+                <th scope="col">Open Source</th>
+                <th scope="col">Status</th>
+                <th scope="col">Details</th>
+            </tr>
+        </thead>
+ 
+        <tbody>
+
+            @foreach (var projectItem in Model.ItemList)
+            {
+
+            <tr>
+                <td scope="row" class="techImageTd">
+                    <div class="techImageDiv">
+                    @if(!string.IsNullOrWhiteSpace(projectItem.Image))
+                    {
+                        <img class="techImage" src="~/img/@projectItem.Image" />
+                    }
+                    else
+                    {
+                        <img class="techImage" src="~/img/blank.png" />
+                    }
+                    </div>
+                    <div class="techName">
+                        <a href="/projects/#@projectItem.SiteName">
+                        @projectItem.SiteName
+                    </a>
+                    </div>
+                </td>
+                <td>
+                    <div class="techName">
+                    @if (projectItem.OpenSource)
+                    {
+                        @:Yes
+                    }
+                    else
+                    {
+                        @:No
+                    }
+                </div>
+                </td>
+                <td>
+                    <div class="techName">
+                    @projectItem.Status
+                    </div>
+                </td>
+
+                <td>
+                    <button class="btn btn-outline-dark"
+                       aria-expanded="false"
+                       data-toggle="collapse"
+                       href='@("#collapseproject"+count)'
+                       role="button">
+                       <div aria-hidden="true" class="expand"></div>
+                    </button>
+                </td>
+
+            </tr>
+                <tr class="collapse out" id='@("collapseproject"+count++)'>
+                    <td colspan="4">
+                        @projectItem.Description
+                    </td>
+                </tr>
+            }
+        </tbody>

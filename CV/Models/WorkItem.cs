@@ -14,6 +14,8 @@ namespace CV.Models
         public string Location { get; set; }
         public string Image { get; set; }
         public List<string> Xref { get; set; } = new List<string>();
+        public List<string> TechXref { get; set; } = new List<string>();
+        public TechCategories TechCats { get; set; } = new TechCategories();
         public List<string> BulletPoints { get; set; } = new List<string>();
     }
 }
