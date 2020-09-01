@@ -8,35 +8,27 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using System.IO;
 using Utf8Json;
+using CV.data;
 
 namespace CV.Pages
 {
     public class ProjectModel : PageModel
     {
         private readonly ILogger<ProjectModel> _logger;
+        private Repository _repository;
 
-        public List<ProjectItem> ProjectItems { get; }
+        public IEnumerable<ProjectItem> ProjectItems { get; private set;  }
 
-        public ProjectModel(ILogger<ProjectModel> logger, List<ProjectItem> projectItems, TechCategories techCats)
+       
+        public ProjectModel(ILogger<ProjectModel> logger, Repository repository)
         {
             _logger = logger;
-            this.ProjectItems = projectItems;
-            foreach (var item in projectItems)
-            {
-                foreach (var xref in item.TechXref)
-                {
-                    // Linq would be easier...but slower
-                    if (techCats.GetTechItemByName(xref) == null)
-                    {
-                        _logger.LogWarning($"Cross-Ref not found: {xref}");
-                    }
-                }
-            }
+            _repository = repository;
         }
 
-        public void OnGet()
+        public async Task OnGet()
         {
-
+            ProjectItems = await _repository.GetAllProjectItems();
         }
     }
 }

@@ -8,24 +8,26 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using System.IO;
 using Utf8Json;
+using CV.data;
 
 namespace CV.Pages
 {
     public class WorkModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
+        private Repository _repository;
+        public IEnumerable<WorkItem> WorkItems { get; private set; }
 
-        public IList<WorkItem> WorkItems { get; }
 
-        public WorkModel(ILogger<IndexModel> logger, List<WorkItem> workItems)
+        public WorkModel(ILogger<IndexModel> logger, Repository repository)
         {
             _logger = logger;
-            this.WorkItems = workItems;
+            _repository = repository;
         }
 
-        public void OnGet()
+        public async Task OnGet()
         {
-
+            this.WorkItems = await _repository.GetAllWorkItems();
         }
     }
 }

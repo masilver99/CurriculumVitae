@@ -18,7 +18,7 @@
                 </div>
                 <div class="p-1">
                     <div>
-                        <i class="far fa-calendar-alt"></i> @workItem.Dates
+                        <i class="far fa-calendar-alt"></i> @workItem.StartDate
                     </div>
                     <div>
                         <i class="fas fa-map-marked-alt"></i>
@@ -28,13 +28,6 @@
             </div>
         </div>
         <div class="card-body">
-                @foreach (var techCat in workItem.TechCats)
-                {
-                    foreach (var techItem in techCat.Items)
-                    {
-                        <div class="techList">@techItem.Name</div>
-                    }
-                }
             <ul class="fa-ul listItem">
                 @foreach (var item in workItem.BulletPoints)
                 {

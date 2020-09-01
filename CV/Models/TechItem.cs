@@ -7,6 +7,7 @@ namespace CV.Models
 {
     public class TechItem
     {
+        public int Id { get; set; }
         /// <summary>
         /// Name of the technology
         /// </summary>

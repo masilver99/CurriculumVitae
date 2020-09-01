@@ -31,21 +31,6 @@ namespace CV.Models
             return null;
         }
 
-        public TechItem GetTechItemByName(string name)
-        {
-            foreach (var techCat in this)
-            {
-                foreach (var techitem in techCat.Items)
-                {
-                    if (techitem.Name == name)
-                    {
-                        return techitem;
-                    }
-                }
-            }
-            return null;
-        }
-
         public void SafeAddTechCat(TechCategory techCategory)
         {
             if (this.Where(t => t.Category == techCategory.Category).Count() == 0)

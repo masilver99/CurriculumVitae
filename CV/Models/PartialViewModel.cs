@@ -8,7 +8,7 @@ namespace CV.Models
     public class PartialViewModel<T>
     {
         public bool IsForSearch { get; set; }
-        public IList<T> ItemList { get; set; }
+        public IEnumerable<T> ItemList { get; set; }
 
     }
 }

@@ -30,14 +30,12 @@ namespace CV.Pages
             ILogger<IndexModel> logger,
             TechCategories techCategories,
             List<EdItem> edItems,
-            List<WorkItem> workItems,
             List<ProjectItem> projectItems)
 
         {
             _logger = logger;
             _techCategories = techCategories;
             _edItems = edItems;
-            _workItems = workItems;
             _projectItems = projectItems;
         }
 
@@ -46,7 +44,7 @@ namespace CV.Pages
             if (!string.IsNullOrWhiteSpace(searchTerms))
             {
                 var terms = ScrubUserInput(searchTerms);
-
+                /*
                 // Search data
                 foreach (var term in terms)
                 {
@@ -63,7 +61,7 @@ namespace CV.Pages
                     //Search Education
                     SearchEdItems(_edItems, term);
                 }
-
+                */
             }
         }
 
@@ -71,7 +69,7 @@ namespace CV.Pages
         {
 
         }
-
+        /*
         private void SearchTechCategories(List<TechCategory> techCategories, string term)
         {
             // Linq is avoided here to increase speed
@@ -157,7 +155,7 @@ namespace CV.Pages
                 }
             }
         }
-
+        */
         private string GetTechItemByName(string name, string searchTerm, List<TechCategory> techCats)
         {
             foreach (var techCat in techCats)
@@ -173,7 +171,7 @@ namespace CV.Pages
             return "";
         }
 
-
+        /*
         private void SearchWorkItems(List<WorkItem> workItems, string term)
         {
             var globalSearchTerms = new string[]
@@ -202,7 +200,7 @@ namespace CV.Pages
                 }
             }
         }
-
+        */
         private void SafeAddItem<T>(List<T> searchedItems, T newItem)
         {
             foreach (var item in searchedItems)
