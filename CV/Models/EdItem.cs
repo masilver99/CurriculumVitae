@@ -7,6 +7,7 @@ namespace CV.Models
 {
     public class EdItem
     {
+        public int Id { get; set; }
         public string SchoolName { get; set; }
         public string Degree { get; set; }
         public string GraduationDate { get; set; }

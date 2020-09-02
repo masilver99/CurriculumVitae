@@ -6,50 +6,47 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using CV.Models;
 using System.Text.RegularExpressions;
+using CV.data;
+using System.Threading.Tasks;
 
 namespace CV.Pages
 {
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
+        private Repository _repository;
 
         [BindProperty(SupportsGet = true)]
         public string searchTerms { get; set; }
 
-        public TechCategories SearchedTechCategories { get; set; } = new TechCategories();
-        public List<EdItem> SearchedEdItems { get; set; } = new List<EdItem>();
-        public List<WorkItem> SearchedWorkItems { get; set; } = new List<WorkItem>();
-        public List<ProjectItem> SearchedProjectItems { get; set; } = new List<ProjectItem>();
-
-        private List<TechCategory> _techCategories { get; }
-        private List<EdItem> _edItems { get; }
-        private List<WorkItem> _workItems { get; }
-        private List<ProjectItem> _projectItems { get; }
+        public IEnumerable<TechCategory> SearchedTechCategories { get; set; } = new TechCategories();
+        public IEnumerable<EdItem> SearchedEdItems { get; set; } = new List<EdItem>();
+        public IEnumerable<WorkItem> SearchedWorkItems { get; set; } = new List<WorkItem>();
+        public IEnumerable<ProjectItem> SearchedProjectItems { get; set; } = new List<ProjectItem>();
 
         public IndexModel(
-            ILogger<IndexModel> logger,
-            TechCategories techCategories,
-            List<EdItem> edItems,
-            List<ProjectItem> projectItems)
-
+            ILogger<IndexModel> logger, Repository repostory)
         {
             _logger = logger;
-            _techCategories = techCategories;
-            _edItems = edItems;
-            _projectItems = projectItems;
+            _repository = repostory;
         }
 
-        public void OnGet()
+        public async Task OnGet()
         {
             if (!string.IsNullOrWhiteSpace(searchTerms))
             {
                 var terms = ScrubUserInput(searchTerms);
+
+                //Search Education
+                await SearchEdItems(terms);
+                await SearchTechCategories(terms);
+                await SearchProjectItems(terms);
+                await SearchWorkItems(terms);
                 /*
                 // Search data
                 foreach (var term in terms)
                 {
                     // Search tech catergories
-                    SearchTechCategories(_techCategories, term);
                     SearchTechItems(_techCategories, term);
 
                     //Search Jobs
@@ -58,8 +55,6 @@ namespace CV.Pages
                     //Search Projects
                     SearchProjectItems(_projectItems, term);
 
-                    //Search Education
-                    SearchEdItems(_edItems, term);
                 }
                 */
             }
@@ -69,39 +64,17 @@ namespace CV.Pages
         {
 
         }
-        /*
-        private void SearchTechCategories(List<TechCategory> techCategories, string term)
+        
+        private async Task SearchTechCategories(List<string> terms)
         {
-            // Linq is avoided here to increase speed
-            foreach(var techCategory in techCategories)
-            {
-                if (techCategory.Xref.Contains(term))
-                {
-                    SafeAddTechCat(techCategory);
-                }
-            }
+            SearchedTechCategories = await _repository.GetTechCategories(terms);
         }
 
-        private void SearchTechItems(List<TechCategory> techCategories, string term)
+        private async Task SearchEdItems(List<string> terms)
         {
-            // linq is avoided here to increase speed
-            foreach (var techCategory in techCategories)
+            var globalSearchTerms = new string[]
             {
-                foreach (var techItem in techCategory.Items)
-                {
-                    if (techItem.Xref.Contains(term))
-                    {
-                        SafeAddTechItem(techCategory, techItem);
-                    }
-                }
-            }
-        }
-
-        private void SearchEdItems(List<EdItem> edItems, string term)
-        {
-            var globalSearchTerms = new string[] 
-            { 
-                "ED", 
+                "ED",
                 "EDUCATION",
                 "SCHOOL",
                 "DEGREE",
@@ -109,25 +82,41 @@ namespace CV.Pages
                 "COLLEGE"
             };
 
-            // Check if looking for all items, if not add only ones matching
-            if (globalSearchTerms.Contains(term))
+            foreach (var global in globalSearchTerms)
             {
-                SearchedEdItems = edItems;
-            }
-            else
-            {
-                // linq is avoided here to increase speed
-                foreach (var edItem in edItems)
+                if (terms.Contains(global))
                 {
-                    if (edItem.Xref.Contains(term))
-                    {
-                        SafeAddItem(SearchedEdItems, edItem);
-                    }
+                    SearchedEdItems = await _repository.GetEdItems();
+                    return;
                 }
             }
+                
+            SearchedEdItems = await _repository.GetEdItems(terms);
+        }
+        private async Task SearchWorkItems(List<string> searchTerms)
+        {
+            var globalSearchTerms = new string[]
+            {
+                "WORK",
+                "WORKEX",
+                "WORKXPERIENCE",
+                "JOBS"
+            };
+
+            // Check if looking for all items, if not add only ones matching
+            foreach (var global in globalSearchTerms)
+            {
+                if (searchTerms.Contains(global))
+                {
+                    SearchedWorkItems = await _repository.GetWorkItems();
+                    return;
+                }
+            }
+
+            SearchedWorkItems = await _repository.GetWorkItems(searchTerms);
         }
 
-        private void SearchProjectItems(List<ProjectItem> projectItems, string term)
+        private async Task SearchProjectItems(List<string> searchTerms)
         {
             var globalSearchTerms = new string[]
             {
@@ -135,101 +124,21 @@ namespace CV.Pages
             };
 
             // Check if looking for all items, if not add only ones matching
-            if (globalSearchTerms.Contains(term))
+            foreach (var global in globalSearchTerms)
             {
-                SearchedProjectItems = projectItems;
-            }
-            else
-            {
-                // linq is avoided here to increase speed
-                foreach (var projectItem in projectItems)
+                if (searchTerms.Contains(global))
                 {
-                    foreach (var xref in projectItem.TechXref)
-                    {
-                        // Linq would be easier...but slower
-                        if (GetTechItemByName(xref, term, this._techCategories) != "")
-                        {
-                            SafeAddItem(SearchedProjectItems, projectItem);
-                        }
-                    }
+                    SearchedProjectItems = await _repository.GetProjectItems();
+                    return;
                 }
             }
-        }
-        */
-        private string GetTechItemByName(string name, string searchTerm, List<TechCategory> techCats)
-        {
-            foreach (var techCat in techCats)
-            {
-                foreach (var techitem in techCat.Items)
-                {
-                    if (techitem.Name == name && techitem.Xref.Contains(searchTerm))
-                    {
-                        return techitem.Name;
-                    }
-                }
-            }
-            return "";
-        }
 
-        /*
-        private void SearchWorkItems(List<WorkItem> workItems, string term)
-        {
-            var globalSearchTerms = new string[]
-            {
-                "WORK",
-                "JOB"
-            };
-
-            // Check if looking for all items, if not add only ones matching
-            if (globalSearchTerms.Contains(term))
-            {
-                SearchedWorkItems = workItems;
-            }
-            else
-            {
-                foreach (var workItem in workItems)
-                {
-                    foreach (var xref in workItem.TechXref)
-                    {
-                        // Linq would be easier...but slower
-                        if (GetTechItemByName(xref, term, this._techCategories) != "")
-                        {
-                            SafeAddItem(SearchedWorkItems, workItem);
-                        }
-                    }
-                }
-            }
-        }
-        */
-        private void SafeAddItem<T>(List<T> searchedItems, T newItem)
-        {
-            foreach (var item in searchedItems)
-            {
-                if (item.Equals(newItem)) return;
-            }
-            searchedItems.Add(newItem);
-        }
-
-        public void SafeAddTechItem(TechCategory techCategory, TechItem techItem)
-        {
-            var matchedCategories = SearchedTechCategories.Where(c => c.Category == techCategory.Category).SingleOrDefault();
-            if (matchedCategories != null)
-            {
-                //Check if Item doesn't exist and add
-                if (matchedCategories.Items.Where(t => t.Name == techItem.Name).Count() == 0)
-                {
-                    matchedCategories.Items.Add(techItem);
-                }
-            }
-            else
-            {
-                var newTechCategory = techCategory.ItemlessCopy(new List<TechItem>() { techItem });
-                SearchedTechCategories.Add(newTechCategory);
-            }
+            SearchedProjectItems = await _repository.GetProjectItems(searchTerms);
         }
 
         private List<string> ScrubUserInput(string searchTerms)
         {
+            
             // Removed numbers and most chars from search term
             // Also remove all trailing 'S'es
             // And capitalize
@@ -241,6 +150,7 @@ namespace CV.Pages
                 scrubedTerms.Add(regex.Replace(term.ToUpper(), ""));
             }
             return scrubedTerms;
+
         }
     }
 }

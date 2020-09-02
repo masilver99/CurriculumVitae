@@ -8,17 +8,17 @@
      <div>   |
     @foreach (var techCategory in Model.ItemList)
     {
-        @:&nbsp;<a href="#@techCategory.Title">@techCategory.Category</a>&nbsp;|
+        @:&nbsp;<a href="#@techCategory.SingularName">@techCategory.Name</a>&nbsp;|
     }
     </div>
     </div>
 
 @foreach (var techCategory in Model.ItemList)
 {
-    <table class="table table-stripedX table-hover table-sm" id="@techCategory.Title">
+    <table class="table table-stripedX table-hover table-sm" id="@techCategory.SingularName">
         <thead class="thead-dark">
             <tr>
-                <th scope="col">@techCategory.Title
+                <th scope="col">@techCategory.SingularName
                 @if (!Model.IsForSearch)
                 {
                     <a href="#"><i class="far fa-caret-square-up"></i></a>
@@ -31,7 +31,7 @@
         </thead>
         <tbody>
 
-            @foreach (var techItem in techCategory.Items.OrderByDescending(i => i.ExperienceLevel))
+            @foreach (var techItem in techCategory.TechItems.OrderByDescending(i => i.ExperienceLevel))
             {
 
             <tr id="@techItem.Name">

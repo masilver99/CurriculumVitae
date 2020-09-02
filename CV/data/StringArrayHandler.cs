@@ -16,7 +16,7 @@ namespace CV.data
 
         public override void SetValue(IDbDataParameter parameter, List<string> value)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
     }
 }

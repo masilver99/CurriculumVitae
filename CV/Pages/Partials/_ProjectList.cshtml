@@ -3,13 +3,13 @@
 
 @foreach(var projectItem in Model.ItemList)
 {
-        <div class="card my-2" id="@projectItem.SiteName">
+        <div class="card my-2" id="@projectItem.ProjectName">
         <div class="card-header">
             <div class="d-flex flex-wrap justify-content-between align-items-center item-title">
                 <div class="p-2 flex-grow-1">
                     <div class="companyName">
                         <img class="workImage" src="~/img/@projectItem.Image" />
-                        @projectItem.SiteName
+                        @projectItem.ProjectName
                     </div>
                     <div class="workTitle">
                         <i class="far fa-address-card"></i>
@@ -18,7 +18,7 @@
                 </div>
                 <div class="p-1">
                     <div>
-                        <i class="far fa-calendar-alt"></i> @projectItem.Date
+                        <i class="far fa-calendar-alt"></i> @projectItem.LastWorkedOnDate
                     </div>
                     <div>
                         <i class="fas fa-map-marked-alt"></i>

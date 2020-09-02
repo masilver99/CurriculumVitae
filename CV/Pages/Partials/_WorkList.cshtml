@@ -18,7 +18,15 @@
                 </div>
                 <div class="p-1">
                     <div>
-                        <i class="far fa-calendar-alt"></i> @workItem.StartDate
+                        <i class="far fa-calendar-alt"></i> @workItem.StartDate.ToString("MMM-yyyy") to 
+                        @if (workItem.EndDate.HasValue)
+                        {
+                            @workItem.EndDate.Value.ToString("MMM-yyyy");
+                        }
+                        else 
+                        {
+                            @:Current 
+                        }
                     </div>
                     <div>
                         <i class="fas fa-map-marked-alt"></i>

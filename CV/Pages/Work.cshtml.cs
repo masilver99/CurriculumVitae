@@ -27,7 +27,7 @@ namespace CV.Pages
 
         public async Task OnGet()
         {
-            this.WorkItems = await _repository.GetAllWorkItems();
+            this.WorkItems = await _repository.GetWorkItems();
         }
     }
 }

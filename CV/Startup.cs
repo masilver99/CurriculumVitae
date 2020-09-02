@@ -36,15 +36,15 @@ namespace CV
                 });
 
             // Cache file.  They aren't that large, so it shouldn't affect memory.
-            TechCategories techCats = new TechCategories(JsonSerializer.Deserialize<List<TechCategory>>(System.IO.File.ReadAllText(@"data/tech.json")));
+            //TechCategories techCats = new TechCategories(JsonSerializer.Deserialize<List<TechCategory>>(System.IO.File.ReadAllText(@"data/tech.json")));
             //var workItems = JsonSerializer.Deserialize<List<WorkItem>>(System.IO.File.ReadAllText(@"data/work.json"));
-            var projectItems = JsonSerializer.Deserialize<List<ProjectItem>>(System.IO.File.ReadAllText(@"data/projects.json"));
+            //var projectItems = JsonSerializer.Deserialize<List<ProjectItem>>(System.IO.File.ReadAllText(@"data/projects.json"));
             //BuildWorkXRefs(workItems, techCats);
             //BuildProjectXRefs(projectItems, techCats);
-            services.AddSingleton(techCats);
-            services.AddSingleton(JsonSerializer.Deserialize<List<EdItem>>(System.IO.File.ReadAllText(@"data/ed.json")));
+            //services.AddSingleton(techCats);
+            //services.AddSingleton(JsonSerializer.Deserialize<List<EdItem>>(System.IO.File.ReadAllText(@"data/ed.json")));
             //services.AddSingleton(workItems);
-            services.AddSingleton(projectItems);
+            //services.AddSingleton(projectItems);
 
             services.AddSingleton(new Repository());
         }

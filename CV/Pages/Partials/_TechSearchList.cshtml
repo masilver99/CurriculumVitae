@@ -19,7 +19,7 @@
 @foreach (var techCategory in Model.ItemList)
 {       <tbody>
 
-            @foreach (var techItem in techCategory.Items.OrderByDescending(i => i.ExperienceLevel))
+            @foreach (var techItem in techCategory.TechItems.OrderByDescending(i => i.ExperienceLevel))
             {
 
             <tr>

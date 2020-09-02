@@ -8,24 +8,25 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using System.IO;
 using Utf8Json;
+using CV.data;
 
 namespace CV.Pages
 {
     public class EdModel : PageModel
     {
         private readonly ILogger<EdModel> _logger;
+        private Repository _repository;
+        public IEnumerable<EdItem> EdItems { get; private set; }
 
-        public List<EdItem> EdItems { get; }
-
-        public EdModel(ILogger<EdModel> logger, List<EdItem> edItems)
+        public EdModel(ILogger<EdModel> logger, Repository repository)
         {
             _logger = logger;
-            EdItems = edItems;
+            _repository = repository;
         }
 
-        public void OnGet()
+        public async Task OnGet()
         {
-
+            EdItems = await _repository.GetEdItems();
         }
     }
 }

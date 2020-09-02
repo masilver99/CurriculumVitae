@@ -20,7 +20,7 @@ namespace CV.Models
         {
             foreach (var techCat in this)
             {
-                foreach (var techitem in techCat.Items)
+                foreach (var techitem in techCat.TechItems)
                 {
                     if (techitem.Name == name)
                     {
@@ -33,7 +33,7 @@ namespace CV.Models
 
         public void SafeAddTechCat(TechCategory techCategory)
         {
-            if (this.Where(t => t.Category == techCategory.Category).Count() == 0)
+            if (this.Where(t => t.Name == techCategory.Name).Count() == 0)
             {
                 this.Add(techCategory);
             }

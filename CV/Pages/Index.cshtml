@@ -58,28 +58,28 @@ advances and how they can reduce costs and increase revenue.</strong></p>
 </div>
 <div class="searchResults">
 
-@if (Model.SearchedTechCategories.Count > 0)
+@if (Model.SearchedTechCategories.Count() > 0)
 {
     <div>
         <partial name="_TechSearchList" model='new PartialViewModel<TechCategory> { ItemList = Model.SearchedTechCategories, IsForSearch = true }' />
     </div>
 }
 
-@if (Model.SearchedWorkItems.Count > 0)
+@if (Model.SearchedWorkItems.Count() > 0)
 {
     <div>
         <partial name="_WorkSearchList" model="new PartialViewModel<WorkItem> { ItemList = Model.SearchedWorkItems, IsForSearch = true }" />
     </div>
 }
 
-@if (Model.SearchedProjectItems.Count > 0)
+@if (Model.SearchedProjectItems.Count() > 0)
 {
     <div>
         <partial name="_ProjectSearchList" model="new PartialViewModel<ProjectItem> { ItemList = Model.SearchedProjectItems, IsForSearch = true }" />
     </div>
 }
 
-@if (Model.SearchedEdItems.Count > 0)
+@if (Model.SearchedEdItems.Count() > 0)
 {
     <div>
         <partial name="_EdSearchList" model="new PartialViewModel<EdItem> { ItemList = Model.SearchedEdItems, IsForSearch = true }" />

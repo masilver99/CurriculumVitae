@@ -8,18 +8,18 @@ namespace CV.Models
     public class ProjectItem
     {
         public int Id { get; set; }
-        public string SiteName { get; set; }
+        public string ProjectName { get; set; }
         public string Url { get; set; }
-        public string Date { get; set; }
+        public string LastWorkedOnDate { get; set; }
         public string Description { get; set; }
         public string Purpose { get; set; }
         public bool OpenSource { get; set; }
         public string Image { get; set; }
-        public string Screenshot { get; set; }
+        public string Screenshots { get; set; }
         public string Status { get; set; }
         public bool CodeAvailable { get; set; }
 
-        public List<string> Types { get; set; }
+        public List<string> ProjectType { get; set; }
         public List<string> TechXref { get; set; } = new List<string>();
         public List<TechItem> TechItems { get; set; } = new List<TechItem>();
         public List<string> TechnologyUsed { get; set; } = new List<string>();
