@@ -18,7 +18,11 @@
                 </div>
                 <div class="p-1">
                     <div>
-                        <i class="far fa-calendar-alt"></i> @workItem.StartDate.ToString("MMM-yyyy") to 
+                        <div class="fa-icon">
+                        <i class="far fa-calendar-alt"></i>
+                        </div>
+                        @workItem.StartDate.ToString("MMM-yyyy") to 
+                        
                         @if (workItem.EndDate.HasValue)
                         {
                             @workItem.EndDate.Value.ToString("MMM-yyyy");
@@ -29,7 +33,9 @@
                         }
                     </div>
                     <div>
+                        <div class="fa-icon">
                         <i class="fas fa-map-marked-alt"></i>
+                        </div>
                         @workItem.Location
                     </div>
                 </div>
@@ -44,6 +50,18 @@
                     </li>
                 }
             </ul>
+        </div>
+        <div class="card-footer">
+            @foreach (var item in workItem.TechItems)
+            {
+                var cat = $"cat{item.CategoryId}";
+                var http = $"/tech/#{item.Name}";
+                <a href="@http">
+                <div class='itemBox @cat'>
+                    @item.Name
+                </div>
+                </a>
+            }
         </div>
     </div>
 }

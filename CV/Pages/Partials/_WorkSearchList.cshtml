@@ -11,8 +11,8 @@
                     <a href="#"><i class="far fa-caret-square-up"></i></a>
                 </th>
                 <th scope="col">Position</th>
-                <th scope="col">Years</th>
-                <th scope="col">Details</th>
+                <th scope="col" class="hideSmall">Years</th>
+                <th scope="col" class="hideSmall">Details</th>
             </tr>
         </thead>
  
@@ -44,13 +44,21 @@
                     @workItem.Position
                 </div>
                 </td>
-                <td>
+                <td class="hideSmall">
                     <div class="techName">
-                    @workItem.StartDate
+                        <i class="far fa-calendar-alt"></i> @workItem.StartDate.ToString("MMM-yyyy") to 
+                        @if (workItem.EndDate.HasValue)
+                        {
+                            @workItem.EndDate.Value.ToString("MMM-yyyy");
+                        }
+                        else 
+                        {
+                            @:Current 
+                        }
                     </div>
                 </td>
 
-                <td>
+                <td class="hideSmall">
                     <button class="btn btn-outline-dark"
                        aria-expanded="false"
                        data-toggle="collapse"
@@ -61,7 +69,7 @@
                 </td>
 
             </tr>
-                <tr class="collapse out" id='@("collapsework"+count++)'>
+                <tr class="hideSmall collapse out" id='@("collapsework"+count++)'>
                     <td colspan="4">
                         <ul>
                             @foreach (var bullet in workItem.BulletPoints)

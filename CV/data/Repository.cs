@@ -62,14 +62,14 @@ LEFT OUTER JOIN tech t on wt.tech_id = t.id{searchSql};";
             if (searchTerms != null && searchTerms.Count > 0)
             {
                 searchSql = @" LEFT OUTER JOIN tech_search_terms tst ON t.id = tst.tech_id 
-WHERE tst.search_term in @searchTerms";
+WHERE tst.search_term in @searchTerms ";
             }
 
             using var connection = await GetConnection();
             var sql = @$"SELECT p.*, t.* 
 FROM project p 
 LEFT OUTER JOIN project_tech pt on p.id = pt.project_id
-LEFT OUTER JOIN tech t on pt.tech_id = t.id{searchSql};";
+LEFT OUTER JOIN tech t on pt.tech_id = t.id{searchSql} ORDER BY p.list_order;";
             var lookup = new Dictionary<int, ProjectItem>();
             await connection.QueryAsync<ProjectItem, TechItem, ProjectItem>(sql,
                 (p, t) =>
@@ -79,7 +79,8 @@ LEFT OUTER JOIN tech t on pt.tech_id = t.id{searchSql};";
                     {
                         lookup.Add(p.Id, projectItem = p);
                     }
-                    projectItem.TechItems.Add(t);
+                    if (t != null) projectItem.TechItems.Add(t);
+
                     return projectItem;
                 },
                 new { searchTerms = searchTerms?.ToArray() }

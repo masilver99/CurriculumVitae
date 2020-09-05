@@ -8,6 +8,7 @@ using CV.Models;
 using System.Text.RegularExpressions;
 using CV.data;
 using System.Threading.Tasks;
+using System.Net;
 
 namespace CV.Pages
 {
@@ -31,10 +32,17 @@ namespace CV.Pages
             _repository = repostory;
         }
 
+        private string GetIpAddress()
+        {
+            var userip = HttpContext.Connection.RemoteIpAddress.MapToIPv4();
+            return userip.ToString();
+        }
+
         public async Task OnGet()
         {
             if (!string.IsNullOrWhiteSpace(searchTerms))
             {
+                _logger.LogInformation("Search: {searchTerms}, from {IpAddress}", searchTerms, GetIpAddress());
                 var terms = ScrubUserInput(searchTerms);
 
                 //Search Education
@@ -42,21 +50,6 @@ namespace CV.Pages
                 await SearchTechCategories(terms);
                 await SearchProjectItems(terms);
                 await SearchWorkItems(terms);
-                /*
-                // Search data
-                foreach (var term in terms)
-                {
-                    // Search tech catergories
-                    SearchTechItems(_techCategories, term);
-
-                    //Search Jobs
-                    SearchWorkItems(_workItems, term);
-
-                    //Search Projects
-                    SearchProjectItems(_projectItems, term);
-
-                }
-                */
             }
         }
 

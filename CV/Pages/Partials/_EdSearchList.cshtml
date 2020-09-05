@@ -12,7 +12,7 @@
                 </th>
                 <th scope="col">Degree</th>
                 <th scope="col">Graduation</th>
-                <th scope="col">Details</th>
+                <th scope="col" class="hideSmall">Details</th>
             </tr>
         </thead>
  
@@ -50,7 +50,7 @@
                     </div>
                 </td>
 
-                <td>
+                <td class="hideSmall">
                     <button class="btn btn-outline-dark"
                        aria-expanded="false"
                        data-toggle="collapse"
@@ -61,7 +61,7 @@
                 </td>
 
             </tr>
-                <tr class="collapse out" id='@("collapseed"+count++)'>
+                <tr class="collapse out hideSmall" id='@("collapseed"+count++)'>
                     <td colspan="4">
                         <ul>
                             @foreach (var bullet in edItem.BulletPoints)

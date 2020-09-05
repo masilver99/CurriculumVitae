@@ -27,6 +27,8 @@ namespace CV.Models
 
         public string Versions { get; set; }
 
+        public int CategoryId { get; set; }
+
         public List<string> BulletPoints { get; set; } = new List<string>();
 
         public List<string> Xref { get; set; } = new List<string>();
