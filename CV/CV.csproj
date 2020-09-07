@@ -39,7 +39,6 @@
   </PropertyGroup>
        
   <ItemGroup>
-    <Folder Include="scripts\" />
     <Folder Include="wwwroot\files\" />
   </ItemGroup>
        
