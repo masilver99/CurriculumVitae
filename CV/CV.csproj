@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="data\ed.json" />
+    <Content Remove="data\projects.json" />
+    <Content Remove="data\tech.json" />
+    <Content Remove="data\work.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="data\work.sql" />
   </ItemGroup>
 
@@ -25,8 +32,6 @@
     <PackageReference Include="Serilog.AspNetCore" Version="3.4.0" />
     <PackageReference Include="Serilog.Exceptions" Version="5.6.0" />
     <PackageReference Include="Serilog.Sinks.File" Version="4.1.0" />
-    <PackageReference Include="Serilog.Sinks.RollingFile" Version="3.3.0" />
-    <PackageReference Include="Utf8Json" Version="1.3.7" />
   </ItemGroup>
 
   <PropertyGroup>
@@ -34,8 +39,21 @@
   </PropertyGroup>
        
   <ItemGroup>
-    <Folder Include="NewFolder\" />
+    <Folder Include="scripts\" />
     <Folder Include="wwwroot\files\" />
+  </ItemGroup>
+       
+  <ItemGroup>
+    <None Include="data\ed.json" />
+    <None Include="data\projects.json" />
+    <None Include="data\tech.json" />
+    <None Include="data\work.json" />
+  </ItemGroup>
+       
+  <ItemGroup>
+    <None Update="data\cv.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

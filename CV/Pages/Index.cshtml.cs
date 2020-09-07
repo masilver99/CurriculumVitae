@@ -8,7 +8,6 @@ using CV.Models;
 using System.Text.RegularExpressions;
 using CV.data;
 using System.Threading.Tasks;
-using System.Net;
 
 namespace CV.Pages
 {
@@ -34,8 +33,29 @@ namespace CV.Pages
 
         private string GetIpAddress()
         {
-            var userip = HttpContext.Connection.RemoteIpAddress.MapToIPv4();
-            return userip.ToString();
+            var headerValue = GetFirstHeaderValue("X-Forwarded-For", "X-Client-IP", "HTTP_X_FORWARDED_FOR", "HTTP_CLIENT_IP");
+
+            if (string.IsNullOrWhiteSpace(headerValue))
+            {
+                return HttpContext.Connection.RemoteIpAddress.ToString();
+            }
+
+            return headerValue;
+        }
+
+        private string GetFirstHeaderValue(params string[] headers)
+        {
+            foreach(var header in headers)
+            {
+                var headerValues = HttpContext.Request.Headers[header];
+
+                if (headerValues.Count > 0)
+                {
+                    return headerValues.FirstOrDefault();
+                }
+            }
+
+            return null;
         }
 
         public async Task OnGet()

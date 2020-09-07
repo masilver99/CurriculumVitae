@@ -30,7 +30,8 @@ a.navbar-brand {
 }
 /* Provide sufficient contrast against white background */
 a {
-    color: #0366d6;
+       color: #0366d6;
+
 }
 
 [aria-expanded="true"] div.expand:before {
@@ -74,11 +75,18 @@ ul.listItem {
     margin-bottom: 10px; /* Added */
 }
 
+.card-header {
+    background-color: gainsboro;
+}
+
 .linkIcon {
     width: 3rem;
     padding-top: 2rem;
 }
 
+.menunavbar {
+    background-color: darkolivegreen;
+}
 .fa-caret-square-up {
     color: white;
 }
@@ -93,14 +101,34 @@ ul.listItem {
     margin-bottom: .5rem;
 }
 
-.techImage {
-    max-width: 2rem;
-    max-height: 2rem;
-    margin-bottom: .1rem;
-    margin-right: .5rem;
+.techImageDiv {
+    width: 32px;
+    vertical-align: middle;
+    text-align: center;
 }
 
+.techImageTd {
+    display: flex;
+}
 
+.techImage {
+    max-width: 32px;
+    max-Height: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2px;
+    vertical-align: middle;
+    align-content: center;
+}
+
+.techName {
+    margin-left: .4rem;
+    margin-top: .25rem;
+}
+
+.techList {
+    font-size: xx-small;
+}
 
 .table-stripedX tbody tr:nth-of-type(4n+1) {
     background-color: rgba(0,0,0,.05);
@@ -118,16 +146,26 @@ ul.listItem {
     border-color: #1861ac;
 }
 
+.nav-link {
+    color: bisque;
+}
+
+.nav-link:hover {
+    color: bisque;
+    text-decoration: underline;
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
+    html {
     font-size: 16px;
-  }
+    }
+
 }
 
 @media (max-width: 400px) {
@@ -137,14 +175,25 @@ html {
     .rating {
         font-size: .75rem;
     }
+    .hideSmall {
+        display: none;
+    }
+}
+
+.fa-icon {
+    width: 24px;
+    float:left;
+    text-align:center;
 }
 
 .primary-ctn {
 }
 
 .companyName {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1.8rem;
+    padding-bottom: 2px;
+    text-shadow: 3px 3px 5px darkgrey;
 }
 
 
@@ -152,6 +201,7 @@ html {
     font-weight: 600;
     font-style: italic;
     color: darkblue;
+    text-shadow: 3px 3px 5px darkgrey;
 }
 
 .border-top {
@@ -185,6 +235,93 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+  //white-space: nowrap;
+  //line-height: 60px; /* Vertically center the text there */
+  background-color: lightgray;
+  padding-bottom: .5rem;
+}
+
+.itemBox {
+    border: 1px solid lightgrey;
+    background-color: lightblue;
+    border-radius: 3px;
+    float: left;
+    padding: 0px 3px 2px 3px;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    font-size: smaller;
+}
+
+.cat1 {
+    background-color: #2f4f4f;
+    color: white;
+}
+
+.cat2 {
+    background-color: #228b22;
+    color: white;
+}
+
+.cat3 {
+    background-color: #7f0000;
+    color: white;
+}
+
+.cat4 {
+    background-color: #00008b;
+    color: white;
+}
+
+.cat5 {
+    background-color: #ff8c00;
+    color: black;
+}
+
+.cat6 {
+    background-color: #ffff00;
+    color: black;
+}
+
+.cat7 {
+    background-color: #00ff00;
+    color: black;
+}
+
+.cat8 {
+    background-color: #00ffff;
+    color: black;
+}
+
+.cat9 {
+    background-color: #ff00ff;
+    color: white;
+}
+
+.cat10 {
+    background-color: #1e90ff;
+    color: white;
+}
+
+.cat11 {
+    background-color: #ffe4b5;
+    color: black;
+}
+
+.cat12 {
+    background-color: #ff69b4;
+    color: black;
+}
+
+.card {
+    box-shadow: 5px 5px 15px lightgrey;
+    
+}
+
+.my-2 {
+    margin-bottom: .8rem !important;
+    margin-top: .8rem !important;
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("/img/menu.png");
 }

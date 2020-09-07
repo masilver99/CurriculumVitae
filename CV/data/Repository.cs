@@ -1,9 +1,7 @@
 ﻿using CV.Models;
 using Dapper;
 using Microsoft.Data.Sqlite;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace CV.data
@@ -18,7 +16,7 @@ namespace CV.data
 
         private async Task<SqliteConnection> GetConnection()
         {
-            var connection = new SqliteConnection(@"Data Source=data\cv.db;");
+            var connection = new SqliteConnection(@"Data Source=data/cv.db;");
             await connection.OpenAsync();
             return connection;
         }
