@@ -1,4 +1,5 @@
 ﻿using CV.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -180,6 +181,18 @@ namespace CV.data
                 Image = w.Image,
                 BulletPoints = w.BulletPoints ?? new List<string>()
             };
+
+            // Parse StartDate
+            if (!string.IsNullOrWhiteSpace(w.StartDate) && DateTime.TryParse(w.StartDate, out var startDate))
+            {
+                item.StartDate = startDate;
+            }
+
+            // Parse EndDate (can be empty)
+            if (!string.IsNullOrWhiteSpace(w.EndDate) && DateTime.TryParse(w.EndDate, out var endDate))
+            {
+                item.EndDate = endDate;
+            }
 
             // Map tech items from TechXref names to full tech detail if available
             if (w.TechXref != null && w.TechXref.Count > 0)
@@ -370,7 +383,8 @@ namespace CV.data
         public string CompanyName { get; set; }
         public string Division { get; set; }
         public string CompanyNote { get; set; }
-        public string Dates { get; set; }
+        public string StartDate { get; set; }
+        public string EndDate { get; set; }
         public string Position { get; set; }
         public string Location { get; set; }
         public string Image { get; set; }
