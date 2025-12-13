@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿﻿using System.Collections.Generic;
 
 namespace CV.Models
 {
@@ -25,6 +25,8 @@ namespace CV.Models
         public string Versions { get; set; }
 
         public int CategoryId { get; set; }
+
+        public string CategoryName { get; set; }
 
         public List<string> BulletPoints { get; set; } = new List<string>();
 

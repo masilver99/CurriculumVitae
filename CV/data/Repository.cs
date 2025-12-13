@@ -63,13 +63,14 @@ namespace CV.data
                 {
                     _techCategories.AddRange(techCats);
                     // Flatten tech items for quick lookup by name
+                    var catId = 1;
                     foreach (var cat in _techCategories)
                     {
                         if (cat.Items != null)
                         {
                             foreach (var item in cat.Items)
                             {
-                                var techItem = MapTechItem(cat, item);
+                                var techItem = MapTechItem(cat, item, catId);
                                 if (!string.IsNullOrWhiteSpace(techItem.Name))
                                 {
                                     var key = techItem.Name.Trim().ToUpperInvariant();
@@ -80,6 +81,7 @@ namespace CV.data
                                 }
                             }
                         }
+                        catId++;
                     }
                 }
             }
@@ -264,13 +266,13 @@ namespace CV.data
             {
                 foreach (var item in c.Items)
                 {
-                    cat.TechItems.Add(MapTechItem(c, item));
+                    cat.TechItems.Add(MapTechItem(c, item, id));
                 }
             }
             return cat;
         }
 
-        private TechItem MapTechItem(TechJsonCategory cat, TechJsonItem item)
+        private TechItem MapTechItem(TechJsonCategory cat, TechJsonItem item, int categoryId)
         {
             return new TechItem
             {
@@ -281,7 +283,8 @@ namespace CV.data
                 Versions = item.Versions,
                 BulletPoints = item.BulletPoints ?? new List<string>(),
                 Xref = item.Xref ?? new List<string>(),
-                CategoryId = 0
+                CategoryId = categoryId,
+                CategoryName = cat.Category
             };
         }
 
@@ -309,7 +312,8 @@ namespace CV.data
                 Versions = t.Versions,
                 BulletPoints = t.BulletPoints != null ? new List<string>(t.BulletPoints) : new List<string>(),
                 Xref = t.Xref != null ? new List<string>(t.Xref) : new List<string>(),
-                CategoryId = t.CategoryId
+                CategoryId = t.CategoryId,
+                CategoryName = t.CategoryName
             };
         }
 

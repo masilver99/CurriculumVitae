@@ -8,7 +8,10 @@
             <div class="d-flex flex-wrap justify-content-between align-items-center item-title">
                 <div class="p-2 flex-grow-1">
                     <div class="companyName">
-                        <img class="workImage" src="~/img/@workItem.Image" />
+                        @if (!string.IsNullOrWhiteSpace(@workItem.Image))
+                        {
+                            <img class="workImage" src="~/img/@workItem.Image"/>
+                        }
                         @workItem.CompanyName
                     </div>
                     <div class="workTitle">
@@ -52,11 +55,11 @@
             </ul>
         </div>
         <div class="card-footer">
-            @foreach (var item in workItem.TechItems)
+            @foreach (var item in workItem.TechItems.OrderBy(x => x.CategoryId))
             {
                 var cat = $"cat{item.CategoryId}";
                 var http = $"/tech/#{item.Name}";
-                <a href="@http">
+                <a href="@http" title="@item.CategoryName">
                 <div class='itemBox @cat'>
                     @item.Name
                 </div>
