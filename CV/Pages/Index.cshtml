@@ -7,52 +7,90 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p><strong>I'm Michael Silver, a professional lead software engineer and architect, working out of the state of Georgia in the USA.
-    I created this site to house my curriculum vitae and to learn more about specific aspects of programming with ASP.NET Razor Pages.
-</strong></p>
-    <div class="card-group align-item-center justify-content-center">
+    <h3 class="display-6">Welcome to Michael Silver's curriculum vitae.</h3>
+
+    <div class="summaryText">I have over 25 years of management and development experience, with a recent focus on leading teams developing message based, high throughput, high availability systems, usually using .NET Core. 
+My <a href="/work">extensive work history</a> and <a href="/tech">list of technologies</a> I've used, documents my wide range of expereince.</div>
+
+    <div class="summaryBullets">
+        <ul>
+            <li>Heavily involved in full life cycle development (SDLC), from business analysis to final release and support.</li>
+<li>Foster open work environment where team members are empowered to make decisions and offer opinions and critiques.</li>
+<li>Firmly believe in keeping development agile, stressing collaboration and iteration throughout the development process as well as code reviews and heavy unit testing.</li>
+<li>Ardent about learning new technology and understanding when and how it may be beneficial.</li>
+<li>Skillful at managing and meeting customer expectations.</li>
+<li>Excellent communication and people skills.</li>
+<li>Excellent analytical and troubleshooting skills, able to solve complex problems.</li>
+        </ul>
+    </div>
+
+    <div class="card-group content-row">
+    <div class="row align-item-center justify-content-center">
+        <a href="/work">
+            <div class="card sectionCard  h-100 mx-auto">
+            <div class="card-body">
+                <i class="fas fa-briefcase fa-lg"></i>
+                <div class="sectionTitle">Extensive Work History</div>
+            </div>
+            </div>
+        </a>
+        <a href="/tech">
+            <div class="card sectionCard mx-auto h-100">
+            <div class="card-body">
+            <i class="fas fa-microchip"></i>
+                <div class="sectionTitle">Technology Experience</div>
+            </div>
+            </div>
+        </a>
+        <a href="/projects">
+            <div class="card sectionCard mx-auto h-100">
+            <div class="card-body">
+                <i class="fas fa-drafting-compass"></i>
+                <div class="sectionTitle">Projects</div>
+            </div>
+            </div>
+        </a>
+        <a href="/ed">
+            <div class="card sectionCard mx-auto h-100">
+            <div class="card-body">
+                <i class="fas fa-user-graduate"></i>
+                <div class="sectionTitle">Education</div>
+            </div>
+            </div>
+        </a>
+        <a href="/ref">
+            <div class="card sectionCard mx-auto h-100">
+            <div class="card-body">
+                <i class="fas fa-users"></i>
+                <div class="sectionTitle">References</div>
+            </div>
+            </div>
+        </a>
+    </div>
+    </div>
+
 
         <a href="https://www.linkedin.com/in/michaelsilver/">
-        <div class="card linkCard mx-auto">
-            <div class="card-title">
                 <img class="linkIcon" src="~/img/linkedin.svg" />
-            </div>
-            <div class="card-body">
-                LinkedIn Profile
-            </div>
-        </div>
         </a>
 
         <a href="https://stackoverflow.com/users/125406/michael-silver">
-        <div class="card linkCard mx-auto">
-            <div class="card-title">
                 <img class="linkIcon" src="~/img/so-icon.svg" />
-            </div>
-            <div class="card-body">
-                Stack Overflow profile
-            </div>
-        </div>
         </a>
 
         <a href="files/MichaelSilverResume.pdf">
-        <div class="card linkCard mx-auto">
-            <div class="card-title">
-                <img class="linkIcon" src="~/img/resume.svg" />
-            </div>
-            <div class="card-body">
-                PDF Resume
-            </div>
-        </div>    
+                <img class="linkIcon" src="~/img/resume-icon.png" />
+        </a>
+        <a href="mailto:masilver@gmail.com?subject=CV">
+            <img class="linkIcon" src="~/img/email-mail-open-at.png" />
         </a>
 
     </div>
-</div>
 
 <div class="text-center">
-<p>Being a CV, this site is rather exhaustive, so for recruiters or those looking for specific skill, I offer a search function below. Enter a technology or a business name, click search and you're off to the races.  Separate multiple terms with a comma.</p>
+<p>This site is extensively indexed and searchable. Separate multiple terms with a comma.</p>
 <form method="get">
-    <input type="text" name="searchTerms" id="searchTerms" value="@Model.searchTerms"> 
+    <input type="text" name="searchTerms" id="searchTerms" placeholder="Seach CV..." value="@Model.searchTerms"> 
     <input type="submit" value="Search">
 </form>
 </div>

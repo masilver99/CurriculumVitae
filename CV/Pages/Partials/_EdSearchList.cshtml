@@ -18,60 +18,61 @@
  
         <tbody>
 
-            @foreach (var edItem in Model.ItemList.OrderByDescending(i => i.GraduationDate))
-            {
+        @foreach (var edItem in Model.ItemList.OrderByDescending(i => i.GraduationDate))
+        {
 
             <tr>
                 <td scope="row" class="techImageTd">
                     <div class="techImageDiv">
-                    @if(!string.IsNullOrWhiteSpace(edItem.Image))
-                    {
-                        <img class="techImage" src="~/img/@edItem.Image" />
-                    }
-                    else
-                    {
-                        <img class="techImage" src="~/img/blank.png" />
-                    }
+                        @if(!string.IsNullOrWhiteSpace(edItem.Image))
+                        {
+                            <img class="techImage" src="~/img/@edItem.Image" />
+                        }
+                        else
+                        {
+                            <img class="techImage" src="~/img/blank.png" />
+                        }
                     </div>
                     <div class="techName">
                         <a href="/Ed/#@edItem.SchoolName">
-                        @edItem.SchoolName
-                    </a>
+                            @edItem.SchoolName
+                        </a>
                     </div>
                 </td>
                 <td>
                     <div class="techName">
-                    @edItem.Degree
+                        @edItem.Degree
                     </div>
                 </td>
                 <td>
                     <div class="techName">
-                    @edItem.GraduationDate
+                        @edItem.GraduationDate
                     </div>
                 </td>
 
                 <td class="hideSmall">
                     <button class="btn btn-outline-dark"
-                       aria-expanded="false"
-                       data-toggle="collapse"
-                       href='@("#collapseed"+count)'
-                       role="button">
-                       <div aria-hidden="true" class="expand"></div>
+                            aria-expanded="false"
+                            data-toggle="collapse"
+                            href='@("#collapseed"+count)'
+                            role="button">
+                        <div aria-hidden="true" class="expand"></div>
                     </button>
                 </td>
 
             </tr>
-                <tr class="collapse out hideSmall" id='@("collapseed"+count++)'>
-                    <td colspan="4">
-                        <ul>
-                            @foreach (var bullet in edItem.BulletPoints)
-                            {
+            <tr class="collapse out hideSmall" id='@("collapseed"+count++)'>
+                <td colspan="4">
+                    <ul>
+                        @foreach (var bullet in edItem.BulletPoints)
+                        {
                             <li>
                                 @bullet
                             </li>
-                            }
-                        </ul>
-                    </td>
-                </tr>
-            }
+                        }
+                    </ul>
+                </td>
+            </tr>
+        }
         </tbody>
+    </table>

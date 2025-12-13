@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using CV.data;
+using CV.Models;
 using Microsoft.AspNetCore.HttpOverrides;
 
 namespace CV
@@ -29,6 +30,7 @@ namespace CV
                 });
 
             services.AddSingleton(new Repository());
+            services.AddSingleton(new VersionInfo());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

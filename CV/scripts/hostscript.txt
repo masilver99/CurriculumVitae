@@ -1,0 +1,6 @@
+﻿
+cd /home/masilver/docker/temp
+rm -r cv
+unzip -d cv/ cv.zip   
+docker build -t cv -f Dockerfile-release . 
+docker-compose -f ~/docker/docker-compose.yml up -d --remove-orphans

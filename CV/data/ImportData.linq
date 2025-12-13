@@ -108,7 +108,7 @@ void Main()
 		}
 	}
 
-
+/*
 	CREATE TABLE work_search_terms(
 		work_id INTEGER NOT NULL,
 		search_term TEXT NOT NULL,
@@ -122,7 +122,7 @@ void Main()
 		FOREIGN KEY(work_id) REFERENCES work(id),
 		FOREIGN KEY(tech_id) REFERENCES tech(id),
 		PRIMARY KEY(work_id, tech_id)
-	);
+	);*/
 	int workId = 0;
 	foreach (var workItem in workItems)
 	{
@@ -138,15 +138,15 @@ void Main()
 				  company_name = workItem.CompanyName,
 				  division = workItem.Division,
 				  company_note = workItem.CompanyNote,
-				  start_date = , 
-				  end_date = , 
+				  //start_date = workItem., 
+				  //end_date = , 
 				  position = workItem.Position,
 				  location = workItem.Location,
 				  image = workItem.Image, 
 				  bullet_points = bulletPoints
 			  });
 
-		foreach (var xref in edItem.Xref)
+		foreach (var xref in workItem.Xref)
 		{
 			connection.Execute(
 				@"INSERT INTO ed_search_terms (ed_id, search_term) VALUES 

@@ -4,26 +4,26 @@
 @{
     int count = 0;
 }
-    <table class="table table-stripedX table-hover table-sm">
-        <thead class="thead-dark">
-            <tr>
-                <th scope="col">Companies
-                    <a href="#"><i class="far fa-caret-square-up"></i></a>
-                </th>
-                <th scope="col">Position</th>
-                <th scope="col" class="hideSmall">Years</th>
-                <th scope="col" class="hideSmall">Details</th>
-            </tr>
-        </thead>
+<table class="table table-stripedX table-hover table-sm">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Companies
+            <a href="#"><i class="far fa-caret-square-up"></i></a>
+        </th>
+        <th scope="col">Position</th>
+        <th scope="col" class="hideSmall">Years</th>
+        <th scope="col" class="hideSmall">Details</th>
+    </tr>
+    </thead>
  
-        <tbody>
+    <tbody>
 
-            @foreach (var workItem in Model.ItemList)
-            {
+    @foreach (var workItem in Model.ItemList)
+    {
 
-            <tr>
-                <td scope="row" class="techImageTd">
-                    <div class="techImageDiv">
+        <tr>
+            <td scope="row" class="techImageTd">
+                <div class="techImageDiv">
                     @if(!string.IsNullOrWhiteSpace(workItem.Image))
                     {
                         <img class="techImage" src="~/img/@workItem.Image" />
@@ -32,54 +32,55 @@
                     {
                         <img class="techImage" src="~/img/blank.png" />
                     }
-                    </div>
-                    <div class="techName">
-                        <a href="/Work/#@workItem.CompanyName">
+                </div>
+                <div class="techName">
+                    <a href="/Work/#@workItem.CompanyName">
                         @workItem.CompanyName
                     </a>
-                    </div>
-                </td>
-                <td>
-                    <div class="techName">
+                </div>
+            </td>
+            <td>
+                <div class="techName">
                     @workItem.Position
                 </div>
-                </td>
-                <td class="hideSmall">
-                    <div class="techName">
-                        <i class="far fa-calendar-alt"></i> @workItem.StartDate.ToString("MMM-yyyy") to 
-                        @if (workItem.EndDate.HasValue)
-                        {
-                            @workItem.EndDate.Value.ToString("MMM-yyyy");
-                        }
-                        else 
-                        {
-                            @:Current 
-                        }
-                    </div>
-                </td>
+            </td>
+            <td class="hideSmall">
+                <div class="techName">
+                    <i class="far fa-calendar-alt"></i> @workItem.StartDate.ToString("MMM-yyyy") to 
+                    @if (workItem.EndDate.HasValue)
+                    {
+                        @workItem.EndDate.Value.ToString("MMM-yyyy");
+                    }
+                    else 
+                    {
+                        @:Current 
+                    }
+                </div>
+            </td>
 
-                <td class="hideSmall">
-                    <button class="btn btn-outline-dark"
-                       aria-expanded="false"
-                       data-toggle="collapse"
-                       href='@("#collapsework"+count)'
-                       role="button">
-                       <div aria-hidden="true" class="expand"></div>
-                    </button>
-                </td>
+            <td class="hideSmall">
+                <button class="btn btn-outline-dark"
+                        aria-expanded="false"
+                        data-toggle="collapse"
+                        href='@("#collapsework"+count)'
+                        role="button">
+                    <div aria-hidden="true" class="expand"></div>
+                </button>
+            </td>
 
-            </tr>
-                <tr class="hideSmall collapse out" id='@("collapsework"+count++)'>
-                    <td colspan="4">
-                        <ul>
-                            @foreach (var bullet in workItem.BulletPoints)
-                            {
-                            <li>
-                                @bullet
-                            </li>
-                            }
-                        </ul>
-                    </td>
-                </tr>
-            }
-        </tbody>
+        </tr>
+        <tr class="hideSmall collapse out" id='@("collapsework"+count++)'>
+            <td colspan="4">
+                <ul>
+                    @foreach (var bullet in workItem.BulletPoints)
+                    {
+                        <li>
+                            @bullet
+                        </li>
+                    }
+                </ul>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

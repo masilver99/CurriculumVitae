@@ -8,7 +8,7 @@
     "OpenSource": false,
     "Image": "nf.png",
     "Screenshot": "",
-    "Status": "Active",
+    "Status": "Retired",
     "CodeAvailable": true,
     "Types": [ "Website" ],
     "TechnologyUsed": [
@@ -71,7 +71,7 @@
     "OpenSource": false,
     "Image": "monitor.svg",
     "Screenshot": "",
-    "Status": "Active, no longer updated",
+    "Status": "Retired",
     "CodeAvailable": true,
     "Types": [ "Website" ],
     "TechnologyUsed": [
@@ -155,7 +155,7 @@
     "OpenSource": false,
     "Image": "monitor.svg",
     "Screenshot": "",
-    "Status": "Retired/Demo",
+    "Status": "Active",
     "CodeAvailable": true,
     "Types": [ "Website" ],
     "TechnologyUsed": [
@@ -232,7 +232,7 @@
     "OpenSource": true,
     "Image": "process.svg",
     "Screenshot": "",
-    "Status": "Active",
+    "Status": "Retired",
     "CodeAvailable": true,
     "Types": [ "Firmware" ],
     "TechnologyUsed": [

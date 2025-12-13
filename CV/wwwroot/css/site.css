@@ -34,22 +34,36 @@ a {
 
 }
 
+.sectionCard {
+    width: 200px;
+}
+
+.display-6 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.sectionTitle {
+    font-size: large;
+    padding-left: 7px;
+}
+ 
 [aria-expanded="true"] div.expand:before {
-    font-family: "FontAwesome";
-    //font-weight: 400;
     content: '\f139';
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 900;
 }
 
 [aria-expanded="false"] div.expand:before {
-    font-family: "FontAwesome";
-    //font-weight: 400;
     content: '\f13a';
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 900;
 }
 
 ul.listItem li:before {
-    font-family: 'FontAwesome';
-    //font-size: .6rem;
     content: '\f1b2';
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 900;
     margin: 0 5px 0 -25px;
 }
 
@@ -92,7 +106,8 @@ ul.listItem {
 }
 
 .searchResults {
-    padding-top: .6rem
+    padding-top: .6rem;
+    padding-bottom: .6rem;
 }
 
 .workImage {
@@ -235,8 +250,6 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-  //white-space: nowrap;
-  //line-height: 60px; /* Vertically center the text there */
   background-color: lightgray;
   padding-bottom: .5rem;
 }
@@ -324,4 +337,24 @@ body {
 
 .navbar-dark .navbar-toggler-icon {
     background-image: url("/img/menu.png");
+}
+
+.navbar-menu {
+    background-color: darkblue;
+}
+
+.summaryText {
+    padding-bottom: 25px;
+    margin-left: .3rem;
+    margin-right: .3rem;
+}
+
+.summaryBullets {
+    text-align: left !important;
+
+}
+
+.display-6 {
+    padding-top: 25px;
+    padding-bottom: 20px;
 }

@@ -1,10 +1,69 @@
 ﻿// All data contained in this file is copyrighted by Michael Silver and cannot be used without permission
 [
   {
+    "CompanyName": "Sagepath Reply",
+    "Division": "Software Agency",
+    "CompanyNote": "Remote",
+    "Dates": "November 2021 - Current",
+    "Position": "Senior Consultant",
+    "Location": "Atlanta, GA",
+    "Image": "Reply.png",
+    "Xref": [
+      "SAGEPATH",
+      "REPLY",
+      "AGENCY", //UNIVERSALTAXSYSTEMS
+      "WEBSITE", //TAXES
+      "ATLANTA",
+      "ATLANTAGA",
+      "GA",
+      "GEORGIA"
+    ],
+    "TechXref": [
+      "C#",
+      "Windows",
+      "Javascript",
+      "Typescript",
+      "Vue.js",
+      "Kentico",
+      "Episerver",
+      "Optimizely",
+      "Crownpeak",
+      "Umbraco",
+      "HTML",
+      "CSS",
+      "SQL",
+      "LINQ",
+      "Dapper",
+      "CSV",
+      "XML",
+      "JSON",
+      "jQuery",
+      "ASP.NET MVC",
+      "REST APIs",
+      "Web Services",
+      ".NET Core",
+      ".NET Framework",
+      "SqlServer",
+      "Agile",
+      "Scrum",
+      "Azure",
+      "Git",
+      "IIS"
+    ],
+    "BulletPoints": [
+      "Maintain, update and rollout publically facing websites for large corporate clients.",
+      "Work with an internal team and the customer, to develop specifications and project plans for small and large projects.",
+      "Most websites are hosted in Azure and use Episerver, Kentico, Umbraco or Sitecore as their CMS with numerous other javascript frameworks, such as Vue.js, jQuery, Bootstrap, etc.",
+      "Helped stabilize a few clients after developers left or the existing developers were overwhelmed.",
+      "Fast moving environment requires working with three project managers at once and being able to close out tasks quickly, based on ever changing priorities and tight deadlines.",
+      "Responsible for resolving ADA issues."
+    ]
+  },
+  {
     "CompanyName": "Wolters Kluwer",
     "Division": "Tax and Accounting",
     "CompanyNote": "Mostly Remote",
-    "Dates": "May 2018 - Current",
+    "Dates": "May 2018 - November 2021",
     "Position": "Senior Product Software Engineer",
     "Location": "Kennesaw, GA",
     "Image": "wk.png",
@@ -66,10 +125,11 @@
       "IIS"
     ],
     "BulletPoints": [
-      "Manage different teams of programmers on a per project basis.",
-      "Primarily work on the Electronic Filing Center (EFC) team. Responsible for a large queue based back end, distributed system, processing millions of tax returns every year.",
-      "\"Security Champion\", responsible for scanning and remediation planning for dozens of products for security, license and operational risks and reporting our security exposure and progress to our Vice President.",
-      "Team is responsible for numerous products, from customer facing web applications, to console apps, to libraries and web apis."
+      "Managed different teams of programmers on a per project basis.",
+      "Primarily worked on the Electronic Filing Center (EFC) team. Responsible for a large queue based back end, distributed system, processing millions of tax returns every year.",
+      "Worked on and help design back end accounting system responsible for processing billing records for all customers based on usage.",
+      "Was \"Security Champion\", responsible for scanning and remediation planning for dozens of products for security, license and operational risks and reporting our security exposure and progress to our Vice President.",
+      "Overall team was responsible for numerous products, from customer facing web applications, to console apps, to libraries and web apis."
     ]
   },
   {
@@ -117,6 +177,7 @@
       "Git",
       "Subversion",
       "Vagrant",
+      "Docker",
       "Virtual Box",
       "IIS",
       "MS Message Queues"
