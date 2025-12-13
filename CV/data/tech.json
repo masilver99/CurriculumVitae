@@ -245,7 +245,7 @@
         "ExperienceLevel": 2,
         "Image": "new-php-logo.svg",
         "BulletPoints": [
-          "Used mostly for fixing bugs in existing code."
+          "Fixed bugs in existing projects."
         ],
         "Xref": [
           "PHP"

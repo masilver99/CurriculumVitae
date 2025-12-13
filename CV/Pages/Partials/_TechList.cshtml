@@ -84,14 +84,55 @@
             </tr>
                 <tr class="collapse out" id='@("collapseme"+count++)'>
                     <td colspan="4">
-                        <ul>
-                            @foreach (var bullet in techItem.BulletPoints)
-                            {
-                            <li>
-                                @bullet
-                            </li>
-                            }
-                        </ul>
+                        @if (techItem.BulletPoints.Any())
+                        {
+                            <ul>
+                                @foreach (var bullet in techItem.BulletPoints)
+                                {
+                                <li>
+                                    @bullet
+                                </li>
+                                }
+                            </ul>
+                        }
+
+                        @if (techItem.WorkItems.Any())
+                        {
+                            <div class="mt-2">
+                                <strong>Work Experience:</strong>
+                                <ul>
+                                    @foreach (var work in techItem.WorkItems)
+                                    {
+                                        <li>
+                                            <a href="/work#@work.CompanyName"><strong>@work.CompanyName</strong></a> - @work.Position
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        }
+
+                        @if (techItem.ProjectItems.Any())
+                        {
+                            <div class="mt-2">
+                                <strong>Projects:</strong>
+                                <ul>
+                                    @foreach (var project in techItem.ProjectItems)
+                                    {
+                                        <li>
+                                            @if (!string.IsNullOrWhiteSpace(project.Url))
+                                            {
+                                                <a href="@project.Url" target="_blank"><strong>@project.ProjectName</strong></a>
+                                            }
+                                            else
+                                            {
+                                                <strong>@project.ProjectName</strong>
+                                            }
+                                            - @project.Purpose
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        }
                     </td>
                 </tr>
             }

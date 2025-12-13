@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
-using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace CV.data
@@ -266,15 +265,15 @@ namespace CV.data
             {
                 foreach (var item in c.Items)
                 {
-                    cat.TechItems.Add(MapTechItem(c, item, id));
+                    cat.TechItems.Add(MapTechItem(c, item, id, true));
                 }
             }
             return cat;
         }
 
-        private TechItem MapTechItem(TechJsonCategory cat, TechJsonItem item, int categoryId)
+        private TechItem MapTechItem(TechJsonCategory cat, TechJsonItem item, int categoryId, bool populateRelations = false)
         {
-            return new TechItem
+            var techItem = new TechItem
             {
                 Name = item.Name,
                 Years = item.Years,
@@ -286,6 +285,25 @@ namespace CV.data
                 CategoryId = categoryId,
                 CategoryName = cat.Category
             };
+
+            if (populateRelations)
+            {
+                var techName = item.Name.Trim().ToUpperInvariant();
+
+                if (_work != null)
+                {
+                    var matchingWork = _work.Where(w => w.TechXref != null && w.TechXref.Any(x => x.Trim().ToUpperInvariant() == techName));
+                    techItem.WorkItems = matchingWork.Select(MapWorkItem).ToList();
+                }
+
+                if (_projects != null)
+                {
+                    var matchingProjects = _projects.Where(p => p.TechXref != null && p.TechXref.Any(x => x.Trim().ToUpperInvariant() == techName));
+                    techItem.ProjectItems = matchingProjects.Select(MapProjectItem).ToList();
+                }
+            }
+
+            return techItem;
         }
 
         private EdItem MapEdItem(EdJson e)
@@ -312,6 +330,8 @@ namespace CV.data
                 Versions = t.Versions,
                 BulletPoints = t.BulletPoints != null ? new List<string>(t.BulletPoints) : new List<string>(),
                 Xref = t.Xref != null ? new List<string>(t.Xref) : new List<string>(),
+                WorkItems = t.WorkItems != null ? new List<WorkItem>(t.WorkItems) : new List<WorkItem>(),
+                ProjectItems = t.ProjectItems != null ? new List<ProjectItem>(t.ProjectItems) : new List<ProjectItem>(),
                 CategoryId = t.CategoryId,
                 CategoryName = t.CategoryName
             };

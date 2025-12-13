@@ -32,6 +32,9 @@ namespace CV.Models
 
         public List<string> Xref { get; set; } = new List<string>();
 
+        public List<WorkItem> WorkItems { get; set; } = new List<WorkItem>();
+        public List<ProjectItem> ProjectItems { get; set; } = new List<ProjectItem>();
+
         public int GetFullStars()
         {
             return (ExperienceLevel - GetHalfStars()) / 2;

@@ -30,6 +30,11 @@
       "Episerver",
       "Optimizely",
       "Crownpeak",
+      "Sitecore",
+      "LLM",
+      "AI",
+      "AICODING",
+      "VIBECODING",
       "Umbraco",
       "HTML",
       "CSS",
@@ -64,7 +69,7 @@
   {
     "CompanyName": "Independent Futures Trader",
     "Division": "",
-    "CompanyNote": "",
+    "CompanyNote": "business.png",
     "StartDate": "2021-08-01",
     "EndDate": "",
     "Position": "Futures Trader",
@@ -75,19 +80,23 @@
       "DAYTRADING",
       "FUTURES", 
       "FUTURESTRADING",
+      "LLM",
+      "AI",
+      "AICODING",
+      "VIBECODING",
       "ROME",
       "ROMEGA",
       "GA",
-      "GEORGIA"
+      "GEORGIA",
+      "FinTech"
     ],
     "TechXref": [
       "C#",
-      "Serria Chart",
+      "Sierra Chart",
       "Ninjatrader",
       "cTrader",
       "TradingView",
-      "C++",
-      "FinTech"
+      "C++"
     ],
     "BulletPoints": [
       "",
