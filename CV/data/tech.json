@@ -670,7 +670,7 @@
       "QUEUE",
       "MESSAGE",
       "MESSAGEQUEUE",
-      "MESSAGEBU" //MessageBus
+      "MESSAGEBUS" //MessageBus
     ],
     "Items": [
       {
@@ -826,7 +826,7 @@
         "Name": "Dapper",
         "Years": 6,
         "ExperienceLevel": 9,
-        "Image": "",
+        "Image": "dapper.jpg",
         "BulletPoints": [
           "Preferred library for accessing databases.",
           "Use in almost all new projects."
@@ -1244,30 +1244,254 @@
           "APACHE",
           "APACHEWEBSERVER"
         ]
+      }
+    ]
+  },
+  {
+    "Category": "Trading Software",
+    "Title": "Trading Software",
+    "Xref": [
+      "TRADINGSOFTWARE",
+      "TERMINAL"
+    ],
+    "Items": [
+      {
+        "Name": "Sierra Chart",
+        "Years": 3,
+        "ExperienceLevel": 8,
+        "Image": "sierrachart.png",
+        "BulletPoints": [
+          "Used for live manual trading of futures.",
+          "Wrote numerous custom indicators.",
+          "Wrote simple bots for backtesting."
+        ],
+        "Xref": [
+          "SIERRACHART",
+          "SIERRA",
+          "TRADING",
+          "CHARTING",
+          "ACSIL",
+          "C++"
+        ]
       },
       {
-        "Name": "Wordpress",
+        "Name": "TradingView",
+        "Years": 3,
+        "ExperienceLevel": 6,
+        "Image": "tradingview.svg",
+        "BulletPoints": [
+          "Used for technical analysis and strategy development.",
+          "Experience with Pine Script for custom indicators."
+        ],
+        "Xref": [
+          "TRADINGVIEW",
+          "TRADING",
+          "CHARTING",
+          "PINESCRIPT"
+        ]
+      },
+      {
+        "Name": "NinjaTrader",
+        "Years": 2,
+        "ExperienceLevel": 8,
+        "Image": "ninjatrader.png",
+        "BulletPoints": [
+          "Used for live and demo manual trading.",
+          "Used for automated trading strategy development.",
+          "Experience with NinjaScript for custom indicators and strategies."
+        ],
+        "Xref": [
+          "NINJATRADER",
+          "NINJA",
+          "TRADING",
+          "NINJASCRIPT",
+          "ALGORITHMIC",
+          "C#"
+        ]
+      },
+      {
+        "Name": "Quantower",
         "Years": 1,
+        "ExperienceLevel": 6,
+        "Image": "quantower.png",
+        "BulletPoints": [
+          "Wrote simple trading bot and indicator to test platform."
+        ],
+        "Xref": [
+          "QUANTOWER",
+          "TRADING",
+          "QUANT",
+          "ALGORITHMIC",
+          "C#"
+        ]
+      },
+      {
+        "Name": "cTrader",
+        "Years": 1,
+        "ExperienceLevel": 5,
+        "Image": "ctrader.ico",
+        "BulletPoints": [
+          "Used to live trade XAUUSD.",
+          "Written indicators and sample cAlgos."
+        ],
+        "Xref": [
+          "CTRADER",
+          "TRADING",
+          "FOREX",
+          "GOLD",
+          "C#"
+        ]
+      },
+      {
+        "Name": "Quantconnect",
+        "Years": 1,
+        "ExperienceLevel": 4,
+        "Image": "quantconnect.png",
+        "BulletPoints": [
+          "Used for backtesting and live trading strategies.",
+          "Extended LEAN open source project with numerous improvements."
+        ],
+        "Xref": [
+          "QUANTCONNECT",
+          "QC",
+          "TRADING",
+          "ALGORITHMIC",
+          "LEAN",
+          "C#"
+        ]
+      },
+      {
+        "Name": "Zorro",
+        "Years": 1,
+        "ExperienceLevel": 5,
+        "Image": "zorro.ico",
+        "BulletPoints": [
+          "Wrote simple trading bot for testing platform."
+        ],
+        "Xref": [
+          "ZORRO",
+          "ZORROTRADER",
+          "TRADING",
+          "ALGORITHMIC",
+          "C++"
+        ]
+      },
+      {
+        "Name": "thinkorswim",
+        "Years": 1,
+        "ExperienceLevel": 4,
+        "Image": "thinkorswim.svg",
+        "BulletPoints": [
+          "Used mostly for demo trading."
+        ],
+        "Xref": [
+          "THINKORSWIM",
+          "TOS",
+          "TRADING",
+          "TDAMERITRADE",
+          "THINKSCRIPT",
+          "SCHWAB"
+        ]
+      }
+    ]
+  },
+  {
+    "Category": "Content Management Systems",
+    "Title": "Content Management Systems",
+    "Xref": [
+      "CMS",
+      "CMSES",
+      "CONTENT MANAGEMENT SYSTEM"
+    ],
+    "Items": [
+      {
+        "Name": "WordPress",
+        "Years": 2,
         "ExperienceLevel": 5,
         "Image": "wordpress.png",
         "BulletPoints": [
-          "Used to bring up robust websites quickly."
+          "Used mostly for personal projects."
         ],
         "Xref": [
+          "WORDPRESS",
           "WP",
-          "WORDPRE" //WORDPRESS
+          "CMS"
         ]
       },
       {
         "Name": "Joomla",
-        "Years": 1,
+        "Years": 2,
         "ExperienceLevel": 5,
-        "Image": "Joomla_logo.png",
+        "Image": "joomla.png",
         "BulletPoints": [
-          "Used on one project where WordPress wasn't well suited."
+          "Used for client website requiring complex content structures."
         ],
         "Xref": [
-          "JOOMLA"
+          "JOOMLA",
+          "CMS"
+        ]
+      },
+      {
+        "Name": "Optimizely/EpiServer",
+        "Years": 3,
+        "ExperienceLevel": 7,
+        "Image": "optimizely.svg",
+        "BulletPoints": [
+          "Used for enterprise-level content management solutions.",
+          "Extensive customization experience.",
+          "External integrations."
+        ],
+        "Xref": [
+          "EPISERVER",
+          "OPTIMIZELY",
+          "CMS",
+          "DOTNET",
+          "ENTERPRISE"
+        ]
+      },
+      {
+        "Name": "SiteCore",
+        "Years": 1,
+        "ExperienceLevel": 4,
+        "Image": "sitecore.png",
+        "BulletPoints": [
+          "Used for large-scale enterprise content management."
+        ],
+        "Xref": [
+          "SITECORE",
+          "CMS",
+          "DOTNET",
+          "ENTERPRISE"
+        ]
+      },
+      {
+        "Name": "Kentico",
+        "Years": 3,
+        "ExperienceLevel": 7,
+        "Image": "kentico.svg",
+        "BulletPoints": [
+          "Used for large corporate financial customers."
+        ],
+        "Xref": [
+          "KENTICO",
+          "CMS",
+          "DOTNET",
+          "ECOMMERCE"
+        ]
+      },
+      {
+        "Name": "Umbraco",
+        "Years": 1,
+        "ExperienceLevel": 2,
+        "Image": "umbraco.svg",
+        "BulletPoints": [
+          "Mostly used for internal projects."
+        ],
+        "Xref": [
+          "UMBRACO",
+          "CMS",
+          "DOTNET",
+          "ASPNET"
         ]
       }
     ]

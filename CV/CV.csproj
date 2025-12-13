@@ -18,14 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="data\work.sql" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Dapper" Version="2.1.66" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="10.0.1" />
-    <PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.1" />
-    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="10.0.1" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.22.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="10.0.0" />
     <PackageReference Include="Serilog" Version="4.3.0" />
@@ -47,12 +40,6 @@
     <None Include="data\projects.json" />
     <None Include="data\tech.json" />
     <None Include="data\work.json" />
-  </ItemGroup>
-       
-  <ItemGroup>
-    <None Update="data\cv.db">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>

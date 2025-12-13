@@ -1,4 +1,4 @@
-﻿@using CV.Models
+﻿﻿@using CV.Models
 @model PartialViewModel<TechCategory>
 @{
     int count = 0;
@@ -16,7 +16,7 @@
 @foreach (var techCategory in Model.ItemList)
 {
     <table class="table table-stripedX table-hover table-sm" id="@techCategory.SingularName">
-        <thead class="thead-dark">
+        <thead class="thead-dark cat@(techCategory.Id)">
             <tr>
                 <th scope="col">@techCategory.SingularName
                 @if (!Model.IsForSearch)
