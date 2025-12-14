@@ -17,6 +17,7 @@ namespace CV.data
         private readonly List<WorkJson> _work = new List<WorkJson>();
 
         private readonly Dictionary<string, TechItem> _techByName = new Dictionary<string, TechItem>();
+        private readonly Dictionary<string, WorkJson> _workById = new Dictionary<string, WorkJson>();
 
         public Repository()
         {
@@ -92,6 +93,18 @@ namespace CV.data
                 if (workItems != null)
                 {
                     _work.AddRange(workItems);
+                    // Build work lookup by Id
+                    foreach (var w in workItems)
+                    {
+                        if (!string.IsNullOrWhiteSpace(w.Id))
+                        {
+                            var key = w.Id.Trim().ToUpperInvariant();
+                            if (!_workById.ContainsKey(key))
+                            {
+                                _workById.Add(key, w);
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -175,6 +188,7 @@ namespace CV.data
         {
             var item = new WorkItem
             {
+                Id = w.Id,
                 CompanyName = w.CompanyName,
                 Division = w.Division,
                 Position = w.Position,
@@ -230,8 +244,19 @@ namespace CV.data
                 Status = p.Status,
                 CodeAvailable = p.CodeAvailable,
                 ProjectType = p.Types ?? new List<string>(),
-                TechnologyUsed = p.TechnologyUsed ?? new List<string>()
+                TechnologyUsed = p.TechnologyUsed ?? new List<string>(),
+                WorkXref = p.WorkXref
             };
+
+            // Resolve WorkItem if WorkXref is provided
+            if (!string.IsNullOrWhiteSpace(p.WorkXref))
+            {
+                var key = p.WorkXref.Trim().ToUpperInvariant();
+                if (_workById.TryGetValue(key, out var workJson))
+                {
+                    item.WorkItem = MapWorkItem(workJson);
+                }
+            }
 
             if (p.TechXref != null && p.TechXref.Count > 0)
             {
@@ -383,6 +408,7 @@ namespace CV.data
         public List<string> Types { get; set; }
         public List<string> TechnologyUsed { get; set; }
         public List<string> TechXref { get; set; }
+        public string WorkXref { get; set; }
     }
 
     internal class TechJsonCategory
@@ -407,6 +433,7 @@ namespace CV.data
 
     internal class WorkJson
     {
+        public string Id { get; set; }
         public string CompanyName { get; set; }
         public string Division { get; set; }
         public string CompanyNote { get; set; }

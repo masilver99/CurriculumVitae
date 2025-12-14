@@ -23,6 +23,13 @@
                         <i style="color: darkblue;"class="far fa-file-alt"></i>
                         @projectItem.Purpose
                     </div>
+                    @if (projectItem.WorkItem != null)
+                    {
+                        <div class="workTitle">
+                            <i style="color: darkgreen;" class="far fa-building"></i>
+                            <a href="/work#@projectItem.WorkItem.Id">@projectItem.WorkItem.CompanyName</a>
+                        </div>
+                    }
                 </div>
                 <div class="p-1">
                     <div>
@@ -54,7 +61,7 @@
         <div class="card-body">
                         @if (!string.IsNullOrWhiteSpace(projectItem.Screenshot))
                         {
-                            <div class="text-center mb-3">
+                            <div class="mb-3">
                                 <img src="~/img/@projectItem.Screenshot" 
                                      alt="@projectItem.ProjectName screenshot" 
                                      class="img-thumbnail screenshot-thumbnail" 

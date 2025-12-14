@@ -557,6 +557,19 @@
         "DisplayName": ".NET Framework"
       },
       {
+        "Years": 1,
+        "ExperienceLevel": 2,
+        "Image": "",
+        "BulletPoints": [
+          "Greate for cross platform applications."
+        ],
+        "Xref": [
+          "NET"
+        ],
+        "Id": "AVALONIA",
+        "DisplayName": "Avalonia UI Framework"
+      },
+      {
         "Years": 4,
         "ExperienceLevel": 9,
         "Image": "NET_Core_Logo.svg",
@@ -1477,6 +1490,21 @@
       {
         "Years": 2,
         "ExperienceLevel": 5,
+        "Image": "",
+        "BulletPoints": [
+          "Purely web based CMS."
+        ],
+        "Xref": [
+          "CROWNPEAK",
+          "CROWNPEAKCMS",
+          "CMS"
+        ],
+        "Id": "CROWNPEAK",
+        "DisplayName": "Crownpeak CMS"
+      },
+      {
+        "Years": 2,
+        "ExperienceLevel": 5,
         "Image": "wordpress.png",
         "BulletPoints": [
           "Used mostly for personal projects."
@@ -1573,6 +1601,84 @@
     ]
   },
   {
+    "Category": "Artificial Intelligence",
+    "Title": "Artificial Intelligence",
+    "Xref": [
+      "AI",
+      "LLM",
+      "ML"
+    ],
+    "Items": [
+      {
+        "Years": 2,
+        "ExperienceLevel": 8,
+        "Image": "",
+        "BulletPoints": [
+          "For agentic programming.",
+          "For code reviews.",
+          "For code analysis.",
+          "For unit test generation."
+        ],
+        "Xref": [
+          "GITHUBCOPILOT",
+          "COPILOT",
+          "GITHUB"
+        ],
+        "Id": "COPILOT",
+        "DisplayName": "Github Copilot"
+      },
+      {
+        "Years": 1,
+        "ExperienceLevel": 7,
+        "Image": "",
+        "BulletPoints": [
+          "For agentic programming.",
+          "For code reviews.",
+          "For code analysis.",
+          "For unit test generation."
+        ],
+        "Xref": [
+          "CHATGPT"
+        ],
+        "Id": "CHATGPT",
+        "DisplayName": "ChatGPT"
+      },
+      {
+        "Years": 1,
+        "ExperienceLevel": 7,
+        "Image": "",
+        "BulletPoints": [
+          "For agentic programming.",
+          "For code reviews.",
+          "For code analysis.",
+          "For unit test generation."
+        ],
+        "Xref": [
+          "CLAUDE",
+          "OPUS",
+          "SONNET"
+        ],
+        "Id": "CLAUDE",
+        "DisplayName": "Anthropic Claude AI"
+      },
+      {
+        "Years": 2,
+        "ExperienceLevel": 6,
+        "Image": "",
+        "BulletPoints": [
+          "Used for trading assistance and prediction."
+        ],
+        "Xref": [
+          "ML.NET",
+          "ML",
+          "NEUTRALNET"
+        ],
+        "Id": "MLNET",
+        "DisplayName": "ML.NET"
+      }
+    ]
+  },
+  {
     "Category": "Hardware",
     "Title": "Hardware",
     "Xref": [
@@ -1581,8 +1687,8 @@
     ],
     "Items": [
       {
-        "Years": 30,
-        "ExperienceLevel": 10,
+        "Years": 1,
+        "ExperienceLevel": 6,
         "Image": "teensy_2.jpg",
         "BulletPoints": [
           "Used as an embedded controller for older keyboards to extend functionality and provide USB support."
@@ -1610,8 +1716,8 @@
         "DisplayName": "Raspberry Pi"
       },
       {
-        "Years": 10,
-        "ExperienceLevel": 8,
+        "Years": 2,
+        "ExperienceLevel": 7,
         "Image": "raspberrypizero.jpg",
         "BulletPoints": [
           "Currently, mostly used to create an inexpensive camera."

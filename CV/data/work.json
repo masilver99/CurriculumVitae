@@ -2,6 +2,7 @@
 [
   {
     "CompanyName": "Sagepath Reply",
+    "Id": "SAGEPATH",
     "Division": "Software Agency",
     "CompanyNote": "Remote",
     "Dates": "November 2021 - Current",
@@ -54,7 +55,10 @@
       "Scrum",
       "Azure",
       "Git",
-      "IIS"
+      "IIS",
+      "COPILOT",
+      "CLAUDE",
+      "CHATGPT"
     ],
     "BulletPoints": [
       "Maintain, update and rollout publicly facing websites for large corporate clients.",
@@ -67,6 +71,7 @@
   },
   {
     "CompanyName": "Independent Futures Trader",
+    "Id": "IFT",
     "Division": "",
     "CompanyNote": "business.png",
     "StartDate": "2021-08-01",
@@ -95,15 +100,20 @@
       "Ninjatrader",
       "cTrader",
       "TradingView",
-      "C++"
+      "C++",
+      "MLNET",
+      "CLAUDE",
+      "CHATGPT"
     ],
     "BulletPoints": [
-      "",
-      ""
+      "Use Al Brooks' methodology to trade E-Mini S&P 500 futures contracts.",
+      "Developed numerous trading bots and indicators for Sierra Chart, TradingView and Ninjatrader platforms.",
+      "Swing trade forex on longer timeframes."
     ]
   },
   {
     "CompanyName": "Wolters Kluwer",
+    "Id": "WK2",
     "Division": "Tax and Accounting",
     "CompanyNote": "Mostly Remote",
     "StartDate": "2018-05-01",
@@ -179,6 +189,7 @@
   },
   {
     "CompanyName": "NCR Corporation",
+    "Id": "NCR",
     "Division": "Professional Services",
     "CompanyNote": "100% Remote",
     "StartDate": "2010-05-01",
@@ -240,6 +251,7 @@
   },
   {
     "CompanyName": "Wolters Kluwer",
+    "Id": "WK1",
     "Division": "",
     "CompanyNote": "formerly Universal Tax Systems",
     "StartDate": "2002-06-01",
@@ -299,6 +311,7 @@
   },
   {
     "CompanyName": "Self-Employed",
+    "Id": "SE",
     "Division": "",
     "CompanyNote": "",
     "StartDate": "1994-05-01",
@@ -394,6 +407,7 @@
   },
   {
     "CompanyName": "Xpress Group, Inc.",
+    "Id": "XPRESS",
     "Division": "",
     "CompanyNote": "",
     "StartDate": "2001-06-01",
@@ -427,6 +441,7 @@
   },
   {
     "CompanyName": "PSNC Energy",
+    "Id": "PSNC",
     "Division": "",
     "CompanyNote": "",
     "StartDate": "1999-03-01",
@@ -461,6 +476,7 @@
   },
   {
     "CompanyName": "CarePoint, Inc",
+    "Id": "CAREPOINT",
     "Division": "",
     "CompanyNote": "",
     "StartDate": "1998-11-01",
@@ -492,6 +508,7 @@
   },
   {
     "CompanyName": "IBSS",
+    "Id": "IBSS",
     "Division": "",
     "CompanyNote": "",
     "StartDate": "1998-02-01",
@@ -521,6 +538,7 @@
   },
   {
     "CompanyName": "TeleQuest Corp.",
+    "Id": "TELEQUEST",
     "Division": "",
     "CompanyNote": "",
     "StartDate": "1995-02-01",
@@ -556,6 +574,7 @@
   },
   {
     "CompanyName": "Electronic Merchant Services",
+    "Id": "EMS",
     "Division": "",
     "CompanyNote": "",
     "StartDate": "1992-11-01",
@@ -578,7 +597,7 @@
       "Windows"
     ],
     "BulletPoints": [
-      "Automated credit card validation testing in Pascal, saving hundreds of man hours.",
+      "Automated credit card validation testing in Pascal, saving hundreds of manual testing hours.",
       "Maintained Novell Network (v3.12), including the physical LAN.",
       "Maintained all computers attached to the network, and supported all users."
     ]

@@ -1,11 +1,11 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 namespace CV.Models
 {
     public class WorkItem
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
         public string CompanyName { get; set; }
         public string Division { get; set; }
         public DateTime StartDate { get; set; }

@@ -20,6 +20,8 @@ namespace CV.Models
         public List<string> TechXref { get; set; } = new List<string>();
         public List<TechItem> TechItems { get; set; } = new List<TechItem>();
         public List<string> TechnologyUsed { get; set; } = new List<string>();
+        public string WorkXref { get; set; }
+        public WorkItem WorkItem { get; set; }
         //Lookup Tech XRef for tech used
     }
 

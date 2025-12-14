@@ -18,10 +18,13 @@ namespace CV.Pages.Admin
 
         public List<string> MissingWorkRefs { get; set; } = new List<string>();
         public List<string> MissingProjectRefs { get; set; } = new List<string>();
+        public List<string> InvalidWorkXrefs { get; set; } = new List<string>();
 
         public async Task OnGetAsync()
         {
-            var workItems = await _repository.GetWorkItems();
+            var workItems = (await _repository.GetWorkItems()).ToList();
+            var workIds = workItems.Select(w => w.Id).ToHashSet();
+            
             foreach (var work in workItems)
             {
                 foreach (var tech in work.TechItems)
@@ -33,7 +36,7 @@ namespace CV.Pages.Admin
                 }
             }
 
-            var projectItems = await _repository.GetProjectItems();
+            var projectItems = (await _repository.GetProjectItems()).ToList();
             foreach (var project in projectItems)
             {
                 foreach (var tech in project.TechItems)
@@ -43,10 +46,20 @@ namespace CV.Pages.Admin
                         MissingProjectRefs.Add($"Project: {project.ProjectName} - Tech: {tech.DisplayName}");
                     }
                 }
+                
+                // Validate WorkXref matches a valid work ID
+                if (!string.IsNullOrWhiteSpace(project.WorkXref))
+                {
+                    if (!workIds.Contains(project.WorkXref))
+                    {
+                        InvalidWorkXrefs.Add($"Project: {project.ProjectName} - WorkXref: {project.WorkXref} (does not match any work item ID)");
+                    }
+                }
             }
 
             MissingWorkRefs.Sort();
             MissingProjectRefs.Sort();
+            InvalidWorkXrefs.Sort();
         }
     }
 }

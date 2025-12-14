@@ -1,50 +1,60 @@
 ﻿[
   {
-  "SiteName": "Carpet Manufacturer CMS",
-  "Url": "",
-  "Date": "2026-1-25",
-  "Description": ["Converted from legacy CMS to Optimizely SaaS CMS.",
-  "Integration with existing inventory system and Optimizely Commerce.",
-  "Included ordering system for samples."],
-  "Purpose": "Large scale website conversion for a large commercial carpet manufacturer.",
-  "OpenSource": false,
-  "Image": "",
-  "Screenshot": "",
-  "Status": "Active",
-  "CodeAvailable": false,
-  "Types": [ "Website" ],
-  "TechnologyUsed": [
-    "ASP.NET MVC",
-    ".NET MVC"
-  ],
-  "TechXref": [
-    "C#",
-    "ASP.NET MVC",
-    ".NET Core",
-    "SQL Server",
-    "Optimizely",
-    "JSON",
-    "CSS",
-    "HTML",
-    "Javascript"
-  ]
-},
+    "SiteName": "Carpet Manufacturer CMS",
+    "WorkXref": "SAGEPATH",
+    "Url": "",
+    "Date": "2026-1-25",
+    "Description": [
+      "Converted from legacy CMS to Optimizely SaaS CMS.",
+      "Integration with existing inventory system and Optimizely Commerce.",
+      "Included ordering system for samples."
+    ],
+    "Purpose": "Large scale website conversion for a large commercial carpet manufacturer.",
+    "OpenSource": false,
+    "Image": "",
+    "Screenshot": "",
+    "Status": "Active",
+    "CodeAvailable": false,
+    "Types": [
+      "Website"
+    ],
+    "TechnologyUsed": [
+      "ASP.NET MVC",
+      ".NET MVC"
+    ],
+    "TechXref": [
+      "C#",
+      "ASP.NET MVC",
+      ".NET Core",
+      "SQLServer",
+      "Optimizely",
+      "JSON",
+      "CSS",
+      "HTML",
+      "Javascript"
+    ]
+  },
   {
     "SiteName": "SiteScan Application",
+    "WorkXref": "SE",
     "Url": "",
     "Date": "2025-8-01",
-    "Description": ["Application to crawl websites for broken links.",
+    "Description": [
+      "Application to crawl websites for broken links.",
       "Provides timings and size per page.",
       "Can parse links on some dynamic javascript pages.",
       "Written as a cross platform app with Avalonia.",
-      "Invaluable for website developers"],
+      "Invaluable for website developers"
+    ],
     "Purpose": "Search websites for broken links.",
     "OpenSource": false,
     "Image": "",
     "Screenshot": "ss-sitescan.png",
     "Status": "Active",
     "CodeAvailable": true,
-    "Types": [ "Application" ],
+    "Types": [
+      "Application"
+    ],
     "TechnologyUsed": [
     ],
     "TechXref": [
@@ -58,46 +68,48 @@
   },
   {
     "SiteName": "Opening Breakout Trading Bot",
+    "WorkXref": "IFT",
     "Url": "",
     "Date": "2024-1-25",
-    "Description": ["Converted from legacy CMS to Optimizely SaaS CMS.",
-      "Integration with existing inventory system and Optimizely Commerce.",
-      "Included ordering system for samples."],
+    "Description": [
+      "Written in Ninjatrader's Ninjascript.",
+      "Traded the MES futures contract live for 9 months.",
+      "After some initial success, shutdown after too many losses."
+    ],
     "Purpose": "Trades the NY open for an opening breakout.",
     "OpenSource": false,
     "Image": "",
     "Screenshot": "",
     "Status": "Active",
     "CodeAvailable": false,
-    "Types": [ "Website" ],
+    "Types": [
+      "Application"
+    ],
     "TechnologyUsed": [
       "ASP.NET MVC",
       ".NET MVC"
     ],
     "TechXref": [
-      "C#",
-      "ASP.NET MVC",
-      ".NET Core",
-      "SQL Server",
-      "Optimizely",
-      "JSON",
-      "CSS",
-      "HTML",
-      "Javascript"
+      "C#"
     ]
   },
   {
     "SiteName": "Nutrition Facts Website",
+    "WorkXref": "SE",
     "Url": "food.michaelsilver.us",
     "Date": "",
-    "Description": ["Began work on first application in the 1990's and over time have converted it from a Delphi Windows app, to a C# Web Forms app, to a .NET Core MVC app running in Docker. Source code is available upon request."],
+    "Description": [
+      "Began work on first application in the 1990's and over time have converted it from a Delphi Windows app, to a C# Web Forms app, to a .NET Core MVC app running in Docker. Source code is available upon request."
+    ],
     "Purpose": "Created to test new programming languages, frameworks and features.",
     "OpenSource": false,
     "Image": "nf.png",
     "Screenshot": "",
     "Status": "Retired",
     "CodeAvailable": true,
-    "Types": [ "Website" ],
+    "Types": [
+      "Website"
+    ],
     "TechnologyUsed": [
       "ASP.NET MVC",
       ".NET MVC",
@@ -122,16 +134,21 @@
   },
   {
     "SiteName": "Curriculum Vitae Website",
+    "WorkXref": "SE",
     "Url": "cv.michaelsilver.us",
     "Date": "",
-    "Description": ["This web site. All data is stored in json files and can be updated without a code change. Developed on Windows and deployed to a Unbuntu machine via a docker container. "],
+    "Description": [
+      "This web site. All data is stored in json files and can be updated without a code change. Developed on Windows and deployed to a Unbuntu machine via a docker container. "
+    ],
     "Purpose": "Provides searchable curriculum vitae for Michael Silver. ",
     "OpenSource": true,
     "Image": "monitor.svg",
     "Screenshot": "Provides searchable curriculum vitae for Michael Silver. ",
     "Status": "Active",
     "CodeAvailable": true,
-    "Types": [ "Website" ],
+    "Types": [
+      "Website"
+    ],
     "TechnologyUsed": [
       "ASP.NET Razor Pages",
       "JSON",
@@ -151,16 +168,19 @@
   },
   {
     "SiteName": "WhoIsOpen.Today",
+    "WorkXref": "SE",
     "Url": "whosopen.today",
     "Date": "",
     "Description": [],
-    "Purpose": "",
+    "Purpose": "Tacked which restaurants and businesses were open during COVID.",
     "OpenSource": false,
     "Image": "monitor.svg",
     "Screenshot": "",
     "Status": "Retired",
     "CodeAvailable": true,
-    "Types": [ "Website" ],
+    "Types": [
+      "Website"
+    ],
     "TechnologyUsed": [
       "ASP.NET Core MVC",
       "Postgres",
@@ -183,16 +203,21 @@
   },
   {
     "SiteName": "NWorkQueue",
+    "WorkXref": "SE",
     "Url": "https://github.com/masilver99/NWorkQueue",
     "Date": "",
-    "Description": ["Provides a thin wrapper around a database, Postgres, by default, allowing for safe queuing of messages, avoiding typical pitfalls, such as poison messages, or locks. Storage is abstracted out and a storage layer can be written for any storage medium, currently Postgres and SQLite are in development. Goal is to have two docker versions, one with the postgres db, the other without."],
+    "Description": [
+      "Provides a thin wrapper around a database, Postgres, by default, allowing for safe queuing of messages, avoiding typical pitfalls, such as poison messages, or locks. Storage is abstracted out and a storage layer can be written for any storage medium, currently Postgres and SQLite are in development. Goal is to have two docker versions, one with the postgres db, the other without."
+    ],
     "Purpose": "A simple, opinionated message queue, using Postgres for storage.",
     "OpenSource": true,
     "Image": "process.svg",
     "Screenshot": "",
     "Status": "Active, still in development",
     "CodeAvailable": true,
-    "Types": [ "Software" ],
+    "Types": [
+      "Software"
+    ],
     "TechnologyUsed": [
       "ASP.NET Core",
       "Postgres",
@@ -210,19 +235,23 @@
       "SQLite"
     ]
   },
-
   {
     "SiteName": "RobbieSilver.com",
+    "WorkXref": "SE",
     "Url": "https://web.archive.org/web/20190109102302/https://robbiesilver.com/",
     "Date": "",
-    "Description": ["Designed a WordPress site for a family member."],
-    "Purpose": "",
+    "Description": [
+      "Designed a WordPress site for a family member."
+    ],
+    "Purpose": "Website for a Profressional Photographer",
     "OpenSource": false,
     "Image": "internet.svg",
     "Screenshot": "",
     "Status": "Retired",
     "CodeAvailable": false,
-    "Types": [ "Website" ],
+    "Types": [
+      "Website"
+    ],
     "TechnologyUsed": [
       "WordPress",
       "CSS"
@@ -235,16 +264,22 @@
   },
   {
     "SiteName": "Live Tennis Scoring",
-    "Url": "",
+    "WorkXref": "SE",
+    "Url": "https://scores.michaelsilver.us/",
     "Date": "",
-    "Description": ["Created as a proof of concept to test live tennis scoring using C#, Vue.js, Bootstrap and SignalR."],
+    "Description": [
+      "Created as a proof of concept to test live tennis scoring using C#, Vue.js, Bootstrap and SignalR.",
+      "Used to broadcast live scores of tournaments and high school matches."
+    ],
     "Purpose": "Proof of Concept",
     "OpenSource": false,
     "Image": "monitor.svg",
     "Screenshot": "",
     "Status": "Active",
     "CodeAvailable": true,
-    "Types": [ "Website" ],
+    "Types": [
+      "Website"
+    ],
     "TechnologyUsed": [
       "ASP.NET Core",
       "Heavy Javascript",
@@ -264,16 +299,21 @@
   },
   {
     "SiteName": "RomeLadder.com",
+    "WorkXref": "SE",
     "Url": "",
     "Date": "",
-    "Description": ["Created to track local tennis league."],
+    "Description": [
+      "Created to track local tennis league."
+    ],
     "Purpose": "",
     "OpenSource": true,
     "Image": "monitor.svg",
     "Screenshot": "",
     "Status": "Retired",
     "CodeAvailable": true,
-    "Types": [ "Website" ],
+    "Types": [
+      "Website"
+    ],
     "TechnologyUsed": [
       "ASP.NET 5",
       "Heavy Javascript",
@@ -289,17 +329,24 @@
     ]
   },
   {
-    "SiteName": "cvta.us",
+    "SiteName": "Coosa Valley Tennis Association Website",
+    "WorkXref": "SE",
     "Url": "https://web.archive.org/web/20160306224456/http://cvta.us/",
     "Date": "",
-    "Description": ["While secretary of the Coosa Valley Tennis Association, I redesigned their website using Joomla and a fair amount of custom css. Also setup and displayed live webcam feed. Site was mostly data driven, using custom built utilities to import tennis league schedules."],
+    "Description": [
+      "While secretary of the Coosa Valley Tennis Association, I redesigned their website using Joomla and a fair amount of custom css.",
+      "Setup and displayed live webcam feed.", 
+      "Site was mostly data driven, using custom built utilities to import tennis league schedules."
+    ],
     "Purpose": "",
     "OpenSource": false,
     "Image": "internet.svg",
     "Screenshot": "",
     "Status": "Retired",
     "CodeAvailable": true,
-    "Types": [ "Website" ],
+    "Types": [
+      "Website"
+    ],
     "TechnologyUsed": [
       "Joomla",
       "CSS"
@@ -312,101 +359,40 @@
   },
   {
     "SiteName": "Keyboard Firmware Mods",
-    "Url": "https://web.archive.org/web/20160306224456/http://cvta.us/",
+    "WorkXref": "IFT",
+    "Url": "",
     "Date": "",
-    "Description": ["QMK firmware allows for the conversion of older keyboards to work on a USB port (along with many other features). Made changes to firmware to allow for the addition of an LCD panel and counting of keystrokes."],
-    "Purpose": "",
+    "Description": [
+      "QMK firmware allows for the conversion of older keyboards to work on a USB port (along with many other features).",
+      "Made changes to firmware to allow for the addition of an LCD panel and counting of keystrokes."
+    ],
+    "Purpose": "Connects older IBM Keyboard to modern computers",
     "OpenSource": true,
     "Image": "process.svg",
     "Screenshot": "",
     "Status": "Retired",
     "CodeAvailable": true,
-    "Types": [ "Firmware" ],
+    "Types": [
+      "Firmware"
+    ],
     "TechnologyUsed": [
       "C",
       "Teensy IC",
       "LCD Display"
     ],
     "TechXref": [
-
-    ]
-  },
-  {
-    "SiteName": "Internet Enabled TV Slideshow",
-    "Url": "",
-    "Date": "",
-    "Description": ["Loads a web page automatically from a Raspberry Pi that displays a slide show of items from a specific directory on the webserver. Includes items like live weather radar, etc."],
-    "Purpose": "",
-    "OpenSource": false,
-    "Image": "process.svg",
-    "Screenshot": "",
-    "Status": "Retired",
-    "CodeAvailable": true,
-    "Types": [ "Website/Hardware" ],
-    "TechnologyUsed": [
-      "Python",
-      "Raspberry Pi",
-      "HTML"
-    ],
-    "TechXref": [
-      "Python",
-      "Raspberry Pi",
-      "HTML",
-      "CSS"
-    ]
-  },
-  {
-    "SiteName": "Internet Enabled TV Slideshow",
-    "Url": "",
-    "Date": "",
-    "Description": ["Loads a web page automatically from a Raspberry Pi that displays a slide show of items from a specific directory on the webserver. Includes items like live weather radar, etc."],
-    "Purpose": "",
-    "OpenSource": false,
-    "Image": "wk.png",
-    "Screenshot": "",
-    "Status": "Retired",
-    "CodeAvailable": true,
-    "Types": [
-      "Firmware"
-    ],
-    "TechnologyUsed": [
-      "Python",
-      "Raspberry Pi",
-      "HTML"
-    ],
-    "TechXref": [
-
-    ]
-  },
-  // Managed team working on File download queue
-  // Managed team working on enrollment software
-  // Billing, critical part of infrastructin
-  // ERP software from scratch
-  // Model M keyboard mods
-  // Arduino lighting
-  // 
-  {
-    "SiteName": "Internet Enabled TV Slideshow",
-    "Url": "",
-    "Date": "",
-    "Description": ["Loads a web page automatically from a Raspberry Pi that displays a slide show of items from a specific directory on the webserver. Includes items like live weather radar, etc."],
-    "Purpose": "",
-    "OpenSource": false,
-    "Image": "wk.png",
-    "Screenshot": "",
-    "Status": "Retired",
-    "CodeAvailable": true,
-    "Types": [
-      "Firmware"
-    ],
-    "TechnologyUsed": [
-        "Python",
-        "Raspberry Pi",
-        "HTML"
-    ],
-    "TechXref":
-    [
-
+      "C",
+      "Teensy Microcontroller"
     ]
   }
-]
+  
+  ]
+// Managed team working on File download queue
+// Managed team working on enrollment software
+// Billing, critical part of infrastructin
+// ERP software from scratch
+// Model M keyboard mods
+// Arduino lighting
+//
+
+  

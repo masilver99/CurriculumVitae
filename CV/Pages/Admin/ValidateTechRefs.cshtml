@@ -6,6 +6,21 @@
 
 <h1>Validate Tech References</h1>
 
+<h2>Invalid Work References</h2>
+@if (Model.InvalidWorkXrefs.Any())
+{
+    <ul>
+        @foreach (var item in Model.InvalidWorkXrefs)
+        {
+            <li>@item</li>
+        }
+    </ul>
+}
+else
+{
+    <p>All project WorkXref values match valid work item IDs.</p>
+}
+
 <h2>Missing Work References</h2>
 @if (Model.MissingWorkRefs.Any())
 {
