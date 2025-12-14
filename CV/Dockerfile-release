@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS runtime
-EXPOSE 80
-EXPOSE 443
+EXPOSE 8081
 WORKDIR /app
 COPY cv/ ./
+ENV ASPNETCORE_URLS=http://+:8081
 ENTRYPOINT ["dotnet", "CV.dll"]  

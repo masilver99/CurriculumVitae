@@ -8,16 +8,7 @@
             <div class="d-flex flex-wrap justify-content-between align-items-center item-title">
                 <div class="p-2 flex-grow-1">
                     <div class="companyName">
-                        @{
-                        if (!string.IsNullOrWhiteSpace(projectItem.Url))
-                        {
-                                <a href="@projectItem.Url">@projectItem.ProjectName</a>
-                        }
-                        else
-                        {
-                            @projectItem.ProjectName
-                        }
-                    }
+                        @projectItem.ProjectName
                     </div>
                     <div class="workTitle">
                         <i style="color: darkblue;"class="far fa-file-alt"></i>
@@ -90,11 +81,16 @@
                         <ul>
                             @foreach (var item in @projectItem.Description)
                             {
-                            <li>
-                                @item
-                            </li>
+                                <li>
+                                    @item
+                                </li>
                             }
                         </ul>
+                        @if (!string.IsNullOrWhiteSpace(projectItem.Url))
+                        {
+                            <a href="@projectItem.Url">[Link]</a>
+                        }
+
         </div>
         <div class="card-footer">
             @foreach (var item in projectItem.TechItems.OrderBy(x => x.CategoryId))

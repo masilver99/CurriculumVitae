@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
+using Serilog;
 
 namespace CV.data
 {
@@ -44,6 +45,10 @@ namespace CV.data
                     _ed.AddRange(edItems);
                 }
             }
+            else
+            {
+                Log.Warning("{EdPath} not found", edPath);
+            }
 
             if (File.Exists(projectsPath))
             {
@@ -53,6 +58,10 @@ namespace CV.data
                 {
                     _projects.AddRange(projectItems);
                 }
+            }
+            else
+            {
+                Log.Warning("{projectsPath} not found", projectsPath);
             }
 
             if (File.Exists(techPath))
@@ -85,6 +94,10 @@ namespace CV.data
                     }
                 }
             }
+            else
+            {
+                Log.Warning("{techPath} not found", techPath);
+            }
 
             if (File.Exists(workPath))
             {
@@ -106,6 +119,10 @@ namespace CV.data
                         }
                     }
                 }
+            }
+            else
+            {
+                Log.Warning("{workPath} not found", workPath);
             }
         }
 

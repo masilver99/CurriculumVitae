@@ -7,13 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="data\ed.json" />
-    <Content Remove="data\projects.json" />
-    <Content Remove="data\tech.json" />
-    <Content Remove="data\work.json" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Remove="data\work.sql" />
   </ItemGroup>
 
@@ -33,13 +26,6 @@
        
   <ItemGroup>
     <Folder Include="wwwroot\files\" />
-  </ItemGroup>
-       
-  <ItemGroup>
-    <None Include="data\ed.json" />
-    <None Include="data\projects.json" />
-    <None Include="data\tech.json" />
-    <None Include="data\work.json" />
   </ItemGroup>
 
 </Project>
