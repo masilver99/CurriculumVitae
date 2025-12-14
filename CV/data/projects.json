@@ -49,7 +49,9 @@
     "Purpose": "Search websites for broken links.",
     "OpenSource": false,
     "Image": "",
-    "Screenshot": "ss-sitescan.png",
+    "Screenshots": [
+      "ss-sitescan.png"
+    ],
     "Status": "Active",
     "CodeAvailable": true,
     "Types": [

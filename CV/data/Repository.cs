@@ -265,6 +265,17 @@ namespace CV.data
                 WorkXref = p.WorkXref
             };
 
+            // Handle screenshots - support both old single Screenshot and new Screenshots array
+            if (p.Screenshots != null && p.Screenshots.Count > 0)
+            {
+                item.Screenshots = p.Screenshots;
+            }
+            else if (!string.IsNullOrWhiteSpace(p.Screenshot))
+            {
+                // For backward compatibility, convert single screenshot to array
+                item.Screenshots = new List<string> { p.Screenshot };
+            }
+
             // Resolve WorkItem if WorkXref is provided
             if (!string.IsNullOrWhiteSpace(p.WorkXref))
             {
@@ -420,6 +431,7 @@ namespace CV.data
         public bool OpenSource { get; set; }
         public string Image { get; set; }
         public string Screenshot { get; set; }
+        public List<string> Screenshots { get; set; }
         public string Status { get; set; }
         public bool CodeAvailable { get; set; }
         public List<string> Types { get; set; }
