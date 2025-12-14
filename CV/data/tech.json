@@ -1319,10 +1319,10 @@
     "Items": [
       {
         "Years": 3,
-        "ExperienceLevel": 8,
+        "ExperienceLevel": 9,
         "Image": "sierrachart.png",
         "BulletPoints": [
-          "Used for live manual trading of futures.",
+          "Use for live manual trading of futures.",
           "Wrote numerous custom indicators.",
           "Wrote simple bots for backtesting."
         ],
@@ -1339,7 +1339,7 @@
       },
       {
         "Years": 3,
-        "ExperienceLevel": 6,
+        "ExperienceLevel": 7,
         "Image": "tradingview.svg",
         "BulletPoints": [
           "Used for technical analysis and strategy development.",
@@ -1430,7 +1430,7 @@
       },
       {
         "Years": 1,
-        "ExperienceLevel": 5,
+        "ExperienceLevel": 3,
         "Image": "zorro.ico",
         "BulletPoints": [
           "Wrote simple trading bot for testing platform."
@@ -1447,7 +1447,7 @@
       },
       {
         "Years": 1,
-        "ExperienceLevel": 4,
+        "ExperienceLevel": 2,
         "Image": "thinkorswim.svg",
         "BulletPoints": [
           "Used mostly for demo trading."

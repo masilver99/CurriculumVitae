@@ -8,11 +8,11 @@ namespace CV.Models
         public string ProjectName { get; set; }
         public string Url { get; set; }
         public string LastWorkedOnDate { get; set; }
-        public string Description { get; set; }
+        public List<string> Description { get; set; }
         public string Purpose { get; set; }
         public bool OpenSource { get; set; }
         public string Image { get; set; }
-        public string Screenshots { get; set; }
+        public string Screenshot { get; set; }
         public string Status { get; set; }
         public bool CodeAvailable { get; set; }
 

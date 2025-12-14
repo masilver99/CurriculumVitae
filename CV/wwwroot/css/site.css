@@ -39,8 +39,17 @@ a {
 }
 
 .display-6 {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+}
+
+.screenshot-thumbnail {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.screenshot-thumbnail:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .sectionTitle {

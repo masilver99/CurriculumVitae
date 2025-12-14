@@ -126,7 +126,7 @@ namespace CV.data
                     var terms = searchTerms.Select(t => t.Trim().ToUpperInvariant()).ToHashSet();
                     items = items.Where(p =>
                         MatchesTerms(terms, p.ProjectName) ||
-                        MatchesTerms(terms, p.Description) ||
+                        (p.Description != null && p.Description.Any(d => MatchesTerms(terms, d))) ||
                         (p.TechItems != null && p.TechItems.Any(t => MatchesTerms(terms, t.DisplayName) || (t.Xref != null && t.Xref.Any(x => terms.Contains(x.ToUpperInvariant())))))
                     ).ToList();
                 }
@@ -226,7 +226,7 @@ namespace CV.data
                 Purpose = p.Purpose,
                 OpenSource = p.OpenSource,
                 Image = p.Image,
-                Screenshots = p.Screenshot,
+                Screenshot = p.Screenshot,
                 Status = p.Status,
                 CodeAvailable = p.CodeAvailable,
                 ProjectType = p.Types ?? new List<string>(),
@@ -373,7 +373,7 @@ namespace CV.data
         public string SiteName { get; set; }
         public string Url { get; set; }
         public string Date { get; set; }
-        public string Description { get; set; }
+        public List<string> Description { get; set; }
         public string Purpose { get; set; }
         public bool OpenSource { get; set; }
         public string Image { get; set; }

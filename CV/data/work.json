@@ -46,8 +46,7 @@
       "JSON",
       "jQuery",
       "ASP.NET MVC",
-      "REST APIs",
-      "Web Services",
+      "REST",
       ".NET Core",
       ".NET Framework",
       "SqlServer",
@@ -126,7 +125,8 @@
       "KENNESAW",
       "KENNESAWGA",
       "GA",
-      "GEORGIA"
+      "GEORGIA",
+      "FinTech"
     ],
     "TechXref": [
       "C#",
@@ -167,8 +167,7 @@
       "Docker",
       "Vagrant",
       "Virtual Box",
-      "IIS",
-      "FinTech"
+      "IIS"
     ],
     "BulletPoints": [
       "Managed different teams of programmers on a per project basis.",
@@ -192,7 +191,8 @@
       "NCRINC",
       "WALMART",
       "RETAIL",
-      "REMOTE"
+      "REMOTE",
+      "FinTech"
     ],
     "TechXref": [
       "C#",
@@ -227,8 +227,7 @@
       "Docker",
       "Virtual Box",
       "IIS",
-      "MS Message Queues",
-      "FinTech"
+      "MS Message Queues"
     ],
     "BulletPoints": [
       "Supervised remote programmers, including mentoring, code reviews and assignments of tasks.",
@@ -261,7 +260,8 @@
       "ROME",
       "ROMEGA",
       "GA",
-      "GEORGIA"
+      "GEORGIA",
+      "FinTech"
     ],
     "TechXref": [
       "C#",
@@ -288,8 +288,7 @@
       "Scrum",
       "Unit/Integration Testing",
       "SOLID Principles",
-      "IIS",
-      "FinTech"
+      "IIS"
     ],
 
     "BulletPoints": [
