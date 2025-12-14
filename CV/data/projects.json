@@ -50,7 +50,9 @@
     "OpenSource": false,
     "Image": "",
     "Screenshots": [
-      "ss-sitescan.png"
+      "ss-sitescan.png",
+      "Git-Icon-1788C.png",
+      "Azure-Service-Bus.png"
     ],
     "Status": "Active",
     "CodeAvailable": true,
