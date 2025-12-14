@@ -50,31 +50,40 @@
             </div>
         </div>
         <div class="card-body">
-                        @if (!string.IsNullOrWhiteSpace(projectItem.Screenshot))
+                        @if (projectItem.Screenshots != null && projectItem.Screenshots.Count > 0)
                         {
                             <div class="mb-3">
-                                <img src="~/img/@projectItem.Screenshot" 
-                                     alt="@projectItem.ProjectName screenshot" 
-                                     class="img-thumbnail screenshot-thumbnail" 
-                                     style="max-width: 300px; cursor: pointer;" 
-                                     data-toggle="modal" 
-                                     data-target="#screenshotModal_@projectItem.ProjectName.Replace(" ", "_")" />
-                            </div>
-                            
-                            <!-- Modal -->
-                            <div class="modal fade" id="screenshotModal_@projectItem.ProjectName.Replace(" ", "_")" tabindex="-1" role="dialog" aria-labelledby="screenshotModalLabel_@projectItem.ProjectName.Replace(" ", "_")" aria-hidden="true">
-                                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="screenshotModalLabel_@projectItem.ProjectName.Replace(" ", "_")">@projectItem.ProjectName</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
+                                <div class="d-flex flex-wrap gap-2">
+                                    @for (int i = 0; i < projectItem.Screenshots.Count; i++)
+                                    {
+                                        var screenshot = projectItem.Screenshots[i];
+                                        var modalId = $"screenshotModal_{projectItem.ProjectName.Replace(" ", "_")}_{i}";
+                                        <div>
+                                            <img src="~/img/@screenshot" 
+                                                 alt="@projectItem.ProjectName screenshot @(i + 1)" 
+                                                 class="img-thumbnail screenshot-thumbnail" 
+                                                 style="max-width: 150px; max-height: 150px; object-fit: cover; cursor: pointer; margin: 5px;" 
+                                                 data-toggle="modal" 
+                                                 data-target="#@modalId" />
                                         </div>
-                                        <div class="modal-body text-center">
-                                            <img src="~/img/@projectItem.Screenshot" alt="@projectItem.ProjectName screenshot" class="img-fluid" />
+                                        
+                                        <!-- Modal for each screenshot -->
+                                        <div class="modal fade" id="@modalId" tabindex="-1" role="dialog" aria-labelledby="@(modalId)_label" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="@(modalId)_label">@projectItem.ProjectName - Screenshot @(i + 1)</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body text-center">
+                                                        <img src="~/img/@screenshot" alt="@projectItem.ProjectName screenshot @(i + 1)" class="img-fluid" />
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
+                                    }
                                 </div>
                             </div>
                         }

@@ -12,7 +12,7 @@ namespace CV.Models
         public string Purpose { get; set; }
         public bool OpenSource { get; set; }
         public string Image { get; set; }
-        public string Screenshot { get; set; }
+        public List<string> Screenshots { get; set; } = new List<string>();
         public string Status { get; set; }
         public bool CodeAvailable { get; set; }
 

@@ -257,12 +257,12 @@ namespace CV.data
                 Purpose = p.Purpose,
                 OpenSource = p.OpenSource,
                 Image = p.Image,
-                Screenshot = p.Screenshot,
                 Status = p.Status,
                 CodeAvailable = p.CodeAvailable,
                 ProjectType = p.Types ?? new List<string>(),
                 TechnologyUsed = p.TechnologyUsed ?? new List<string>(),
-                WorkXref = p.WorkXref
+                WorkXref = p.WorkXref,
+                Screenshots = p.Screenshots
             };
 
             // Resolve WorkItem if WorkXref is provided
@@ -420,6 +420,7 @@ namespace CV.data
         public bool OpenSource { get; set; }
         public string Image { get; set; }
         public string Screenshot { get; set; }
+        public List<string> Screenshots { get; set; }
         public string Status { get; set; }
         public bool CodeAvailable { get; set; }
         public List<string> Types { get; set; }
