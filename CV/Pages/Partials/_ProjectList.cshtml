@@ -1,4 +1,4 @@
-﻿﻿@using CV.Models
+﻿@using CV.Models
 @model PartialViewModel<ProjectItem>
 
 @foreach(var projectItem in Model.ItemList)
@@ -65,10 +65,10 @@
             @foreach (var item in projectItem.TechItems.OrderBy(x => x.CategoryId))
             {
                 var cat = $"cat{item.CategoryId}";
-                var http = $"/tech/#{item.Name}";
+                var http = $"/tech/#{item.Id}";
                 <a href="@http" title="@item.CategoryName">
                 <div class='itemBox @cat'>
-                    @item.Name
+                    @item.DisplayName
                 </div>
                 </a>
             } 

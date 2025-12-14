@@ -19,7 +19,6 @@
     ],
     "Items": [
       {
-        "Name": "C#",
         "Years": 20,
         "ExperienceLevel": 10,
         "Image": "C_Sharp_wordmark.svg",
@@ -38,10 +37,11 @@
           "NETFRAMEWORK",
           "NETCORE",
           "CORE"
-        ]
+        ],
+        "Id": "C#",
+        "DisplayName": "C#"
       },
       {
-        "Name": "Delphi/Pascal",
         "Years": 9,
         "ExperienceLevel": 9,
         "Image": "Delphi.png",
@@ -57,10 +57,11 @@
           "OBJECTPASCAL",
           "MODULA",
           "OXYGEN"
-        ]
+        ],
+        "Id": "Delphi/Pascal",
+        "DisplayName": "Delphi/Pascal"
       },
       {
-        "Name": "Python",
         "Years": 2,
         "ExperienceLevel": 4,
         "Image": "Python-logo-notext.svg",
@@ -71,10 +72,11 @@
         "Xref": [
           "PYTHON",
           "PY"
-        ]
+        ],
+        "Id": "Python",
+        "DisplayName": "Python"
       },
       {
-        "Name": "SQL",
         "Years": 25,
         "ExperienceLevel": 9,
         "Image": "mono-state-sql.svg",
@@ -86,10 +88,11 @@
         "Xref": [
           "SQL",
           "STRUCTURED QUERY LANGUAGE"
-        ]
+        ],
+        "Id": "SQL",
+        "DisplayName": "SQL"
       },
       {
-        "Name": "HTML",
         "Years": 25,
         "ExperienceLevel": 9,
         "Image": "HTML5_logo_and_wordmark.svg",
@@ -100,10 +103,11 @@
           "HTML",
           "HYPERTEXTMARKUPLANGUAGE",
           "HYPERTEXT"
-        ]
+        ],
+        "Id": "HTML",
+        "DisplayName": "HTML"
       },
       {
-        "Name": "CSS",
         "Years": 15,
         "ExperienceLevel": 7,
         "Image": "CSS3_logo_and_wordmark.svg",
@@ -114,10 +118,11 @@
           "CSS",
           "STYLESHEETS",
           "CASCADINGSTYLESHEETS"
-        ]
+        ],
+        "Id": "CSS",
+        "DisplayName": "CSS"
       },
       {
-        "Name": "Javascript",
         "Years": 15,
         "ExperienceLevel": 7,
         "Image": "File_Unofficial_JavaScript_logo_2.svg",
@@ -128,10 +133,11 @@
         "Xref": [
           "JS",
           "JAVASCRIPT"
-        ]
+        ],
+        "Id": "Javascript",
+        "DisplayName": "Javascript"
       },
       {
-        "Name": "C++",
         "Years": 1,
         "ExperienceLevel": 3,
         "Image": "cpp_logo.png",
@@ -141,10 +147,11 @@
         "Xref": [
           "C",
           "C++"
-        ]
+        ],
+        "Id": "C++",
+        "DisplayName": "C++"
       },
       {
-        "Name": "C",
         "Years": 1,
         "ExperienceLevel": 3,
         "Image": "1920px-The_C_Programming_Language_logo.svg.png",
@@ -155,10 +162,11 @@
         "Xref": [
           "C",
           "C++"
-        ]
+        ],
+        "Id": "C",
+        "DisplayName": "C"
       },
       {
-        "Name": "Ruby",
         "Years": 1,
         "ExperienceLevel": 3,
         "Image": "ruby.png",
@@ -167,10 +175,11 @@
         ],
         "Xref": [
           "RUBY"
-        ]
+        ],
+        "Id": "Ruby",
+        "DisplayName": "Ruby"
       },
       {
-        "Name": "VBScript",
         "Years": 2,
         "ExperienceLevel": 3,
         "Image": "VBScript.jpg",
@@ -181,10 +190,11 @@
           "MS",
           "MICROSOFT",
           "VBSCRIPT"
-        ]
+        ],
+        "Id": "VBScript",
+        "DisplayName": "VBScript"
       },
       {
-        "Name": "VB.NET",
         "Years": 1,
         "ExperienceLevel": 1,
         "Image": "VB.NET_Logo.svg",
@@ -197,10 +207,11 @@
           "VISUALBASIC",
           "MSVB",
           "MSVISUALBASIC"
-        ]
+        ],
+        "Id": "VB.NET",
+        "DisplayName": "VB.NET"
       },
       {
-        "Name": "Typescript",
         "Years": 1,
         "ExperienceLevel": 3,
         "Image": "Typescript_logo_2020.svg",
@@ -210,10 +221,11 @@
         "Xref": [
           "TYPESCRIPT",
           "TS"
-        ]
+        ],
+        "Id": "Typescript",
+        "DisplayName": "Typescript"
       },
       {
-        "Name": "SCSS",
         "Years": 1,
         "ExperienceLevel": 2,
         "Image": "sass-color-1c4aab2b.png",
@@ -224,10 +236,11 @@
           "SCSS",
           "SASS",
           "SASSSCRIPT"
-        ]
+        ],
+        "Id": "SCSS",
+        "DisplayName": "SCSS"
       },
       {
-        "Name": "Perl",
         "Years": 1,
         "ExperienceLevel": 2,
         "Image": "perl-onion.png",
@@ -237,10 +250,11 @@
         ],
         "Xref": [
           "PERL"
-        ]
+        ],
+        "Id": "Perl",
+        "DisplayName": "Perl"
       },
       {
-        "Name": "PHP",
         "Years": 1,
         "ExperienceLevel": 2,
         "Image": "new-php-logo.svg",
@@ -249,7 +263,9 @@
         ],
         "Xref": [
           "PHP"
-        ]
+        ],
+        "Id": "PHP",
+        "DisplayName": "PHP"
       }
     ]
   },
@@ -262,7 +278,6 @@
     ],
     "Items": [
       {
-        "Name": "Code Reviews",
         "Years": 18,
         "ExperienceLevel": 8,
         "Image": "code-review.png",
@@ -273,10 +288,11 @@
         "Xref": [
           "CODEREVIEW",
           "CODEREVIEWS"
-        ]
+        ],
+        "Id": "Code Reviews",
+        "DisplayName": "Code Reviews"
       },
       {
-        "Name": "Agile",
         "Years": 10,
         "ExperienceLevel": 8,
         "Image": "agile.png",
@@ -286,10 +302,11 @@
         ],
         "Xref": [
           "AGILE"
-        ]
+        ],
+        "Id": "Agile",
+        "DisplayName": "Agile"
       },
       {
-        "Name": "Design Patterns",
         "Years": 15,
         "ExperienceLevel": 6,
         "Image": "",
@@ -306,10 +323,11 @@
           "DI",
           "IOC",
           "REPOSITORY"
-        ]
+        ],
+        "Id": "Design Patterns",
+        "DisplayName": "Design Patterns"
       },
       {
-        "Name": "Scrum",
         "Years": 10,
         "ExperienceLevel": 9,
         "Image": "scrum.png",
@@ -318,10 +336,11 @@
         ],
         "Xref": [
           "SCRUM"
-        ]
+        ],
+        "Id": "Scrum",
+        "DisplayName": "Scrum"
       },
       {
-        "Name": "Unit/Integration Testing",
         "Years": 18,
         "ExperienceLevel": 9,
         "Image": "mstest.png",
@@ -336,10 +355,11 @@
           "INTEGRATIONTESTS",
           "INTEGRATIONTESTING",
           "INTTESTS"
-        ]
+        ],
+        "Id": "Unit/Integration Testing",
+        "DisplayName": "Unit/Integration Testing"
       },
       {
-        "Name": "SDLC",
         "Years": 18,
         "ExperienceLevel": 9,
         "BulletPoints": [
@@ -352,10 +372,11 @@
           "SOFTWAREDESIGN",
           "SOFTWAREDEVELOPMENT",
           "SOFTWAREDEVELOPMENTLIFECYCLE"
-        ]
+        ],
+        "Id": "SDLC",
+        "DisplayName": "SDLC"
       },
       {
-        "Name": "SOLID Principles",
         "Years": 15,
         "ExperienceLevel": 7,
         "Image": "",
@@ -365,7 +386,9 @@
         "Xref": [
           "SOLID",
           "SOLIDPRINCIPLES"
-        ]
+        ],
+        "Id": "SOLID Principles",
+        "DisplayName": "SOLID Principles"
       }
     ]
   },
@@ -378,7 +401,6 @@
     ],
     "Items": [
       {
-        "Name": "SqlServer",
         "Years": 10,
         "ExperienceLevel": 8,
         "Image": "microsoft-sql-server-logo-96AF49E2B3-seeklogo.com.png",
@@ -386,7 +408,7 @@
           "Used for numerous projects across numerous companies."
         ],
         "Xref": [
-          "M", // MS
+          "M",
           "MICROSOFT",
           "SQL",
           "TSQL",
@@ -394,10 +416,11 @@
           "SQLSERVER",
           "MSSQLSERVER",
           "MICROSOFTSQLSERVER"
-        ]
+        ],
+        "Id": "SqlServer",
+        "DisplayName": "SqlServer"
       },
       {
-        "Name": "Oracle",
         "Years": 13,
         "ExperienceLevel": 7,
         "Image": "640px-Oracle_Logo.svg.png",
@@ -409,10 +432,11 @@
           "PLSQL",
           "ORACLE",
           "ORACLESQL"
-        ]
+        ],
+        "Id": "Oracle",
+        "DisplayName": "Oracle"
       },
       {
-        "Name": "PostgreSQL",
         "Years": 10,
         "ExperienceLevel": 7,
         "Image": "PostgreSQL_logo.3colors.svg",
@@ -424,12 +448,13 @@
         "Xref": [
           "POSTGRESSQL",
           "POSTGRESQL",
-          "POSTGRE", //POSTGRES
+          "POSTGRE",
           "DOCUMENTDB"
-        ]
+        ],
+        "Id": "PostgreSQL",
+        "DisplayName": "PostgreSQL"
       },
       {
-        "Name": "MongoDB",
         "Years": 1,
         "ExperienceLevel": 1,
         "Image": "MongoDB_Leaf_FullColor_RGB.png",
@@ -441,10 +466,11 @@
           "MONGO",
           "MONGODB",
           "DOCUMENTDB"
-        ]
+        ],
+        "Id": "MongoDB",
+        "DisplayName": "MongoDB"
       },
       {
-        "Name": "SQLite",
         "Years": 5,
         "ExperienceLevel": 6,
         "Image": "sqlite370_banner.gif",
@@ -456,10 +482,11 @@
           "SQL",
           "SQLITE",
           "SQLLITE"
-        ]
+        ],
+        "Id": "SQLite",
+        "DisplayName": "SQLite"
       },
       {
-        "Name": "Informix",
         "Years": 3,
         "ExperienceLevel": 4,
         "Image": "informix.gif",
@@ -472,10 +499,11 @@
           "INFORMIXSQL",
           "INFORMIX",
           "IBMINFORMIX"
-        ]
+        ],
+        "Id": "Informix",
+        "DisplayName": "Informix"
       },
       {
-        "Name": "Interbase",
         "Years": 2,
         "ExperienceLevel": 4,
         "Image": "Interbase_FINAL_ICONS_1024.png",
@@ -485,10 +513,11 @@
         "Xref": [
           "SQL",
           "INTERBASE"
-        ]
+        ],
+        "Id": "Interbase",
+        "DisplayName": "Interbase"
       },
       {
-        "Name": "Sybase",
         "Years": 1,
         "ExperienceLevel": 3,
         "Image": "Sybase.png",
@@ -498,7 +527,9 @@
         "Xref": [
           "SQL",
           "SYBASE"
-        ]
+        ],
+        "Id": "Sybase",
+        "DisplayName": "Sybase"
       }
     ]
   },
@@ -510,7 +541,6 @@
     ],
     "Items": [
       {
-        "Name": ".NET Framework",
         "Years": 18,
         "ExperienceLevel": 9,
         "Image": "Microsoft_.NET_Framework_v4.5_logo.png",
@@ -522,10 +552,11 @@
           "MICROSOFT",
           "NET",
           "NETFRAMEWORK"
-        ]
+        ],
+        "Id": ".NET Framework",
+        "DisplayName": ".NET Framework"
       },
       {
-        "Name": ".NET Core",
         "Years": 4,
         "ExperienceLevel": 9,
         "Image": "NET_Core_Logo.svg",
@@ -539,10 +570,11 @@
           "MICROSOFT",
           "NET",
           "NETCORE"
-        ]
+        ],
+        "Id": ".NET Core",
+        "DisplayName": ".NET Core"
       },
       {
-        "Name": "ASP.NET MVC",
         "Years": 8,
         "ExperienceLevel": 7,
         "Image": "mvc.png",
@@ -559,10 +591,11 @@
           "NETMVC",
           "RAZOR",
           "ASPNET"
-        ]
+        ],
+        "Id": "ASP.NET MVC",
+        "DisplayName": "ASP.NET MVC"
       },
       {
-        "Name": "ASP.NET Razor Pages",
         "Years": 2,
         "ExperienceLevel": 8,
         "Image": "mvc.png",
@@ -577,10 +610,11 @@
           "ASPNETRAZORPAGE",
           "RAZOR",
           "ASPNET"
-        ]
+        ],
+        "Id": "ASP.NET Razor Pages",
+        "DisplayName": "ASP.NET Razor Pages"
       },
       {
-        "Name": "ASP.NET WebForms",
         "Years": 4,
         "ExperienceLevel": 5,
         "Image": "mvc.png",
@@ -594,10 +628,11 @@
           "ASPNETWEBFORM",
           "MSWBEFORM",
           "ASPNET"
-        ]
+        ],
+        "Id": "ASP.NET WebForms",
+        "DisplayName": "ASP.NET WebForms"
       },
       {
-        "Name": "Bootstrap",
         "Years": 10,
         "ExperienceLevel": 7,
         "Image": "Bootstrap.svg",
@@ -607,10 +642,11 @@
         ],
         "Xref": [
           "BOOTSTRAP"
-        ]
+        ],
+        "Id": "Bootstrap",
+        "DisplayName": "Bootstrap"
       },
       {
-        "Name": "jQuery",
         "Years": 10,
         "ExperienceLevel": 6,
         "Image": "jQuery.jpg",
@@ -619,10 +655,11 @@
         ],
         "Xref": [
           "JQUERY"
-        ]
+        ],
+        "Id": "jQuery",
+        "DisplayName": "jQuery"
       },
       {
-        "Name": "Ruby On Rails",
         "Years": 1,
         "ExperienceLevel": 4,
         "Image": "Ruby_on_Rails-logo.png",
@@ -632,10 +669,11 @@
         "Xref": [
           "RAIL",
           "RUBYONRAIL"
-        ]
+        ],
+        "Id": "Ruby On Rails",
+        "DisplayName": "Ruby On Rails"
       },
       {
-        "Name": "Node.js",
         "Years": 1,
         "ExperienceLevel": 5,
         "Image": "Node.js_logo.svg",
@@ -645,10 +683,11 @@
         "Xref": [
           "NODE",
           "NODEJ"
-        ]
+        ],
+        "Id": "Node.js",
+        "DisplayName": "Node.js"
       },
       {
-        "Name": "Vue.js",
         "Years": 1,
         "ExperienceLevel": 4,
         "Image": "vue.png",
@@ -659,7 +698,9 @@
         "Xref": [
           "VUE",
           "VUEJ"
-        ]
+        ],
+        "Id": "Vue.js",
+        "DisplayName": "Vue.js"
       }
     ]
   },
@@ -670,11 +711,10 @@
       "QUEUE",
       "MESSAGE",
       "MESSAGEQUEUE",
-      "MESSAGEBUS" //MessageBus
+      "MESSAGEBUS"
     ],
     "Items": [
       {
-        "Name": "Oracle Advanced Queuing",
         "Years": 11,
         "ExperienceLevel": 5,
         "Image": "640px-Oracle_Logo.svg.png",
@@ -685,10 +725,11 @@
           "ORACLE",
           "ORACLEAQ",
           "ORACLEADVANCEDQUEUING"
-        ]
+        ],
+        "Id": "Oracle Advanced Queuing",
+        "DisplayName": "Oracle Advanced Queuing"
       },
       {
-        "Name": "MS Message Queues",
         "Years": 2,
         "ExperienceLevel": 7,
         "Image": "Microsoft.png",
@@ -702,10 +743,11 @@
           "MSMESSAGEQUEUE",
           "MICROSOFTMESSAGEQUEUE",
           "MESSAGEQUEUE"
-        ]
+        ],
+        "Id": "MS Message Queues",
+        "DisplayName": "MS Message Queues"
       },
       {
-        "Name": "Azure Service Bus",
         "Years": 1,
         "ExperienceLevel": 4,
         "Image": "Azure-Service-Bus.png",
@@ -719,7 +761,9 @@
           "AZURE",
           "AZURESERVICEBU",
           "CLOUD"
-        ]
+        ],
+        "Id": "Azure Service Bus",
+        "DisplayName": "Azure Service Bus"
       }
     ]
   },
@@ -731,7 +775,6 @@
     ],
     "Items": [
       {
-        "Name": "JSON",
         "Years": 12,
         "ExperienceLevel": 8,
         "Image": "json-logo-svg-vector.svg",
@@ -743,10 +786,11 @@
         "Xref": [
           "JSON",
           "JSONNET"
-        ]
+        ],
+        "Id": "JSON",
+        "DisplayName": "JSON"
       },
       {
-        "Name": "Protocol Buffers",
         "Years": 5,
         "ExperienceLevel": 6,
         "Image": "protobuf_nano.png",
@@ -756,10 +800,11 @@
         "Xref": [
           "PB",
           "PROTOCOLBUFFER"
-        ]
+        ],
+        "Id": "Protocol Buffers",
+        "DisplayName": "Protocol Buffers"
       },
       {
-        "Name": "XML",
         "Years": 6,
         "ExperienceLevel": 7,
         "Image": "xml.png",
@@ -770,10 +815,11 @@
         "Xref": [
           "XML",
           "EXTENSIBLEMARKUPLANGUAGE"
-        ]
+        ],
+        "Id": "XML",
+        "DisplayName": "XML"
       },
       {
-        "Name": "Fixed Length",
         "Years": 6,
         "ExperienceLevel": 9,
         "Image": "",
@@ -783,10 +829,11 @@
         "Xref": [
           "FIXEDLENGTH",
           "FIXED"
-        ]
+        ],
+        "Id": "Fixed Length",
+        "DisplayName": "Fixed Length"
       },
       {
-        "Name": "CSV",
         "Years": 6,
         "ExperienceLevel": 9,
         "Image": "csv.svg",
@@ -797,10 +844,11 @@
           "CSV",
           "COMMADELIMITED",
           "COMMASEPARATEDVALUE"
-        ]
+        ],
+        "Id": "CSV",
+        "DisplayName": "CSV"
       },
       {
-        "Name": "MessagePack",
         "Years": 1,
         "ExperienceLevel": 4,
         "Image": "messagepack.png",
@@ -810,7 +858,9 @@
         ],
         "Xref": [
           "MESSAGEPACK"
-        ]
+        ],
+        "Id": "MessagePack",
+        "DisplayName": "MessagePack"
       }
     ]
   },
@@ -823,7 +873,6 @@
     ],
     "Items": [
       {
-        "Name": "Dapper",
         "Years": 6,
         "ExperienceLevel": 9,
         "Image": "dapper.jpg",
@@ -835,10 +884,11 @@
           "DAPPER",
           "ORM",
           "STACKEXCHANGE"
-        ]
+        ],
+        "Id": "Dapper",
+        "DisplayName": "Dapper"
       },
       {
-        "Name": "NHibernate",
         "Years": 5,
         "ExperienceLevel": 3,
         "Image": "NhLogo.png",
@@ -849,10 +899,11 @@
         "Xref": [
           "ORM",
           "NHIBERNATE"
-        ]
+        ],
+        "Id": "NHibernate",
+        "DisplayName": "NHibernate"
       },
       {
-        "Name": "nUnit",
         "Years": 5,
         "ExperienceLevel": 6,
         "Image": "nunit.png",
@@ -862,10 +913,11 @@
           "UNITTESTING",
           "TESTING",
           "TEST"
-        ]
+        ],
+        "Id": "nUnit",
+        "DisplayName": "nUnit"
       },
       {
-        "Name": "MS Test",
         "Years": 2,
         "ExperienceLevel": 8,
         "Image": "MSTest.png",
@@ -880,10 +932,11 @@
           "TESTING",
           "TEST",
           "TESTFRAMEWORK"
-        ]
+        ],
+        "Id": "MS Test",
+        "DisplayName": "MS Test"
       },
       {
-        "Name": "xUnit",
         "Years": 6,
         "ExperienceLevel": 8,
         "Image": "xunit.png",
@@ -897,10 +950,11 @@
           "TESTING",
           "TEST",
           "TESTFRAMEWORK"
-        ]
+        ],
+        "Id": "xUnit",
+        "DisplayName": "xUnit"
       },
       {
-        "Name": "Moq",
         "Years": 10,
         "ExperienceLevel": 8,
         "Image": "moq.png",
@@ -914,10 +968,11 @@
           "TESTING",
           "TEST",
           "TESTFRAMEWORK"
-        ]
+        ],
+        "Id": "Moq",
+        "DisplayName": "Moq"
       },
       {
-        "Name": "Entity Framework",
         "Years": 1,
         "ExperienceLevel": 2,
         "Image": "ef.png",
@@ -928,10 +983,11 @@
           "EF",
           "ENTITYFRAMEWORK",
           "ORM"
-        ]
+        ],
+        "Id": "Entity Framework",
+        "DisplayName": "Entity Framework"
       },
       {
-        "Name": "LINQ",
         "Years": 12,
         "ExperienceLevel": 9,
         "Image": "Microsoft_.NET_Framework_v4.5_logo.png",
@@ -940,10 +996,11 @@
         ],
         "Xref": [
           "LINQ"
-        ]
+        ],
+        "Id": "LINQ",
+        "DisplayName": "LINQ"
       },
       {
-        "Name": "SignalR",
         "Years": 1,
         "ExperienceLevel": 6,
         "Image": "signalr.png",
@@ -953,7 +1010,9 @@
         "Xref": [
           "SIGNALR",
           "AJAX"
-        ]
+        ],
+        "Id": "SignalR",
+        "DisplayName": "SignalR"
       }
     ]
   },
@@ -965,7 +1024,6 @@
     ],
     "Items": [
       {
-        "Name": "Subversion",
         "Years": 6,
         "ExperienceLevel": 7,
         "Image": "Subversion_Logo.svg",
@@ -973,10 +1031,11 @@
           "SUBVERSION",
           "SOURCECONTROL",
           "SVN"
-        ]
+        ],
+        "Id": "Subversion",
+        "DisplayName": "Subversion"
       },
       {
-        "Name": "Azure DevOps",
         "Years": 2,
         "ExperienceLevel": 7,
         "Image": "AzureDevOps.jpg",
@@ -987,10 +1046,11 @@
           "AZURE",
           "AZUREDEVOP",
           "DEVOP"
-        ]
+        ],
+        "Id": "Azure DevOps",
+        "DisplayName": "Azure DevOps"
       },
       {
-        "Name": "Git",
         "Years": 5,
         "ExperienceLevel": 8,
         "Image": "Git-Icon-1788C.png",
@@ -1002,10 +1062,11 @@
         "Xref": [
           "GIT",
           "SOURCECONTROL"
-        ]
+        ],
+        "Id": "Git",
+        "DisplayName": "Git"
       },
       {
-        "Name": "Docker",
         "Years": 2,
         "ExperienceLevel": 7,
         "Image": "Moby-logo.png",
@@ -1019,10 +1080,11 @@
           "DOCKERDESKTOP",
           "CONTAINER",
           "VM"
-        ]
+        ],
+        "Id": "Docker",
+        "DisplayName": "Docker"
       },
       {
-        "Name": "Vagrant",
         "Years": 6,
         "ExperienceLevel": 8,
         "Image": "vagrant-color.svg",
@@ -1034,10 +1096,11 @@
           "VAGRANT",
           "VM",
           "VIRTUALBOX"
-        ]
+        ],
+        "Id": "Vagrant",
+        "DisplayName": "Vagrant"
       },
       {
-        "Name": "Amazon S3",
         "Years": 4,
         "ExperienceLevel": 5,
         "Image": "s3.png",
@@ -1051,10 +1114,11 @@
           "STORAGE",
           "CLOUDSTORAGE",
           "ONLINESTORAGE"
-        ]
+        ],
+        "Id": "Amazon S3",
+        "DisplayName": "Amazon S3"
       },
       {
-        "Name": "Virtual Box",
         "Years": 6,
         "ExperienceLevel": 7,
         "Image": "vbox_logo2_gradient.png",
@@ -1068,10 +1132,11 @@
           "VIRTUALBOX",
           "VIRTUALIZATION",
           "VM"
-        ]
+        ],
+        "Id": "Virtual Box",
+        "DisplayName": "Virtual Box"
       },
       {
-        "Name": "Amazon SES",
         "Years": 1,
         "ExperienceLevel": 2,
         "Image": "SES_logo_transparent.png",
@@ -1079,14 +1144,16 @@
           "Integrated into websites for sending high volume email."
         ],
         "Xref": [
-          "AMAZONSE", //AmazonSES
-          "SE", //SES
+          "AMAZONSE",
+          "SE",
           "EMAIL",
           "EMAILING",
           "CLOUD",
           "MAIL",
           "SIMPLEEMAILSERVICE"
-        ]
+        ],
+        "Id": "Amazon SES",
+        "DisplayName": "Amazon SES"
       }
     ]
   },
@@ -1094,12 +1161,11 @@
     "Category": "Operating Systems",
     "Title": "Operating System",
     "Xref": [
-      "O", //OS
+      "O",
       "OPERATINGSYSTEM"
     ],
     "Items": [
       {
-        "Name": "Windows",
         "Years": 30,
         "ExperienceLevel": 10,
         "Image": "Windows.svg",
@@ -1107,12 +1173,13 @@
           "Use extensively in development as a client and as a server."
         ],
         "Xref": [
-          "MSWINDOW", //MSWindows
-          "WINDOW" //Windows
-        ]
+          "MSWINDOW",
+          "WINDOW"
+        ],
+        "Id": "Windows",
+        "DisplayName": "Windows"
       },
       {
-        "Name": "FreeBSD",
         "Years": 2,
         "ExperienceLevel": 6,
         "Image": "Freebsd.jpg",
@@ -1124,10 +1191,11 @@
           "BSD",
           "LINUX",
           "UNIX"
-        ]
+        ],
+        "Id": "FreeBSD",
+        "DisplayName": "FreeBSD"
       },
       {
-        "Name": "Ubuntu",
         "Years": 10,
         "ExperienceLevel": 8,
         "Image": "ubuntu-logo.png",
@@ -1138,10 +1206,11 @@
           "UBUNTU",
           "LINUX",
           "UNIX"
-        ]
+        ],
+        "Id": "Ubuntu",
+        "DisplayName": "Ubuntu"
       },
       {
-        "Name": "HP-UX",
         "Years": 2,
         "ExperienceLevel": 2,
         "Image": "HP-UX-logo.jpg",
@@ -1152,10 +1221,11 @@
           "UNIX",
           "UPUX",
           "HP"
-        ]
+        ],
+        "Id": "HP-UX",
+        "DisplayName": "HP-UX"
       },
       {
-        "Name": "pfSense",
         "Years": 1,
         "ExperienceLevel": 5,
         "Image": "PfSense_logo.png",
@@ -1167,10 +1237,11 @@
           "PFSENSE",
           "FREEBSD",
           "UNIX"
-        ]
+        ],
+        "Id": "pfSense",
+        "DisplayName": "pfSense"
       },
       {
-        "Name": "OpenWRT",
         "Years": 1,
         "ExperienceLevel": 5,
         "Image": "Openwrt.png",
@@ -1181,24 +1252,12 @@
           "ROUTER",
           "LINUX",
           "OPENWRT"
-        ]
+        ],
+        "Id": "OpenWRT",
+        "DisplayName": "OpenWRT"
       }
     ]
   },
-  //Software
-  //IIS
-  //Nginx
-  //Apache
-  //Wordpress
-  //Joomla
-
-  // Need to ad CMSes
-  // WordPress
-  // Joomla
-  // EpiServer (Optimizely)
-  // SiteCore
-  // Kentico
-  // Umbraco
   {
     "Category": "Software",
     "Title": "Software",
@@ -1207,7 +1266,6 @@
     ],
     "Items": [
       {
-        "Name": "IIS",
         "Years": 20,
         "ExperienceLevel": 7,
         "Image": "iis.png",
@@ -1215,13 +1273,14 @@
           "Usually used on Windows Server for hosting .NET web applications."
         ],
         "Xref": [
-          "II", //IIS
+          "II",
           "INTERNETINFORMATIONSERVER",
           "WEBSERVER"
-        ]
+        ],
+        "Id": "IIS",
+        "DisplayName": "IIS"
       },
       {
-        "Name": "Nginx",
         "Years": 2,
         "ExperienceLevel": 6,
         "Image": "nginx.png",
@@ -1230,10 +1289,11 @@
         ],
         "Xref": [
           "NGINX"
-        ]
+        ],
+        "Id": "Nginx",
+        "DisplayName": "Nginx"
       },
       {
-        "Name": "Apache",
         "Years": 10,
         "ExperienceLevel": 8,
         "Image": "apache.svg",
@@ -1243,7 +1303,9 @@
         "Xref": [
           "APACHE",
           "APACHEWEBSERVER"
-        ]
+        ],
+        "Id": "Apache",
+        "DisplayName": "Apache"
       }
     ]
   },
@@ -1256,7 +1318,6 @@
     ],
     "Items": [
       {
-        "Name": "Sierra Chart",
         "Years": 3,
         "ExperienceLevel": 8,
         "Image": "sierrachart.png",
@@ -1272,10 +1333,11 @@
           "CHARTING",
           "ACSIL",
           "C++"
-        ]
+        ],
+        "Id": "Sierra Chart",
+        "DisplayName": "Sierra Chart"
       },
       {
-        "Name": "TradingView",
         "Years": 3,
         "ExperienceLevel": 6,
         "Image": "tradingview.svg",
@@ -1288,10 +1350,11 @@
           "TRADING",
           "CHARTING",
           "PINESCRIPT"
-        ]
+        ],
+        "Id": "TradingView",
+        "DisplayName": "TradingView"
       },
       {
-        "Name": "NinjaTrader",
         "Years": 2,
         "ExperienceLevel": 8,
         "Image": "ninjatrader.png",
@@ -1307,10 +1370,11 @@
           "NINJASCRIPT",
           "ALGORITHMIC",
           "C#"
-        ]
+        ],
+        "Id": "NinjaTrader",
+        "DisplayName": "NinjaTrader"
       },
       {
-        "Name": "Quantower",
         "Years": 1,
         "ExperienceLevel": 6,
         "Image": "quantower.png",
@@ -1323,10 +1387,11 @@
           "QUANT",
           "ALGORITHMIC",
           "C#"
-        ]
+        ],
+        "Id": "Quantower",
+        "DisplayName": "Quantower"
       },
       {
-        "Name": "cTrader",
         "Years": 1,
         "ExperienceLevel": 5,
         "Image": "ctrader.ico",
@@ -1340,10 +1405,11 @@
           "FOREX",
           "GOLD",
           "C#"
-        ]
+        ],
+        "Id": "cTrader",
+        "DisplayName": "cTrader"
       },
       {
-        "Name": "Quantconnect",
         "Years": 1,
         "ExperienceLevel": 4,
         "Image": "quantconnect.png",
@@ -1358,10 +1424,11 @@
           "ALGORITHMIC",
           "LEAN",
           "C#"
-        ]
+        ],
+        "Id": "Quantconnect",
+        "DisplayName": "Quantconnect"
       },
       {
-        "Name": "Zorro",
         "Years": 1,
         "ExperienceLevel": 5,
         "Image": "zorro.ico",
@@ -1374,10 +1441,11 @@
           "TRADING",
           "ALGORITHMIC",
           "C++"
-        ]
+        ],
+        "Id": "Zorro",
+        "DisplayName": "Zorro"
       },
       {
-        "Name": "thinkorswim",
         "Years": 1,
         "ExperienceLevel": 4,
         "Image": "thinkorswim.svg",
@@ -1391,7 +1459,9 @@
           "TDAMERITRADE",
           "THINKSCRIPT",
           "SCHWAB"
-        ]
+        ],
+        "Id": "thinkorswim",
+        "DisplayName": "thinkorswim"
       }
     ]
   },
@@ -1405,7 +1475,6 @@
     ],
     "Items": [
       {
-        "Name": "WordPress",
         "Years": 2,
         "ExperienceLevel": 5,
         "Image": "wordpress.png",
@@ -1416,10 +1485,11 @@
           "WORDPRESS",
           "WP",
           "CMS"
-        ]
+        ],
+        "Id": "WordPress",
+        "DisplayName": "WordPress"
       },
       {
-        "Name": "Joomla",
         "Years": 2,
         "ExperienceLevel": 5,
         "Image": "joomla.png",
@@ -1429,10 +1499,11 @@
         "Xref": [
           "JOOMLA",
           "CMS"
-        ]
+        ],
+        "Id": "Joomla",
+        "DisplayName": "Joomla"
       },
       {
-        "Name": "Optimizely/EpiServer",
         "Years": 3,
         "ExperienceLevel": 7,
         "Image": "optimizely.svg",
@@ -1447,10 +1518,11 @@
           "CMS",
           "DOTNET",
           "ENTERPRISE"
-        ]
+        ],
+        "Id": "Optimizely",
+        "DisplayName": "Optimizely/EpiServer"
       },
       {
-        "Name": "SiteCore",
         "Years": 1,
         "ExperienceLevel": 4,
         "Image": "sitecore.png",
@@ -1462,10 +1534,11 @@
           "CMS",
           "DOTNET",
           "ENTERPRISE"
-        ]
+        ],
+        "Id": "SiteCore",
+        "DisplayName": "SiteCore"
       },
       {
-        "Name": "Kentico",
         "Years": 3,
         "ExperienceLevel": 7,
         "Image": "kentico.svg",
@@ -1477,10 +1550,11 @@
           "CMS",
           "DOTNET",
           "ECOMMERCE"
-        ]
+        ],
+        "Id": "Kentico",
+        "DisplayName": "Kentico"
       },
       {
-        "Name": "Umbraco",
         "Years": 1,
         "ExperienceLevel": 2,
         "Image": "umbraco.svg",
@@ -1492,7 +1566,9 @@
           "CMS",
           "DOTNET",
           "ASPNET"
-        ]
+        ],
+        "Id": "Umbraco",
+        "DisplayName": "Umbraco"
       }
     ]
   },
@@ -1505,7 +1581,6 @@
     ],
     "Items": [
       {
-        "Name": "Teensy Microcontroller",
         "Years": 30,
         "ExperienceLevel": 10,
         "Image": "teensy_2.jpg",
@@ -1515,10 +1590,11 @@
         "Xref": [
           "PJCTEENSY",
           "TEENSY"
-        ]
+        ],
+        "Id": "Teensy Microcontroller",
+        "DisplayName": "Teensy Microcontroller"
       },
       {
-        "Name": "Raspberry Pi",
         "Years": 2,
         "ExperienceLevel": 6,
         "Image": "RaspberryPi.png",
@@ -1529,10 +1605,11 @@
           "RASPBERRY",
           "RASPBERRYPI",
           "PI"
-        ]
+        ],
+        "Id": "Raspberry Pi",
+        "DisplayName": "Raspberry Pi"
       },
       {
-        "Name": "Raspberry Pi Zero",
         "Years": 10,
         "ExperienceLevel": 8,
         "Image": "raspberrypizero.jpg",
@@ -1546,10 +1623,11 @@
           "RASPBERRYPIZERO",
           "PIZERO",
           "ZERO"
-        ]
+        ],
+        "Id": "Raspberry Pi Zero",
+        "DisplayName": "Raspberry Pi Zero"
       },
       {
-        "Name": "Arduino Uno",
         "Years": 1,
         "ExperienceLevel": 5,
         "Image": "Arduino-uno.jpg",
@@ -1560,7 +1638,9 @@
           "ARDUINO",
           "ARDUINOUNO",
           "UNO"
-        ]
+        ],
+        "Id": "Arduino Uno",
+        "DisplayName": "Arduino Uno"
       }
     ]
   },
@@ -1574,7 +1654,6 @@
     ],
     "Items": [
       {
-        "Name": "REST",
         "Years": 10,
         "ExperienceLevel": 8,
         "Image": "rest.png",
@@ -1585,10 +1664,11 @@
         "Xref": [
           "REST",
           "RESTAPI"
-        ]
+        ],
+        "Id": "REST",
+        "DisplayName": "REST"
       },
       {
-        "Name": "SOAP",
         "Years": 2,
         "ExperienceLevel": 5,
         "Image": "soap-logo.png",
@@ -1598,10 +1678,11 @@
         "Xref": [
           "SOAP",
           "SOAPAPI"
-        ]
+        ],
+        "Id": "SOAP",
+        "DisplayName": "SOAP"
       },
       {
-        "Name": "gRPC",
         "Years": 1,
         "ExperienceLevel": 6,
         "Image": "grpc-logo.png",
@@ -1612,7 +1693,9 @@
           "RPC",
           "GRPC",
           "GRPCAPI"
-        ]
+        ],
+        "Id": "gRPC",
+        "DisplayName": "gRPC"
       }
     ]
   }

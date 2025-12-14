@@ -1,5 +1,4 @@
-﻿﻿@using CV.Models
-@model PartialViewModel<TechCategory>
+﻿@model CV.Models.PartialViewModel<CV.Models.TechCategory>
 @{
     int count = 0;
 }
@@ -34,7 +33,7 @@
             @foreach (var techItem in techCategory.TechItems.OrderByDescending(i => i.ExperienceLevel))
             {
 
-            <tr id="@techItem.Name">
+            <tr id="@techItem.Id">
                 <td scope="row" class="techImageTd">
                     <div class="techImageDiv">
                     @if(!string.IsNullOrWhiteSpace(techItem.Image))
@@ -47,7 +46,7 @@
                     }
                     </div>
                     <div class="techName">
-                        @techItem.Name
+                        @techItem.DisplayName
                     </div>
                 </td>
                 <td>

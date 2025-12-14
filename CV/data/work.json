@@ -18,7 +18,12 @@
       "ATLANTA",
       "ATLANTAGA",
       "GA",
-      "GEORGIA"
+      "GEORGIA",
+      "LLM",
+      "AI",
+      "AICODING",
+      "VIBECODING"
+
     ],
     "TechXref": [
       "C#",
@@ -27,14 +32,9 @@
       "Typescript",
       "Vue.js",
       "Kentico",
-      "Episerver",
       "Optimizely",
       "Crownpeak",
       "Sitecore",
-      "LLM",
-      "AI",
-      "AICODING",
-      "VIBECODING",
       "Umbraco",
       "HTML",
       "CSS",

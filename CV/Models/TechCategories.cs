@@ -14,13 +14,13 @@ namespace CV.Models
             this.AddRange(techCategories);
         }
 
-        public TechItem GetTechItemByName(string name)
+        public TechItem GetTechItemById(string id)
         {
             foreach (var techCat in this)
             {
                 foreach (var techitem in techCat.TechItems)
                 {
-                    if (techitem.Name == name)
+                    if (techitem.Id == id)
                     {
                         return techitem;
                     }

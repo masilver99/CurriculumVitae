@@ -4,11 +4,11 @@ namespace CV.Models
 {
     public class TechItem
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
         /// <summary>
         /// Name of the technology
         /// </summary>
-        public string Name { get; set; }
+        public string DisplayName { get; set; }
 
         /// <summary>
         /// Number of years of experience 

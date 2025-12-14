@@ -58,10 +58,10 @@
             @foreach (var item in workItem.TechItems.OrderBy(x => x.CategoryId))
             {
                 var cat = $"cat{item.CategoryId}";
-                var http = $"/tech/#{item.Name}";
+                var http = $"/tech/#{item.Id}";
                 <a href="@http" title="@item.CategoryName">
                 <div class='itemBox @cat'>
-                    @item.Name
+                    @item.DisplayName
                 </div>
                 </a>
             }

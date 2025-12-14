@@ -70,9 +70,9 @@ namespace CV.data
                             foreach (var item in cat.Items)
                             {
                                 var techItem = MapTechItem(cat, item, catId);
-                                if (!string.IsNullOrWhiteSpace(techItem.Name))
+                                if (!string.IsNullOrWhiteSpace(techItem.Id))
                                 {
-                                    var key = techItem.Name.Trim().ToUpperInvariant();
+                                    var key = techItem.Id.Trim().ToUpperInvariant();
                                     if (!_techByName.ContainsKey(key))
                                     {
                                         _techByName.Add(key, techItem);
@@ -109,7 +109,7 @@ namespace CV.data
                         MatchesTerms(terms, w.CompanyName) ||
                         MatchesTerms(terms, w.Division) ||
                         MatchesTerms(terms, w.Location) ||
-                        w.TechItems.Any(t => MatchesTerms(terms, t.Name) || (t.Xref != null && t.Xref.Any(x => terms.Contains(x.ToUpperInvariant()))))
+                        w.TechItems.Any(t => MatchesTerms(terms, t.DisplayName) || (t.Xref != null && t.Xref.Any(x => terms.Contains(x.ToUpperInvariant()))))
                     ).ToList();
                 }
                 return items;
@@ -127,7 +127,7 @@ namespace CV.data
                     items = items.Where(p =>
                         MatchesTerms(terms, p.ProjectName) ||
                         MatchesTerms(terms, p.Description) ||
-                        (p.TechItems != null && p.TechItems.Any(t => MatchesTerms(terms, t.Name) || (t.Xref != null && t.Xref.Any(x => terms.Contains(x.ToUpperInvariant())))))
+                        (p.TechItems != null && p.TechItems.Any(t => MatchesTerms(terms, t.DisplayName) || (t.Xref != null && t.Xref.Any(x => terms.Contains(x.ToUpperInvariant())))))
                     ).ToList();
                 }
                 // Keep original ordering intent if any (projects.json has no explicit list_order; return as-is)
@@ -145,7 +145,7 @@ namespace CV.data
                     var terms = searchTerms.Select(t => t.Trim().ToUpperInvariant()).ToHashSet();
                     cats = cats.Where(c =>
                         MatchesTerms(terms, c.Name) ||
-                        (c.TechItems != null && c.TechItems.Any(t => MatchesTerms(terms, t.Name) || (t.Xref != null && t.Xref.Any(x => terms.Contains(x.ToUpperInvariant())))))
+                        (c.TechItems != null && c.TechItems.Any(t => MatchesTerms(terms, t.DisplayName) || (t.Xref != null && t.Xref.Any(x => terms.Contains(x.ToUpperInvariant())))))
                     ).ToList();
                 }
                 return cats;
@@ -208,7 +208,7 @@ namespace CV.data
                     else
                     {
                         // Fallback minimal tech item
-                        item.TechItems.Add(new TechItem { Name = name ?? string.Empty });
+                        item.TechItems.Add(new TechItem { Id = name ?? string.Empty, DisplayName = name ?? string.Empty });
                     }
                 }
             }
@@ -244,7 +244,7 @@ namespace CV.data
                     }
                     else
                     {
-                        item.TechItems.Add(new TechItem { Name = name ?? string.Empty });
+                        item.TechItems.Add(new TechItem { Id = name ?? string.Empty, DisplayName = name ?? string.Empty });
                     }
                 }
             }
@@ -275,7 +275,8 @@ namespace CV.data
         {
             var techItem = new TechItem
             {
-                Name = item.Name,
+                Id = item.Id,
+                DisplayName = item.DisplayName,
                 Years = item.Years,
                 ExperienceLevel = item.ExperienceLevel,
                 Image = item.Image,
@@ -288,7 +289,7 @@ namespace CV.data
 
             if (populateRelations)
             {
-                var techName = item.Name.Trim().ToUpperInvariant();
+                var techName = item.Id.Trim().ToUpperInvariant();
 
                 if (_work != null)
                 {
@@ -323,7 +324,8 @@ namespace CV.data
         {
             return new TechItem
             {
-                Name = t.Name,
+                Id = t.Id,
+                DisplayName = t.DisplayName,
                 Years = t.Years,
                 ExperienceLevel = t.ExperienceLevel,
                 Image = t.Image,
@@ -393,7 +395,8 @@ namespace CV.data
 
     internal class TechJsonItem
     {
-        public string Name { get; set; }
+        public string Id { get; set; }
+        public string DisplayName { get; set; }
         public int Years { get; set; }
         public int ExperienceLevel { get; set; }
         public string Image { get; set; }
