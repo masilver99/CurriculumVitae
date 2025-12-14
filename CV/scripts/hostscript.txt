@@ -1,6 +1,6 @@
 ﻿
-cd /home/masilver/docker/temp
+cd /home/ubuntu/docker/sites/cv.michaelsilver.us/temp
 rm -r cv
 unzip -d cv/ cv.zip   
-docker build -t cv -f Dockerfile-release . 
-docker-compose -f ~/docker/docker-compose.yml up -d --remove-orphans
+sudo docker build -t cv -f Dockerfile-release . 
+sudo docker-compose -f ~/docker/sites/cv.michaelsilver.us/docker-compose.yml up -d --remove-orphans

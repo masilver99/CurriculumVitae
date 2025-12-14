@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  cv:
+    build:
+      context: .
+      dockerfile: CV/Dockerfile-release
+    container_name: cv
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - LOG_DIR=/app/logs
+    volumes:
+      - ./logs:/app/logs
+    restart: unless-stopped
+    networks:
+      - cv-network
+
+networks:
+  cv-network:
+    driver: bridge
+
