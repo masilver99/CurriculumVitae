@@ -3,4 +3,5 @@ EXPOSE 80
 EXPOSE 443
 WORKDIR /app
 COPY cv/ ./
+ENV ASPNETCORE_URLS=http://+:80
 ENTRYPOINT ["dotnet", "CV.dll"]  
