@@ -29,8 +29,8 @@
     "TechXref": [
       "C#",
       "Windows",
-      "Javascript",
-      "Typescript",
+      "JavaScript",
+      "TypeScript",
       "Vue.js",
       "Kentico",
       "Optimizely",
@@ -61,12 +61,12 @@
       "CHATGPT"
     ],
     "BulletPoints": [
-      "Maintain, update and rollout publicly facing websites for large corporate clients.",
-      "Work with an internal team and the customer, to develop specifications and project plans for small and large projects.",
-      "Most websites are hosted in Azure and use Episerver, Kentico, Umbraco or Sitecore as their CMS with numerous other javascript frameworks, such as Vue.js, jQuery, Bootstrap, etc.",
-      "Helped stabilize a few clients after developers left or the existing developers were overwhelmed.",
-      "Fast moving environment requires working with three project managers at once and being able to close out tasks quickly, based on ever changing priorities and tight deadlines.",
-      "Responsible for resolving ADA issues."
+      "Maintain, update, and roll out publicly facing websites for large corporate clients.",
+      "Collaborate with internal teams and customers to develop specifications and project plans for both small and large engagements.”",
+      "Most websites are hosted in Azure and use Episerver, Kentico, Umbraco, or Sitecore as CMS platforms, along with JavaScript frameworks such as Vue.js, jQuery, and Bootstrap.”",
+      "Stabilized client environments after team transitions or staffing overloads.",
+      "Fast-paced environment requiring coordination with multiple project managers and rapid task resolution amid shifting priorities and tight deadlines.",
+      "Responsible for resolving accessibility (ADA) compliance issues."
     ]
   },
   {
@@ -107,8 +107,8 @@
     ],
     "BulletPoints": [
       "Use Al Brooks' methodology to trade E-Mini S&P 500 futures contracts.",
-      "Developed numerous trading bots and indicators for Sierra Chart, TradingView and Ninjatrader platforms.",
-      "Swing trade forex on longer timeframes."
+      "Developed numerous trading bots and indicators for Sierra Chart, TradingView, and NinjaTrader platforms.",
+      "Swing-trade forex on longer timeframes."
     ]
   },
   {
@@ -141,8 +141,8 @@
     "TechXref": [
       "C#",
       "Windows",
-      "Javascript",
-      "Typescript",
+      "JavaScript",
+      "TypeScript",
       "HTML",
       "CSS",
       "SQL",
@@ -182,8 +182,8 @@
     "BulletPoints": [
       "Managed different teams of programmers on a per project basis.",
       "Primarily worked on the Electronic Filing Center (EFC) team. Responsible for a large queue based back end, distributed system, processing millions of tax returns every year.",
-      "Worked on and help design back end accounting system responsible for processing billing records for all customers based on usage.",
-      "Was \"Security Champion\", responsible for scanning and remediation planning for dozens of products for security, license and operational risks and reporting our security exposure and progress to our Vice President.",
+      "Worked on and helped design the back-end accounting system responsible for processing billing records for all customers based on usage.",
+      "Served as the Security Champion, responsible for vulnerability scanning, remediation planning, and reporting security exposure and progress to the Vice President.",
       "Overall team was responsible for numerous products, from customer facing web applications, to console apps, to libraries and web apis."
     ]
   },
@@ -209,7 +209,7 @@
       "C#",
       "Delphi/Pascal",
       "Windows",
-      "Javascript",
+      "JavaScript",
       "HTML",
       "CSS",
       "SQL",
@@ -279,7 +279,7 @@
       "C#",
       "Delphi/Pascal",
       "Windows",
-      "Javascript",
+      "JavaScript",
       "HTML",
       "CSS",
       "SQL",
@@ -341,7 +341,7 @@
       "SQL",
       "HTML",
       "CSS",
-      "Javascript",
+      "JavaScript",
       "C",
       "Ruby",
       "Perl",

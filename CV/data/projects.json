@@ -5,9 +5,9 @@
     "Url": "",
     "Date": "2026-1-25",
     "Description": [
-      "Converted from legacy CMS to Optimizely SaaS CMS.",
+      "Converted from a legacy CMS to the Optimizely SaaS platform.",
       "Integration with existing inventory system and Optimizely Commerce.",
-      "Included ordering system for samples."
+      "Included an ordering system for samples."
     ],
     "Purpose": "Large scale website conversion for a large commercial carpet manufacturer.",
     "OpenSource": false,
@@ -31,7 +31,7 @@
       "JSON",
       "CSS",
       "HTML",
-      "Javascript"
+      "JavaScript"
     ]
   },
   {
@@ -41,12 +41,12 @@
     "Date": "2025-8-01",
     "Description": [
       "Application to crawl websites for broken links.",
-      "Provides timings and size per page.",
-      "Can parse links on some dynamic javascript pages.",
+      "Provides timing and size metrics per page.",
+      "Parses links on some dynamic JavaScript pages.",
       "Written as a cross platform app with Avalonia.",
       "Invaluable for website developers"
     ],
-    "Purpose": "Search websites for broken links.",
+    "Purpose": "Searches websites for broken links",
     "OpenSource": false,
     "Image": "",
     "Screenshots": [
@@ -65,7 +65,7 @@
       "Avalonia",
       "CSS",
       "HTML",
-      "Javascript"
+      "JavaScript"
     ]
   },
   {
@@ -76,9 +76,9 @@
     "Description": [
       "Written in Ninjatrader's Ninjascript.",
       "Traded the MES futures contract live for 9 months.",
-      "After some initial success, shutdown after too many losses."
+      "After initial success, it was shut down due to excessive losses."
     ],
-    "Purpose": "Trades the NY open for an opening breakout.",
+    "Purpose": "Trades the New York open based on breadkout signals",
     "OpenSource": false,
     "Image": "",
     "Screenshots": [],
@@ -102,9 +102,9 @@
     "Url": "food.michaelsilver.us",
     "Date": "",
     "Description": [
-      "Began work on first application in the 1990's and over time have converted it from a Delphi Windows app, to a C# Web Forms app, to a .NET Core MVC app running in Docker. Source code is available upon request."
+      "Work began on the first application in the 1990s and over time was converted from a Delphi Windows app, to a C# Web Forms app, to a .NET Core MVC app running in Docker." 
     ],
-    "Purpose": "Created to test new programming languages, frameworks and features.",
+    "Purpose": "Created to test new programming languages, frameworks and features",
     "OpenSource": false,
     "Image": "nf.png",
     "Screenshots": [],
@@ -141,9 +141,10 @@
     "Url": "cv.michaelsilver.us",
     "Date": "",
     "Description": [
-      "This web site. All data is stored in json files and can be updated without a code change. Developed on Windows and deployed to a Unbuntu machine via a docker container. "
+      "This web site. All data is stored in json files and can be updated without a code change.",
+      "Developed on Windows and deployed to an Ubuntu machine via a Docker container."
     ],
-    "Purpose": "Provides searchable curriculum vitae for Michael Silver. ",
+    "Purpose": "Provides searchable curriculum vitae for Michael Silver ",
     "OpenSource": true,
     "Image": "monitor.svg",
     "Screenshots": [],
@@ -156,7 +157,7 @@
       "ASP.NET Razor Pages",
       "JSON",
       "Nginx reverse proxy",
-      "Unbuntu",
+      "Ubuntu",
       "Let's Encrypt"
     ],
     "TechXref": [
@@ -175,7 +176,7 @@
     "Url": "whosopen.today",
     "Date": "",
     "Description": [],
-    "Purpose": "Tacked which restaurants and businesses were open during COVID.",
+    "Purpose": "Tracked which restaurants and businesses were open during COVID-19",
     "OpenSource": false,
     "Image": "monitor.svg",
     "Screenshots": [],
@@ -190,7 +191,7 @@
       "CSV",
       "Docker",
       "Nginx reverse proxy",
-      "Unbuntu",
+      "Ubuntu",
       "Let's Encrypt"
     ],
     "TechXref": [
@@ -210,9 +211,10 @@
     "Url": "https://github.com/masilver99/NWorkQueue",
     "Date": "",
     "Description": [
-      "Provides a thin wrapper around a database, Postgres, by default, allowing for safe queuing of messages, avoiding typical pitfalls, such as poison messages, or locks. Storage is abstracted out and a storage layer can be written for any storage medium, currently Postgres and SQLite are in development. Goal is to have two docker versions, one with the postgres db, the other without."
+      "Provides a thin wrapper around a database, Postgres, by default, allowing for safe queuing of messages, avoiding typical pitfalls, such as poison messages, or locks.",
+      "Storage is abstracted out and a storage layer can be written for any storage medium, currently Postgres and SQLite are in development. "
     ],
-    "Purpose": "A simple, opinionated message queue, using Postgres for storage.",
+    "Purpose": "A simple, opinionated message queue, using Postgres for storage",
     "OpenSource": true,
     "Image": "process.svg",
     "Screenshots": [],
@@ -246,7 +248,7 @@
     "Description": [
       "Designed a WordPress site for a family member."
     ],
-    "Purpose": "Website for a Profressional Photographer",
+    "Purpose": "Creation of a professional photographer website",
     "OpenSource": false,
     "Image": "internet.svg",
     "Screenshots": [],
@@ -274,7 +276,7 @@
       "Created as a proof of concept to test live tennis scoring using C#, Vue.js, Bootstrap and SignalR.",
       "Used to broadcast live scores of tournaments and high school matches."
     ],
-    "Purpose": "Proof of Concept",
+    "Purpose": "Live broadcast tennis matches",
     "OpenSource": false,
     "Image": "monitor.svg",
     "Screenshots": [],
@@ -293,7 +295,7 @@
       "C#",
       "ASP.NET MVC",
       ".NET Core",
-      "Javascript",
+      "JavaScript",
       "SignalR",
       "Vue.js",
       "PostgreSQL",
@@ -319,14 +321,14 @@
     ],
     "TechnologyUsed": [
       "ASP.NET 5",
-      "Heavy Javascript",
+      "Heavy JavaScript",
       "SignalR"
     ],
     "TechXref": [
       "C#",
       ".NET Framework",
       "ASP.NET MVC",
-      "Javascript",
+      "JavaScript",
       "PostgreSQL",
       "Dapper"
     ]

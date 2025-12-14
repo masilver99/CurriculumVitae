@@ -134,8 +134,8 @@
           "JS",
           "JAVASCRIPT"
         ],
-        "Id": "Javascript",
-        "DisplayName": "Javascript"
+        "Id": "JavaScript",
+        "DisplayName": "JavaScript"
       },
       {
         "Years": 1,
@@ -222,8 +222,8 @@
           "TYPESCRIPT",
           "TS"
         ],
-        "Id": "Typescript",
-        "DisplayName": "Typescript"
+        "Id": "TypeScript",
+        "DisplayName": "TypeScript"
       },
       {
         "Years": 1,
@@ -418,7 +418,7 @@
           "MICROSOFTSQLSERVER"
         ],
         "Id": "SqlServer",
-        "DisplayName": "SqlServer"
+        "DisplayName": "SQL Server"
       },
       {
         "Years": 13,
