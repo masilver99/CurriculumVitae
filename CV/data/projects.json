@@ -92,7 +92,8 @@
       ".NET MVC"
     ],
     "TechXref": [
-      "C#"
+      "C#",
+      "NINJATRADER"
     ]
   },
   {
@@ -340,10 +341,10 @@
       "Setup and displayed live webcam feed.", 
       "Site was mostly data driven, using custom built utilities to import tennis league schedules."
     ],
-    "Purpose": "",
+    "Purpose": "Allowed local players to stay up to date on tennis leagues",
     "OpenSource": false,
     "Image": "internet.svg",
-    "Screenshots": [],
+    "Screenshots": ["projects/cvta.webp"],
     "Status": "Retired",
     "CodeAvailable": true,
     "Types": [
