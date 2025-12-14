@@ -1,0 +1,38 @@
+@page
+@model CV.Pages.Admin.ValidateTechRefsModel
+@{
+    ViewData["Title"] = "Validate Tech References";
+}
+
+<h1>Validate Tech References</h1>
+
+<h2>Missing Work References</h2>
+@if (Model.MissingWorkRefs.Any())
+{
+    <ul>
+        @foreach (var item in Model.MissingWorkRefs)
+        {
+            <li>@item</li>
+        }
+    </ul>
+}
+else
+{
+    <p>No missing references in Work items.</p>
+}
+
+<h2>Missing Project References</h2>
+@if (Model.MissingProjectRefs.Any())
+{
+    <ul>
+        @foreach (var item in Model.MissingProjectRefs)
+        {
+            <li>@item</li>
+        }
+    </ul>
+}
+else
+{
+    <p>No missing references in Project items.</p>
+}
+
