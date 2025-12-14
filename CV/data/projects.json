@@ -12,7 +12,7 @@
     "Purpose": "Large scale website conversion for a large commercial carpet manufacturer.",
     "OpenSource": false,
     "Image": "",
-    "Screenshot": "",
+    "Screenshots": [],
     "Status": "Active",
     "CodeAvailable": false,
     "Types": [
@@ -81,7 +81,7 @@
     "Purpose": "Trades the NY open for an opening breakout.",
     "OpenSource": false,
     "Image": "",
-    "Screenshot": "",
+    "Screenshots": [],
     "Status": "Active",
     "CodeAvailable": false,
     "Types": [
@@ -106,7 +106,7 @@
     "Purpose": "Created to test new programming languages, frameworks and features.",
     "OpenSource": false,
     "Image": "nf.png",
-    "Screenshot": "",
+    "Screenshots": [],
     "Status": "Retired",
     "CodeAvailable": true,
     "Types": [
@@ -145,7 +145,7 @@
     "Purpose": "Provides searchable curriculum vitae for Michael Silver. ",
     "OpenSource": true,
     "Image": "monitor.svg",
-    "Screenshot": "Provides searchable curriculum vitae for Michael Silver. ",
+    "Screenshots": [],
     "Status": "Active",
     "CodeAvailable": true,
     "Types": [
@@ -177,7 +177,7 @@
     "Purpose": "Tacked which restaurants and businesses were open during COVID.",
     "OpenSource": false,
     "Image": "monitor.svg",
-    "Screenshot": "",
+    "Screenshots": [],
     "Status": "Retired",
     "CodeAvailable": true,
     "Types": [
@@ -214,7 +214,7 @@
     "Purpose": "A simple, opinionated message queue, using Postgres for storage.",
     "OpenSource": true,
     "Image": "process.svg",
-    "Screenshot": "",
+    "Screenshots": [],
     "Status": "Active, still in development",
     "CodeAvailable": true,
     "Types": [
@@ -248,7 +248,7 @@
     "Purpose": "Website for a Profressional Photographer",
     "OpenSource": false,
     "Image": "internet.svg",
-    "Screenshot": "",
+    "Screenshots": [],
     "Status": "Retired",
     "CodeAvailable": false,
     "Types": [
@@ -276,7 +276,7 @@
     "Purpose": "Proof of Concept",
     "OpenSource": false,
     "Image": "monitor.svg",
-    "Screenshot": "",
+    "Screenshots": [],
     "Status": "Active",
     "CodeAvailable": true,
     "Types": [
@@ -310,7 +310,7 @@
     "Purpose": "",
     "OpenSource": true,
     "Image": "monitor.svg",
-    "Screenshot": "",
+    "Screenshots":[],
     "Status": "Retired",
     "CodeAvailable": true,
     "Types": [
@@ -343,7 +343,7 @@
     "Purpose": "",
     "OpenSource": false,
     "Image": "internet.svg",
-    "Screenshot": "",
+    "Screenshots": [],
     "Status": "Retired",
     "CodeAvailable": true,
     "Types": [
@@ -371,7 +371,10 @@
     "Purpose": "Connects older IBM Keyboard to modern computers",
     "OpenSource": true,
     "Image": "process.svg",
-    "Screenshot": "",
+    "Screenshots": [
+      "projects/lcd1.webp",
+      "projects/lcd2.webp",
+      "projects/lcd3.webp"],
     "Status": "Retired",
     "CodeAvailable": true,
     "Types": [

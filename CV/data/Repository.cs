@@ -257,24 +257,13 @@ namespace CV.data
                 Purpose = p.Purpose,
                 OpenSource = p.OpenSource,
                 Image = p.Image,
-                Screenshot = p.Screenshot,
                 Status = p.Status,
                 CodeAvailable = p.CodeAvailable,
                 ProjectType = p.Types ?? new List<string>(),
                 TechnologyUsed = p.TechnologyUsed ?? new List<string>(),
-                WorkXref = p.WorkXref
+                WorkXref = p.WorkXref,
+                Screenshots = p.Screenshots
             };
-
-            // Handle screenshots - support both old single Screenshot and new Screenshots array
-            if (p.Screenshots != null && p.Screenshots.Count > 0)
-            {
-                item.Screenshots = p.Screenshots;
-            }
-            else if (!string.IsNullOrWhiteSpace(p.Screenshot))
-            {
-                // For backward compatibility, convert single screenshot to array
-                item.Screenshots = new List<string> { p.Screenshot };
-            }
 
             // Resolve WorkItem if WorkXref is provided
             if (!string.IsNullOrWhiteSpace(p.WorkXref))

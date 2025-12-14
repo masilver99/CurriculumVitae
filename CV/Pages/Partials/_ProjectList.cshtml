@@ -87,35 +87,6 @@
                                 </div>
                             </div>
                         }
-                        else if (!string.IsNullOrWhiteSpace(projectItem.Screenshot))
-                        {
-                            <!-- Fallback for the old single screenshot format -->
-                            <div class="mb-3">
-                                <img src="~/img/@projectItem.Screenshot" 
-                                     alt="@projectItem.ProjectName screenshot" 
-                                     class="img-thumbnail screenshot-thumbnail" 
-                                     style="max-width: 300px; cursor: pointer;" 
-                                     data-toggle="modal" 
-                                     data-target="#screenshotModal_@projectItem.ProjectName.Replace(" ", "_")" />
-                            </div>
-                            
-                            <!-- Modal -->
-                            <div class="modal fade" id="screenshotModal_@projectItem.ProjectName.Replace(" ", "_")" tabindex="-1" role="dialog" aria-labelledby="screenshotModalLabel_@projectItem.ProjectName.Replace(" ", "_")" aria-hidden="true">
-                                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="screenshotModalLabel_@projectItem.ProjectName.Replace(" ", "_")">@projectItem.ProjectName</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body text-center">
-                                            <img src="~/img/@projectItem.Screenshot" alt="@projectItem.ProjectName screenshot" class="img-fluid" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        }
                         <ul>
                             @foreach (var item in @projectItem.Description)
                             {
