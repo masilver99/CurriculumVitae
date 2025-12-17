@@ -1,0 +1,8 @@
+@page
+@using CV.Models
+@model CV.Pages.CertificationsModel
+@{
+    ViewData["Title"] = "Certifications";
+}
+
+<partial name="_CertificationList" model="new PartialViewModel<CertificationItem> { ItemList = Model.CertificationItems, IsForSearch = true }" />

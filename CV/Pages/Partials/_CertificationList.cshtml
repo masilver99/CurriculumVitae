@@ -1,0 +1,75 @@
+@using CV.Models
+@model PartialViewModel<CertificationItem>
+
+@foreach (var cert in Model.ItemList)
+{
+    <div class="card my-2 certifications-card" id="@cert.Name">
+        <div class="card-header">
+            <div class="d-flex flex-wrap justify-content-between align-items-center item-title">
+                <div class="p-2 flex-grow-1">
+                    <div class="companyName">
+                        @cert.Name
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="d-flex flex-wrap align-items-start">
+                @if (!string.IsNullOrWhiteSpace(cert.ImageUrl))
+                {
+                    <div class="mb-3 mr-3 cert-thumb">
+                        <img src="~/img/@cert.ImageUrl" alt="@cert.Name" class="img-thumbnail" style="max-height: 150px;" />
+                    </div>
+                }
+                <div class="mb-2 cert-details" style="min-width: 240px;">
+                    @if (!string.IsNullOrWhiteSpace(cert.IssuedBy))
+                    {
+                        <div class="workTitle mb-2">
+                            <i style="color: darkslategray;" class="fas fa-id-badge"></i>
+                            Issued by: @cert.IssuedBy
+                        </div>
+                    }
+                    <div class="workTitle">
+                        <i style="color: darkblue;" class="far fa-calendar-check"></i>
+                        Issued: @cert.DateIssued
+                    </div>
+                    @if (!string.IsNullOrWhiteSpace(cert.ExpirationDate))
+                    {
+                        <div class="workTitle mb-2">
+                            <i style="color: darkred;" class="far fa-calendar-times"></i>
+                            Expires: @cert.ExpirationDate
+                        </div>
+                    }
+                    @if (!string.IsNullOrWhiteSpace(cert.VerificationUrl))
+                    {
+                        <div class="workTitle">
+                            <i class="fas fa-link"></i>
+                            <a href="@cert.VerificationUrl" target="_blank" rel="noopener">Verify</a>
+                        </div>
+                    }
+                    @if (!string.IsNullOrWhiteSpace(cert.DownloadUrl))
+                    {
+                        <div class="workTitle">
+                            <i class="fas fa-download"></i>
+                            <a href="@cert.DownloadUrl" target="_blank" rel="noopener">Download Certificate</a>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            @if (cert.TechItems != null)
+            {
+                foreach (var item in cert.TechItems.OrderBy(x => x.CategoryId))
+                {
+                    var http = $"/tech/#{item.Id}";
+                    <a href="@http" title="@item.CategoryName">
+                        <div class='itemBox @($"cat{item.CategoryId}")'>
+                            @item.DisplayName
+                        </div>
+                    </a>
+                }
+            }
+        </div>
+    </div>
+}

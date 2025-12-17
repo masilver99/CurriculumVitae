@@ -16,6 +16,7 @@ namespace CV.data
         private readonly List<ProjectJson> _projects = new List<ProjectJson>();
         private readonly List<TechJsonCategory> _techCategories = new List<TechJsonCategory>();
         private readonly List<WorkJson> _work = new List<WorkJson>();
+        private readonly List<CertificationJson> _certifications = new List<CertificationJson>();
 
         private readonly Dictionary<string, TechItem> _techByName = new Dictionary<string, TechItem>();
         private readonly Dictionary<string, WorkJson> _workById = new Dictionary<string, WorkJson>();
@@ -35,6 +36,7 @@ namespace CV.data
             var projectsPath = Path.Combine(basePath, "projects.json");
             var techPath = Path.Combine(basePath, "tech.json");
             var workPath = Path.Combine(basePath, "work.json");
+            var certificationsPath = Path.Combine(basePath, "certifications.json");
 
             if (File.Exists(edPath))
             {
@@ -124,6 +126,20 @@ namespace CV.data
             {
                 Log.Warning("{workPath} not found", workPath);
             }
+
+            if (File.Exists(certificationsPath))
+            {
+                var certsJson = File.ReadAllText(certificationsPath);
+                var certItems = JsonSerializer.Deserialize<List<CertificationJson>>(certsJson, options);
+                if (certItems != null)
+                {
+                    _certifications.AddRange(certItems);
+                }
+            }
+            else
+            {
+                Log.Warning("{certificationsPath} not found", certificationsPath);
+            }
         }
 
         // Public API preserved
@@ -161,6 +177,26 @@ namespace CV.data
                     ).ToList();
                 }
                 // Keep original ordering intent if any (projects.json has no explicit list_order; return as-is)
+                return items;
+            });
+        }
+
+        public async Task<IEnumerable<CertificationItem>> GetCertificationItems(List<string> searchTerms = null)
+        {
+            return await Task.Run(() =>
+            {
+                var items = _certifications.Select(MapCertificationItem).ToList();
+                if (searchTerms != null && searchTerms.Count > 0)
+                {
+                    var terms = searchTerms.Select(t => t.Trim().ToUpperInvariant()).ToHashSet();
+                    items = items.Where(c =>
+                        MatchesTerms(terms, c.Name) ||
+                        MatchesTerms(terms, c.IssuedBy) ||
+                        MatchesTerms(terms, c.DateIssued) ||
+                        MatchesTerms(terms, c.ExpirationDate) ||
+                        (c.TechItems != null && c.TechItems.Any(t => MatchesTerms(terms, t.DisplayName) || (t.Xref != null && t.Xref.Any(x => terms.Contains(x.ToUpperInvariant())))))
+                    ).ToList();
+                }
                 return items;
             });
         }
@@ -381,6 +417,38 @@ namespace CV.data
             };
         }
 
+        private CertificationItem MapCertificationItem(CertificationJson c)
+        {
+            var item = new CertificationItem
+            {
+                Name = c.Name,
+                IssuedBy = c.IssuedBy,
+                DateIssued = c.DateIssued,
+                ExpirationDate = c.ExpirationDate,
+                VerificationUrl = c.VerificationUrl,
+                ImageUrl = c.ImageUrl,
+                DownloadUrl = c.DownloadUrl
+            };
+
+            if (c.TechXref != null && c.TechXref.Count > 0)
+            {
+                foreach (var name in c.TechXref)
+                {
+                    var key = (name ?? string.Empty).Trim().ToUpperInvariant();
+                    if (!string.IsNullOrWhiteSpace(key) && _techByName.TryGetValue(key, out var tech))
+                    {
+                        item.TechItems.Add(CloneTechItem(tech));
+                    }
+                    else
+                    {
+                        item.TechItems.Add(new TechItem { Id = name ?? string.Empty, DisplayName = name ?? string.Empty });
+                    }
+                }
+            }
+
+            return item;
+        }
+
         private bool MatchesTerms(HashSet<string> terms, string value)
         {
             if (string.IsNullOrWhiteSpace(value))
@@ -400,6 +468,17 @@ namespace CV.data
     }
 
     // JSON DTOs used for deserialization
+    internal class CertificationJson
+    {
+        public string Name { get; set; }
+        public string IssuedBy { get; set; }
+        public string DateIssued { get; set; }
+        public string ExpirationDate { get; set; }
+        public List<string> TechXref { get; set; }
+        public string VerificationUrl { get; set; }
+        public string ImageUrl { get; set; }
+        public string DownloadUrl { get; set; }
+    }
     internal class EdJson
     {
         public string SchoolName { get; set; }

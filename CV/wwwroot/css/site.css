@@ -377,3 +377,22 @@ body {
     padding-top: 25px;
     padding-bottom: 20px;
 }
+/* Certifications: remove text shadow for details column (stronger specificity) */
+.certifications-card .cert-details,
+.certifications-card .cert-details *,
+.certifications-card .cert-details a,
+.certifications-card .cert-details .workTitle,
+.certifications-card .cert-details .workTitle * {
+  text-shadow: none !important;
+}
+
+/* Certifications: increase space between image and details */
+.certifications-card .cert-thumb {
+  margin-right: 2rem !important; /* roughly double the default mr-3 (1rem) */
+}
+
+@media (max-width: 576px) {
+  .certifications-card .cert-thumb {
+    margin-right: 0.75rem !important; /* tighter on small screens */
+  }
+}
