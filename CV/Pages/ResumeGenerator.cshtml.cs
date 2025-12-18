@@ -38,15 +38,30 @@ namespace CV.Pages
         public string? GeneratedResume { get; set; }
         public string? ErrorMessage { get; set; }
 
-        public void OnGet()
+        public IActionResult OnGet()
         {
+            // Check feature flag
+            var enableResumeGeneration = _configuration.GetValue<bool>("FeatureFlags:EnableResumeGeneration", true);
+            if (!enableResumeGeneration)
+            {
+                return NotFound();
+            }
+
             // Initialize defaults
             ResumeStyle = "ats";
             OutputFormat = "text";
+            return Page();
         }
 
         public async Task<IActionResult> OnPostAsync()
         {
+            // Check feature flag
+            var enableResumeGeneration = _configuration.GetValue<bool>("FeatureFlags:EnableResumeGeneration", true);
+            if (!enableResumeGeneration)
+            {
+                return NotFound();
+            }
+
             if (string.IsNullOrWhiteSpace(JobDescription))
             {
                 ErrorMessage = "Please provide a job description.";

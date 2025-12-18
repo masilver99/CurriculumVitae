@@ -1,7 +1,10 @@
 @page
 @model CV.Pages.ResumeGeneratorModel
+@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
 @{
     ViewData["Title"] = "Resume Generator";
+    var enableResumeGeneration = Configuration.GetValue<bool>("FeatureFlags:EnableResumeGeneration", true);
 }
 
 <div class="text-center">
@@ -9,7 +12,17 @@
     <p class="text-muted">Generate a tailored resume based on a job description</p>
 </div>
 
-<div class="container mt-4">
+@if (!enableResumeGeneration)
+{
+    <div class="container mt-4">
+        <div class="alert alert-info" role="alert">
+            <strong>Feature Disabled:</strong> The resume generator feature is currently disabled.
+        </div>
+    </div>
+}
+else
+{
+    <div class="container mt-4">
     <form method="post" id="resumeForm">
         <div class="form-group mb-3">
             <label for="jobDescription" class="form-label">Job Description</label>
@@ -158,4 +171,5 @@
             document.getElementById('generateBtn').disabled = true;
         });
     </script>
+}
 }

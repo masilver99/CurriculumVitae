@@ -34,5 +34,11 @@
   <ItemGroup>
     <Folder Include="wwwroot\files\" />
   </ItemGroup>
+       
+  <ItemGroup>
+    <Content Update="wwwroot\files\MichaelSilverResume.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 
 </Project>

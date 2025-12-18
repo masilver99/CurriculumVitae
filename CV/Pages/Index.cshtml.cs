@@ -4,6 +4,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Configuration;
 using CV.Models;
 using System.Text.RegularExpressions;
 using CV.data;
@@ -14,6 +15,7 @@ namespace CV.Pages
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
+        private readonly IConfiguration _configuration;
         private Repository _repository;
 
         [BindProperty(SupportsGet = true)]
@@ -23,12 +25,14 @@ namespace CV.Pages
         public IEnumerable<EdItem> SearchedEdItems { get; set; } = new List<EdItem>();
         public IEnumerable<WorkItem> SearchedWorkItems { get; set; } = new List<WorkItem>();
         public IEnumerable<ProjectItem> SearchedProjectItems { get; set; } = new List<ProjectItem>();
+        public bool IsResumeGenerationEnabled { get; set; }
 
         public IndexModel(
-            ILogger<IndexModel> logger, Repository repostory)
+            ILogger<IndexModel> logger, Repository repostory, IConfiguration configuration)
         {
             _logger = logger;
             _repository = repostory;
+            _configuration = configuration;
         }
 
         private string GetIpAddress()
@@ -60,6 +64,9 @@ namespace CV.Pages
 
         public async Task OnGet()
         {
+            // Initialize feature flag
+            IsResumeGenerationEnabled = _configuration.GetValue<bool>("FeatureFlags:EnableResumeGeneration", true);
+
             if (!string.IsNullOrWhiteSpace(searchTerms))
             {
                 _logger.LogInformation("Search: {searchTerms}, from {IpAddress}", searchTerms, GetIpAddress());
