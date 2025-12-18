@@ -465,6 +465,252 @@ namespace CV.data
             }
             return false;
         }
+
+        /// <summary>
+        /// Generates a markdown version of the curriculum vitae that is friendly to LLMs.
+        /// </summary>
+        /// <returns>A markdown formatted string containing all CV information</returns>
+        public async Task<string> GenerateLlmFriendlyMarkdown()
+        {
+            return await GenerateLlmFriendlyMarkdown(false);
+        }
+
+        /// <summary>
+        /// Generates a markdown version of the curriculum vitae with optional compact output.
+        /// </summary>
+        /// <param name="compact">If true, omits verbose fields for a shorter output.</param>
+        public async Task<string> GenerateLlmFriendlyMarkdown(bool compact)
+        {
+            return await Task.Run(async () =>
+            {
+                var sb = new System.Text.StringBuilder();
+
+                sb.AppendLine("# Curriculum Vitae");
+                sb.AppendLine();
+
+                // Work Experience
+                sb.AppendLine("## Work Experience");
+                sb.AppendLine();
+                var workItems = await GetWorkItems();
+                foreach (var work in workItems)
+                {
+                    sb.AppendLine($"### {work.Position} at {work.CompanyName}");
+                    if (!compact && !string.IsNullOrWhiteSpace(work.Division))
+                    {
+                        sb.AppendLine($"**Division:** {work.Division}");
+                    }
+                    if (!string.IsNullOrWhiteSpace(work.Location))
+                    {
+                        sb.AppendLine($"**Location:** {work.Location}");
+                    }
+                    sb.Append($"**Duration:** {work.StartDate:MMMM yyyy}");
+                    if (work.EndDate.HasValue)
+                    {
+                        sb.Append($" - {work.EndDate:MMMM yyyy}");
+                    }
+                    else
+                    {
+                        sb.Append(" - Present");
+                    }
+                    sb.AppendLine();
+
+                    if (!compact && work.BulletPoints != null && work.BulletPoints.Count > 0)
+                    {
+                        sb.AppendLine();
+                        foreach (var bullet in work.BulletPoints)
+                        {
+                            sb.AppendLine($"- {bullet}");
+                        }
+                    }
+
+                    if (!compact && work.TechItems != null && work.TechItems.Count > 0)
+                    {
+                        sb.AppendLine();
+                        sb.Append("**Technologies:** ");
+                        sb.AppendLine(string.Join(", ", work.TechItems.Select(t => t.DisplayName)));
+                    }
+                    sb.AppendLine();
+                }
+
+                // Education
+                sb.AppendLine("## Education");
+                sb.AppendLine();
+                var edItems = await GetEdItems();
+                foreach (var ed in edItems)
+                {
+                    sb.AppendLine($"### {ed.Degree}");
+                    sb.AppendLine($"**Institution:** {ed.SchoolName}");
+                    if (!string.IsNullOrWhiteSpace(ed.GraduationDate))
+                    {
+                        sb.AppendLine($"**Graduation Date:** {ed.GraduationDate}");
+                    }
+
+                    if (!compact && ed.BulletPoints != null && ed.BulletPoints.Count > 0)
+                    {
+                        sb.AppendLine();
+                        foreach (var bullet in ed.BulletPoints)
+                        {
+                            sb.AppendLine($"- {bullet}");
+                        }
+                    }
+                    sb.AppendLine();
+                }
+
+                // Certifications
+                sb.AppendLine("## Certifications");
+                sb.AppendLine();
+                var certItems = await GetCertificationItems();
+                foreach (var cert in certItems)
+                {
+                    sb.AppendLine($"### {cert.Name}");
+                    if (!string.IsNullOrWhiteSpace(cert.IssuedBy))
+                    {
+                        sb.AppendLine($"**Issued By:** {cert.IssuedBy}");
+                    }
+                    if (!string.IsNullOrWhiteSpace(cert.DateIssued))
+                    {
+                        sb.AppendLine($"**Date Issued:** {cert.DateIssued}");
+                    }
+                    if (!compact && !string.IsNullOrWhiteSpace(cert.ExpirationDate))
+                    {
+                        sb.AppendLine($"**Expires:** {cert.ExpirationDate}");
+                    }
+                    if (!string.IsNullOrWhiteSpace(cert.VerificationUrl))
+                    {
+                        sb.AppendLine($"**Verification:** {cert.VerificationUrl}");
+                    }
+
+                    if (!compact && cert.TechItems != null && cert.TechItems.Count > 0)
+                    {
+                        sb.AppendLine();
+                        sb.Append("**Related Technologies:** ");
+                        sb.AppendLine(string.Join(", ", cert.TechItems.Select(t => t.DisplayName)));
+                    }
+                    sb.AppendLine();
+                }
+
+                // Technical Skills
+                sb.AppendLine("## Technical Skills");
+                sb.AppendLine();
+                var techCategories = await GetTechCategories();
+                foreach (var category in techCategories)
+                {
+                    sb.AppendLine($"### {category.SingularName}");
+                    sb.AppendLine();
+
+                    if (category.TechItems != null && category.TechItems.Count > 0)
+                    {
+                        var items = category.TechItems;
+                        if (compact)
+                        {
+                            // In compact mode, show only top 5 by ExperienceLevel
+                            items = items.OrderByDescending(t => t.ExperienceLevel).Take(5).ToList();
+                        }
+                        else
+                        {
+                            items = items.OrderByDescending(t => t.ExperienceLevel).ToList();
+                        }
+                        foreach (var tech in items)
+                        {
+                            sb.Append($"- **{tech.DisplayName}**");
+                            if (tech.Years > 0)
+                            {
+                                sb.Append($" ({tech.Years} years)");
+                            }
+                            if (!compact && tech.ExperienceLevel > 0)
+                            {
+                                sb.Append($" - Level: {tech.ExperienceLevel}/10");
+                            }
+                            sb.AppendLine();
+
+                            if (!compact && !string.IsNullOrWhiteSpace(tech.Versions))
+                            {
+                                sb.AppendLine($"  Versions: {tech.Versions}");
+                            }
+
+                            if (!compact && tech.BulletPoints != null && tech.BulletPoints.Count > 0)
+                            {
+                                foreach (var bullet in tech.BulletPoints)
+                                {
+                                    sb.AppendLine($"  - {bullet}");
+                                }
+                            }
+                        }
+                    }
+                    sb.AppendLine();
+                }
+
+                // Projects
+                sb.AppendLine("## Projects");
+                sb.AppendLine();
+                var projectItems = await GetProjectItems();
+                foreach (var project in projectItems)
+                {
+                    sb.AppendLine($"### {project.ProjectName}");
+                    if (!string.IsNullOrWhiteSpace(project.Url))
+                    {
+                        sb.AppendLine($"**URL:** {project.Url}");
+                    }
+                    if (!string.IsNullOrWhiteSpace(project.Status))
+                    {
+                        sb.AppendLine($"**Status:** {project.Status}");
+                    }
+                    if (!string.IsNullOrWhiteSpace(project.LastWorkedOnDate))
+                    {
+                        sb.AppendLine($"**Last Updated:** {project.LastWorkedOnDate}");
+                    }
+
+                    if (!compact && !string.IsNullOrWhiteSpace(project.Purpose))
+                    {
+                        sb.AppendLine();
+                        sb.AppendLine($"**Purpose:** {project.Purpose}");
+                    }
+
+                    if (!compact && project.Description != null && project.Description.Count > 0)
+                    {
+                        sb.AppendLine();
+                        sb.AppendLine("**Description:**");
+                        foreach (var desc in project.Description)
+                        {
+                            sb.AppendLine($"- {desc}");
+                        }
+                    }
+
+                    if (project.ProjectType != null && project.ProjectType.Count > 0)
+                    {
+                        sb.AppendLine();
+                        sb.Append("**Project Type:** ");
+                        sb.AppendLine(string.Join(", ", project.ProjectType));
+                    }
+
+                    if (project.TechItems != null && project.TechItems.Count > 0)
+                    {
+                        sb.AppendLine();
+                        sb.Append("**Technologies Used:** ");
+                        if (compact)
+                        {
+                            sb.AppendLine(string.Join(", ", project.TechItems.Select(t => t.DisplayName).Take(5)));
+                        }
+                        else
+                        {
+                            sb.AppendLine(string.Join(", ", project.TechItems.Select(t => t.DisplayName)));
+                        }
+                    }
+
+                    if (!compact)
+                    {
+                        sb.AppendLine($"**Open Source:** {(project.OpenSource ? "Yes" : "No")}");
+                        sb.AppendLine($"**Code Available:** {(project.CodeAvailable ? "Yes" : "No")}");
+                    }
+
+                    sb.AppendLine();
+                }
+
+                return sb.ToString();
+            });
+        }
+
+        // ...existing code...
     }
 
     // JSON DTOs used for deserialization
