@@ -1,6 +1,8 @@
 using System;
 using System.IO;
+using Azure.Identity;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 using Serilog.Events;
@@ -41,6 +43,20 @@ namespace CV
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .UseSerilog()
+                .ConfigureAppConfiguration((_, config) =>
+                {
+                    var builtConfig = config.Build();
+                    var keyVaultEnabled = builtConfig.GetValue<bool>("KeyVault:Enabled");
+                    var keyVaultUri = builtConfig.GetValue<string>("KeyVault:VaultUri");
+
+                    if (keyVaultEnabled && !string.IsNullOrWhiteSpace(keyVaultUri))
+                    {
+                        Log.Information("Azure Key Vault integration enabled. Vault URI: {VaultUri}", keyVaultUri);
+                        config.AddAzureKeyVault(
+                            new Uri(keyVaultUri),
+                            new DefaultAzureCredential());
+                    }
+                })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
