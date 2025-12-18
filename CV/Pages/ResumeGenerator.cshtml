@@ -1,0 +1,163 @@
+@page
+@model CV.Pages.ResumeGeneratorModel
+@{
+    ViewData["Title"] = "Resume Generator";
+}
+
+<div class="text-center">
+    <h3 class="display-6">AI-Powered Resume Generator</h3>
+    <p class="text-muted">Generate a tailored resume based on a job description</p>
+</div>
+
+<div class="container mt-4">
+    <form method="post" id="resumeForm">
+        <div class="form-group mb-3">
+            <label for="jobDescription" class="form-label">Job Description</label>
+            <textarea class="form-control" id="jobDescription" name="jobDescription" rows="10" 
+                      placeholder="Paste the job description here..." required>@Model.JobDescription</textarea>
+            <small class="form-text text-muted">Paste the job description for the position you're applying to.</small>
+        </div>
+
+        <div class="form-group mb-3">
+            <label class="form-label">Resume Style</label>
+            <div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="resumeStyle" id="atsOptimized" 
+                           value="ats" checked="@(Model.ResumeStyle == "ats" || string.IsNullOrEmpty(Model.ResumeStyle))">
+                    <label class="form-check-label" for="atsOptimized">
+                        ATS-Optimized
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="resumeStyle" id="executive" 
+                           value="executive" checked="@(Model.ResumeStyle == "executive")">
+                    <label class="form-check-label" for="executive">
+                        Executive Style
+                    </label>
+                </div>
+            </div>
+            <small class="form-text text-muted">ATS-Optimized: Keyword-focused for applicant tracking systems. Executive: Detailed, achievement-focused narrative.</small>
+        </div>
+
+        <div class="form-group mb-3">
+            <label class="form-label">Output Format</label>
+            <div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="outputFormat" id="formatText" 
+                           value="text" checked="@(Model.OutputFormat == "text" || string.IsNullOrEmpty(Model.OutputFormat))">
+                    <label class="form-check-label" for="formatText">
+                        Text
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="outputFormat" id="formatMarkdown" 
+                           value="markdown" checked="@(Model.OutputFormat == "markdown")">
+                    <label class="form-check-label" for="formatMarkdown">
+                        Markdown
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="outputFormat" id="formatHtml" 
+                           value="html" checked="@(Model.OutputFormat == "html")">
+                    <label class="form-check-label" for="formatHtml">
+                        HTML
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="outputFormat" id="formatPdf" 
+                           value="pdf" checked="@(Model.OutputFormat == "pdf")">
+                    <label class="form-check-label" for="formatPdf">
+                        PDF
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group mb-4">
+            <button type="submit" class="btn btn-primary" id="generateBtn">
+                <i class="fas fa-magic"></i> Generate Resume
+            </button>
+        </div>
+    </form>
+
+    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+    {
+        <div class="alert alert-danger" role="alert">
+            <strong>Error:</strong> @Model.ErrorMessage
+        </div>
+    }
+
+    @if (!string.IsNullOrEmpty(Model.GeneratedResume))
+    {
+        <div class="card mt-4">
+            <div class="card-header">
+                <h5>Generated Resume (@Model.OutputFormat)</h5>
+                <button type="button" class="btn btn-sm btn-secondary" onclick="copyToClipboard()">
+                    <i class="fas fa-copy"></i> Copy to Clipboard
+                </button>
+                @if (Model.OutputFormat == "pdf")
+                {
+                    <button type="button" class="btn btn-sm btn-success" onclick="downloadPdf()">
+                        <i class="fas fa-download"></i> Download PDF
+                    </button>
+                }
+            </div>
+            <div class="card-body">
+                @if (Model.OutputFormat == "html")
+                {
+                    @Html.Raw(Model.GeneratedResume)
+                }
+                else if (Model.OutputFormat == "pdf")
+                {
+                    <div class="alert alert-info">
+                        PDF generation is ready. Click the download button above.
+                    </div>
+                    <input type="hidden" id="pdfData" value="@Model.GeneratedResume" />
+                }
+                else
+                {
+                    <pre style="white-space: pre-wrap; word-wrap: break-word;">@Model.GeneratedResume</pre>
+                }
+            </div>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        function copyToClipboard() {
+            let text = '';
+            @if (Model.OutputFormat == "html")
+            {
+                <text>
+                text = document.querySelector('.card-body').innerHTML;
+                </text>
+            }
+            else
+            {
+                <text>
+                text = document.querySelector('.card-body pre').textContent;
+                </text>
+            }
+            
+            navigator.clipboard.writeText(text).then(function() {
+                alert('Resume copied to clipboard!');
+            }).catch(function(err) {
+                console.error('Failed to copy:', err);
+                alert('Failed to copy to clipboard');
+            });
+        }
+
+        function downloadPdf() {
+            // For now, this will just copy the content
+            // In a full implementation, you would generate an actual PDF
+            alert('PDF download functionality would be implemented here using a library like wkhtmltopdf or a PDF generation service.');
+        }
+
+        // Show loading state when form is submitted
+        document.getElementById('resumeForm').addEventListener('submit', function() {
+            document.getElementById('generateBtn').innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating...';
+            document.getElementById('generateBtn').disabled = true;
+        });
+    </script>
+}

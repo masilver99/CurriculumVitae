@@ -29,6 +29,7 @@ namespace CV
                     options.PageViewLocationFormats.Add("/Pages/Partials/{0}.cshtml");
                 });
 
+            services.AddHttpClient();
             services.AddSingleton(new Repository());
             services.AddSingleton(new VersionInfo());
         }
