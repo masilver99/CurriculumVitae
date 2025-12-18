@@ -65,7 +65,7 @@ namespace CV.Pages
 
                 if (string.IsNullOrWhiteSpace(apiKey))
                 {
-                    ErrorMessage = "OpenRouter API key is not configured. Please add it to appsettings.json or user secrets.";
+                    ErrorMessage = "OpenRouter API key is not configured. Please set it using user secrets (dotnet user-secrets set \"OpenRouter:ApiKey\" \"your-key\") or environment variables.";
                     return Page();
                 }
 
@@ -107,7 +107,8 @@ Generate the resume now:";
                 // Call OpenRouter API
                 var httpClient = _httpClientFactory.CreateClient();
                 httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {apiKey}");
-                httpClient.DefaultRequestHeaders.Add("HTTP-Referer", "https://github.com/masilver99/CurriculumVitae");
+                var siteUrl = _configuration["SiteUrl"] ?? "https://michaelsilver.rocks";
+                httpClient.DefaultRequestHeaders.Add("HTTP-Referer", siteUrl);
 
                 var requestBody = new
                 {
@@ -139,16 +140,9 @@ Generate the resume now:";
                 {
                     GeneratedResume = apiResponse.Choices[0].Message?.Content ?? string.Empty;
 
-                    // For PDF, we would need to implement actual PDF generation
-                    // For now, we'll just provide the content
                     if (OutputFormat == "pdf")
                     {
-                        // In a real implementation, you would use a library like:
-                        // - PuppeteerSharp
-                        // - IronPdf
-                        // - QuestPDF
-                        // For now, just return the formatted text
-                        ErrorMessage = "Note: PDF generation requires additional setup. The content is available as text below.";
+                        ErrorMessage = "PDF generation is not yet available. The content is displayed as text below.";
                         OutputFormat = "text";
                     }
                 }
