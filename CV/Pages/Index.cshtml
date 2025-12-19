@@ -9,6 +9,59 @@
 <div class="text-center">
     <h3 class="display-6">Welcome to Michael Silver's curriculum vitae.</h3>
 
+    <!-- Quick Facts Statistics -->
+    <div class="quick-facts-container mb-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3"><i class="fas fa-chart-line"></i> Professional Summary at a Glance</h5>
+                        <div class="row text-center">
+                            <div class="col-6 col-md-4 mb-3">
+                                <div class="stat-box">
+                                    <div class="stat-number">@Model.YearsOfExperience+</div>
+                                    <div class="stat-label">Years Experience</div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 mb-3">
+                                <div class="stat-box">
+                                    <div class="stat-number">@Model.TotalCompanies</div>
+                                    <div class="stat-label">Companies</div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 mb-3">
+                                <div class="stat-box">
+                                    <div class="stat-number">@Model.TotalTechnologies+</div>
+                                    <div class="stat-label">Technologies</div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 mb-3">
+                                <div class="stat-box">
+                                    <div class="stat-number">@Model.TotalProjects</div>
+                                    <div class="stat-label">Projects</div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 mb-3">
+                                <div class="stat-box">
+                                    <div class="stat-number">@Model.TotalCertifications</div>
+                                    <div class="stat-label">Certifications</div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 mb-3">
+                                <div class="stat-box">
+                                    <a href="files/MichaelSilverResume.pdf" class="stat-link text-decoration-none">
+                                        <i class="fas fa-file-pdf fa-2x text-danger mb-2"></i>
+                                        <div class="stat-label">Download Resume</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="summaryText">I have over 25 years of management and development experience, with a recent focus on leading teams developing message based, high throughput, high availability systems, usually using .NET Core. 
 My <a href="/work">extensive work history</a> and <a href="/tech">list of technologies</a> I've used, documents my wide range of expereince.</div>
 
@@ -89,20 +142,30 @@ My <a href="/work">extensive work history</a> and <a href="/tech">list of techno
     </div>
 
 
-        <a href="https://www.linkedin.com/in/michaelsilver/">
-                <img class="linkIcon" src="~/img/linkedin.svg" />
-        </a>
+        <div class="contact-section mb-4">
+            <h5 class="mb-3"><i class="fas fa-envelope"></i> Contact Information</h5>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/michaelsilver/" title="LinkedIn Profile" class="contact-item">
+                    <img class="linkIcon" src="~/img/linkedin.svg" alt="LinkedIn" />
+                    <span class="contact-label">LinkedIn</span>
+                </a>
 
-        <a href="https://stackoverflow.com/users/125406/michael-silver">
-                <img class="linkIcon" src="~/img/so-icon.svg" />
-        </a>
+                <a href="https://stackoverflow.com/users/125406/michael-silver" title="Stack Overflow Profile" class="contact-item">
+                    <img class="linkIcon" src="~/img/so-icon.svg" alt="Stack Overflow" />
+                    <span class="contact-label">Stack Overflow</span>
+                </a>
 
-        <a href="files/MichaelSilverResume.pdf">
-                <img class="linkIcon" src="~/img/resume-icon.png" />
-        </a>
-        <a href="mailto:masilver@gmail.com?subject=CV">
-            <img class="linkIcon" src="~/img/email-mail-open-at.png" />
-        </a>
+                <a href="files/MichaelSilverResume.pdf" title="Download Resume PDF" class="contact-item">
+                    <img class="linkIcon" src="~/img/resume-icon.png" alt="Resume" />
+                    <span class="contact-label">Resume PDF</span>
+                </a>
+                
+                <a href="mailto:masilver@gmail.com?subject=CV" title="Email Me" class="contact-item">
+                    <img class="linkIcon" src="~/img/email-mail-open-at.png" alt="Email" />
+                    <span class="contact-label">Email</span>
+                </a>
+            </div>
+        </div>
 
     </div>
 

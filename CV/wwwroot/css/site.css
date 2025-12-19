@@ -1,6 +1,77 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+/* Quick Facts Statistics */
+.quick-facts-container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.stat-box {
+    padding: 0.5rem;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1b6ec2;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+.stat-link {
+    color: inherit;
+    display: block;
+}
+
+.stat-link:hover {
+    text-decoration: none;
+    transform: scale(1.05);
+    transition: transform 0.2s;
+}
+
+/* Contact Section Improvements */
+.contact-section {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.contact-item:hover {
+    transform: scale(1.1);
+}
+
+.contact-label {
+    font-size: 0.85rem;
+    color: #333;
+    margin-top: 0.25rem;
+    font-weight: 500;
+}
+
 a.navbar-brand {
     white-space: normal;
     text-align: center;
@@ -395,4 +466,59 @@ body {
   .certifications-card .cert-thumb {
     margin-right: 0.75rem !important; /* tighter on small screens */
   }
+}
+
+/* Print styles for better CV printing */
+@media print {
+    /* Hide navigation and footer when printing */
+    .navbar, .footer, .contact-section {
+        display: none !important;
+    }
+
+    /* Optimize spacing for print */
+    body {
+        margin: 0;
+        padding: 0;
+        font-size: 12pt;
+    }
+
+    /* Ensure cards don't break across pages */
+    .card {
+        page-break-inside: avoid;
+        margin-bottom: 1rem;
+        border: 1px solid #ddd;
+    }
+
+    /* Make links visible in print */
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #666;
+    }
+
+    /* Don't show URLs for internal navigation links */
+    a[href^="/"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    /* Ensure stats are visible */
+    .stat-box {
+        border: 1px solid #ddd;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Force color on important elements */
+    .companyName, .workTitle {
+        color: #000 !important;
+        text-shadow: none !important;
+    }
+
+    /* Make tech tags readable */
+    .itemBox {
+        border: 1px solid #333;
+        background-color: #eee !important;
+        color: #000 !important;
+    }
 }
