@@ -27,6 +27,13 @@ namespace CV.Pages
         public IEnumerable<ProjectItem> SearchedProjectItems { get; set; } = new List<ProjectItem>();
         public bool IsResumeGenerationEnabled { get; set; }
 
+        // Statistics for quick facts
+        public int YearsOfExperience { get; set; }
+        public int TotalCompanies { get; set; }
+        public int TotalProjects { get; set; }
+        public int TotalCertifications { get; set; }
+        public int TotalTechnologies { get; set; }
+
         public IndexModel(
             ILogger<IndexModel> logger, Repository repostory, IConfiguration configuration)
         {
@@ -67,6 +74,9 @@ namespace CV.Pages
             // Initialize feature flag
             IsResumeGenerationEnabled = _configuration.GetValue<bool>("FeatureFlags:EnableResumeGeneration", true);
 
+            // Calculate statistics for quick facts
+            await CalculateStatistics();
+
             if (!string.IsNullOrWhiteSpace(searchTerms))
             {
                 _logger.LogInformation("Search: {searchTerms}, from {IpAddress}", searchTerms, GetIpAddress());
@@ -78,6 +88,33 @@ namespace CV.Pages
                 await SearchProjectItems(terms);
                 await SearchWorkItems(terms);
             }
+        }
+
+        private async Task CalculateStatistics()
+        {
+            // Get all work items
+            var workItems = await _repository.GetWorkItems();
+            TotalCompanies = workItems.Count();
+
+            // Calculate years of experience from earliest start date to now
+            if (workItems.Any())
+            {
+                var earliestDate = workItems.Min(w => w.StartDate);
+                var timeSpan = DateTime.Now - earliestDate;
+                YearsOfExperience = (int)(timeSpan.TotalDays / 365.25); // Account for leap years
+            }
+
+            // Get all projects
+            var projects = await _repository.GetProjectItems();
+            TotalProjects = projects.Count();
+
+            // Get all certifications
+            var certifications = await _repository.GetCertificationItems();
+            TotalCertifications = certifications.Count();
+
+            // Get all technologies (count unique tech items across all categories)
+            var techCategories = await _repository.GetTechCategories();
+            TotalTechnologies = techCategories.SelectMany(c => c.TechItems).Count();
         }
 
         public void OnPost(string emailAddress)
