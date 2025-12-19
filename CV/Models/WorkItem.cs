@@ -5,6 +5,9 @@ namespace CV.Models
 {
     public class WorkItem
     {
+        private const double DAYS_PER_YEAR = 365.25;  // Account for leap years
+        private const double DAYS_PER_MONTH = 30.44;   // Average days per month
+
         public string Id { get; set; }
         public string CompanyName { get; set; }
         public string Division { get; set; }
@@ -23,8 +26,8 @@ namespace CV.Models
         {
             var endDate = EndDate ?? DateTime.Now;
             var duration = endDate - StartDate;
-            var years = (int)(duration.Days / 365.25);
-            var months = (int)((duration.Days % 365.25) / 30.44);
+            var years = (int)(duration.Days / DAYS_PER_YEAR);
+            var months = (int)((duration.Days % DAYS_PER_YEAR) / DAYS_PER_MONTH);
 
             if (years > 0 && months > 0)
             {

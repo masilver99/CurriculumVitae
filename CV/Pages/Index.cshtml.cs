@@ -100,7 +100,8 @@ namespace CV.Pages
             if (workItems.Any())
             {
                 var earliestDate = workItems.Min(w => w.StartDate);
-                YearsOfExperience = DateTime.Now.Year - earliestDate.Year;
+                var timeSpan = DateTime.Now - earliestDate;
+                YearsOfExperience = (int)(timeSpan.TotalDays / 365.25); // Account for leap years
             }
 
             // Get all projects
